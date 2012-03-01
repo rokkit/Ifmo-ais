@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <script type="text/javascript" src="../content/js/jquery-1.7.1.min.js"></script>
 <script>
     $("document").ready(function(){
@@ -11,7 +12,6 @@ $("#submit-cud").click(function(){
 });
 </script>
 <?php
-session_start();
 if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
 {
     require 'dbconnect.php';
