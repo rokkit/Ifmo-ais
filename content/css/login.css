@@ -1,0 +1,45 @@
+/* 
+    Document   : login
+    Created on : 08.02.2012, 10:06:31
+    Author     : rokkitlanchaz
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body { 
+    display: block;
+}
+.login {
+    padding: 50px;
+    text-align: center;
+    margin-top: 200px;
+}
+form#login-form {
+    
+    width: 550px;
+    margin: 0 auto;
+}
+.au-input {
+    padding: 0 4px 0 0;
+    float:left;
+}
+#error{  
+    
+    margin-bottom: 20px;  
+    border: 1px solid #efefef;  
+} 
+.error {
+    background: #F8DBDB;
+}
+#error ul{  
+    list-style: square;  
+    padding: 5px;  
+    font-size: 11px;  
+}  
+#error ul li{  
+    list-style-position: inside;  
+    line-height: 1.6em;
+    visibility: hidden;
+}
+
+
