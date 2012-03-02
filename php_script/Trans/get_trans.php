@@ -79,13 +79,24 @@ $limitSql";
        $trans =  mysql_query($sql,$fsdb) or die("ERROR 1");
        while($tran =  mysql_fetch_array($trans))
        {
-           $disp_name =  mysql_query("SELECT name FROM discipline WHERE id=$tran[1]", $fsdb) or die("ERROR 2");
+           $disp_name =  mysql_query("SELECT name,id_direction FROM discipline WHERE id=$tran[1]", $fsdb) or die("ERROR 2");
            $subj_name =  mysql_query("SELECT Name FROM predmeti_table WHERE Predmet_ID=$tran[2]", $fsdb) or die("ERROR 3");
-           
-           if($disp_name = mysql_fetch_array($disp_name)) $disp_name=$disp_name['name'];
+           $dir_id=0;
+           $dir_name="Общий";
+           if($disp_name = mysql_fetch_array($disp_name)) { $disp_name=$disp_name['name'];}
            if($subj_name = mysql_fetch_array($subj_name)) $subj_name=$subj_name['Name'];
            
-           $data['rows'][]=array('id'=>$tran['id'],'cell'=>array($disp_name,$subj_name));
+                if($tran[3]!=0) 
+                {
+                    $dir_names = mysql_query("SELECT name FROM direction WHERE id=$tran[3]");//получаем название направление подготовки для перехода
+                    $dir_name =  mysql_fetch_array($dir_names);
+                }
+                else
+                {
+                    $dir_name="Общий";
+                }
+                
+           $data['rows'][]=array('id'=>$tran['id'],'cell'=>array($disp_name,$subj_name,$dir_name['name']));
            
        }
        echo json_encode($data);

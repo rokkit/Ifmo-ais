@@ -104,7 +104,8 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
            colModel : [
                         
                         {display: 'Дисциплина СПО', name : 'name', width : 150, sortable : true, align: 'left'},
-                        {display: 'Дисциплина ВПО', name : 'name', width : 150, sortable : true, align: 'left'}
+                        {display: 'Дисциплина ВПО', name : 'name', width : 150, sortable : true, align: 'left'},
+                        {display: 'Направление', name : 'name', width : 150, sortable : true, align: 'left'}
                         
            ],
            
