@@ -71,7 +71,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                                     <h3>Удаление переходов</h3>
                                 </div>
                                 <div class='modal-body'>
-                                    
+                                <h2>Удаление выбранных переходов</h2>
                                 </div>
                             <form id="modal-delete">
                                 <div class="modal-footer">                                
@@ -185,12 +185,10 @@ $(function(){//on modal click do delete trans
                  id = id.substring(id.lastIndexOf('row')+3);
                  trans+=id+"_";
              });
-        $.get("/php_script/Trans/set_trans.php",{"trans":trans,"type":"delete"},function(){});
+        $.get("/php_script/Trans/set_trans.php",{"trans":trans,"type":"delete"},function(){$("ModalDelDisp").modal('hide');});
     });
 });
-$(function(){
-            $("div#ModalDelDisp").on('hidden',function(){$("form#modal-delete").empty();})
-            });
+
         </script>
 </body>
 </html>
