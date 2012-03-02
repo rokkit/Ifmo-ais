@@ -34,7 +34,10 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
       <a href="trans_editor.php">Показать все</a>
   </li>
   <li>
-      <a href="add_trans.php">Добавить</a>
+      <a href="add_trans.php"><i class="icon-plus"></i>Добавить</a>
+  </li>
+  <li>
+      <a href="" id="delete-trans"><i class="icon-remove"></i>Удалить</a>
   </li>
  
                             </ul>
@@ -62,6 +65,20 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                                 </form>
                             <div id="trans-table">
                                 
+                            </div>
+                            <div id="ModalDelDisp" class="modal hide">
+                                <div class="modal-header">
+                                    <h3>Удаление переходов</h3>
+                                </div>
+                                <div class='modal-body'>
+                                    
+                                </div>
+                            <form id="modal-delete">
+                                <div class="modal-footer">                                
+                                    <input type='submit' id='delete-trans-btn' class='btn btn-danger' value='Удалить'/>
+                                    <a href='#' class='btn' data-dismiss='modal'>Отмена</a>
+                                </div>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -153,6 +170,27 @@ $(function()
           $("div#trans-table").flexOptions({url:'../../php_script/Trans/get_trans.php?type=all&'+form}).flexReload();  
         });
     });
+    
+
+        </script>
+        <script>
+$(function(){
+    $("#delete-trans").click(function(){$("#ModalDelDisp").modal('show');return false;});
+            });
+$(function(){//on modal click do delete trans
+    $("#delete-trans-btn").click(function(){
+        var trans="";
+        $('#trans-table .trSelected').each(function(){
+                 var id = $(this).attr('id');
+                 id = id.substring(id.lastIndexOf('row')+3);
+                 trans+=id+"_";
+             });
+        $.get("/php_script/Trans/set_trans.php",{"trans":trans,"type":"delete"},function(){});
+    });
+});
+$(function(){
+            $("div#ModalDelDisp").on('hidden',function(){$("form#modal-delete").empty();})
+            });
         </script>
 </body>
 </html>

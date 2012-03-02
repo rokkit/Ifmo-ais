@@ -36,7 +36,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
       <a href="trans_editor.php">Показать все</a>
   </li>
   <li class="active">
-    <a href="">Добавить</a>
+    <a href=""><i class="icon-plus icon-white"></i>Добавить</a>
   </li>
  
 </ul>
