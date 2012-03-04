@@ -98,3 +98,7 @@ root {
     position: absolute;
     width: 350px;
 }
+
+.flexigrid i {
+    padding-right: 3px;
+}
