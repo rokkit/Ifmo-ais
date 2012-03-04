@@ -10,7 +10,7 @@
                         <a href="/main.php"><i class="icon-home icon-white"></i>Домой</a>
                     </li>
                     <li>
-                        <a href="/html/form_maker.php">Формирование выписок</a>
+                        <a href="/html/Forms/form_maker.php">Формирование выписок</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
