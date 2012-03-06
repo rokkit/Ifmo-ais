@@ -37,7 +37,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                         </div>
                         <div class="span6">
                             <div id="fcd-content">
-                                <div class="inbox-table">
+                                <div class="studs-table">
                                     
                                 </div>
                             </div>
@@ -51,8 +51,8 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
         <script>
         $(function(){
             
-       $("div#trans-table").flexigrid({
-           url:'',
+       $("div#studs-table").flexigrid({
+           url:'/php_script/Forms/get_studs.php',
            dataType: 'json',
            colModel : [
                         

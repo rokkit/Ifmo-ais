@@ -55,12 +55,13 @@
                         
                         {display: 'ФИО', name : 'name', width : 150, sortable : true, align: 'left'},
                         {display: 'Кафедра', name : 'name', width : 150, sortable : true, align: 'left'},
-                        {display: 'Направление', name : 'name', width : 150, sortable : true, align: 'left'}
+                        {display: 'Направление', name : 'name', width : 150, sortable : true, align: 'left'},
+                        {display: 'Форма обучения', name : 'name', width : 150, sortable : true, align: 'left'}
                         
            ],
            buttons : [
-                        {name: '<i class="icon-check"></i>Подтвердить', bclass: 'create', onpress : doCommand},
-                        {name: '<i class="icon-share"></i>Удалить', bclass: 'delete', onpress : doCommand}
+                        {name: '<i class="icon-check"></i>Принять', bclass: 'create', onpress : doCommand},
+                        {name: '<i class="icon-share"></i>Отклонить', bclass: 'delete', onpress : doCommand}
                 ],
            
            searchitems : [
