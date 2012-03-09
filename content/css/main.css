@@ -102,3 +102,7 @@ root {
 .flexigrid i {
     padding-right: 3px;
 }
+.well {
+    margin-top: 20px;
+    margin-left:-10px;
+}

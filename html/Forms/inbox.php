@@ -85,30 +85,26 @@
 
 //Кнопки таблицы
     function doCommand(com, grid) {
-            if (com == 'Подтвердить') {
+            if (com == '<i class="icon-check"></i>Принять') {
             $('.trSelected', grid).each(function() {
             var id = $(this).attr('id');
             id = id.substring(id.lastIndexOf('row')+3);
-                        $.get("../php_script/set_disps.php",{id:id,get_update:"true"},
+                        $.get("/php_script/Forms/set_inbox.php",{id:id,"confirm":"true"},
                             function(data)
                             {
                             });
   
             });
-            } else if (com == 'Удалить') {
+            } else if (com == '<i class="icon-share"></i>Отклонить') {
                     $('.trSelected', grid).each(function() {
                     var id = $(this).attr('id');
                     id = id.substring(id.lastIndexOf('row')+3);
                     
-                    $.get("../php_script/set_disps.php", {id:id,get_delete:"true"}, function(data){
-                        $("form#modal-delete").html(data);
+                    $.get("/php_script/Forms/set_inbox.php", {id:id,"confirm":"false"}, function(data){
+                        
                     });
-                    $("#ModalDelDisp").modal('show');
+                    
                     });
-                    }
-                     else if (com == 'Добавить') 
-                    {
-                    $("#ModalAddDisp").modal();
                     }
                     
             }

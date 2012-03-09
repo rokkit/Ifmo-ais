@@ -124,8 +124,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                 resizable: false,
                 width: 600,
                 height: 400,
-                singleSelect: false,
-                minwidth:200
+                singleSelect: false
        }); 
     });        
         </script>

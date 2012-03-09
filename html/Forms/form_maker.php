@@ -15,6 +15,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
         <script type="text/javascript" src="/content/js/jquery.chainedSelects.js"></script>
         <script type="text/javascript" src="/content/js/bootstrap-dropdown.js"></script>
         <script type="text/javascript" src="/content/js/flexigrid.pack.js"></script>
+        <script type="text/javascript" src="/content/js/jquery.pjax.js"></script>
     </head>
     <body>
         <?php include ('../header-menu.php'); ?>
@@ -34,11 +35,26 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                                     <a href="inbox.php"><i class="icon-inbox"></i>Заявки <?php include 'get_inbox_choose.php'; ?></a>
                                 </li>
                             </ul>
+                            <div class="span3 well" style="width: 200px;">
+                                <form>
+                                    <label for="year-sel">Год</label>
+                                    <select id="year-sel" name="year-sel" class="span2">
+                                        
+                                    </select>
+                                    <label for="group-sel">Группа</label>
+                                    <select id="group-sel" name="group-sel" class="span2">
+                                        
+                                    </select>
+                                     <label for="only-choosed">С указанным направлением</label>
+                                     <input type="checkbox" id="only-choosed" name="only-choosed"/>
+                                </form>
+                            </div>
                         </div>
+                        
                         <div class="span6">
                             <div id="fcd-content">
-                                <div class="studs-table">
-                                    
+                                <div class="studs-table" id="studs-table">
+                                    <a href="/php_script/Student/get_student.php" id="1231">Student 1231</a>
                                 </div>
                             </div>
                         </div>
@@ -46,8 +62,17 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                 </div>
             </div>
         </div>
-        
-        <!-- Таблица заявок -->
+
+  <script type="text/javascript">
+    $(function(){
+      // pjax
+$.hash = '#!/';
+$.siteurl = '<?php echo $_SERVER['HTTP_HOST']; ?>';
+$.container = '#studs-table';
+      $('a').pjax('#studs-table');
+    })
+  </script>
+        <!-- Таблица студентов 
         <script>
         $(function(){
             
@@ -114,7 +139,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                     $("#ModalAddDisp").modal();
                     }
                     
-            }
+            }-->
         </script>
     </body>
 </html>
