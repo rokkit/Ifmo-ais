@@ -1,7 +1,5 @@
 <?php
-session_start();
-if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
-{
+require '../../php_script/auth.php';
     ?>
     <!DOCTYPE html>
 <html>
@@ -54,7 +52,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                         <div class="span6">
                             <div id="fcd-content">
                                 <div class="studs-table" id="studs-table">
-                                    <a href="/php_script/Student/get_student.php" id="1231">Student 1231</a>
+                                    <a href="/php_script/Student/get_student.php?id=1">Student 1231</a>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +70,7 @@ $.container = '#studs-table';
       $('a').pjax('#studs-table');
     })
   </script>
-        <!-- Таблица студентов 
+        <!-- Таблица студентов
         <script>
         $(function(){
             
@@ -139,15 +137,7 @@ $.container = '#studs-table';
                     $("#ModalAddDisp").modal();
                     }
                     
-            }-->
-        </script>
+            }
+        </script>-->
     </body>
 </html>
-<?php
-}
-else 
-{
-header("Location: http://".$_SERVER['HTTP_HOST']."/");
-}
-exit;
-?>

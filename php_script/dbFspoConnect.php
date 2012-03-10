@@ -1,7 +1,9 @@
 <?php
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+$dbhost="localhost";
+$dbname="ifmodb";
+$dbuser="root";
+$dbpass="1405";
+$fspodb=mysql_connect($dbhost,$dbuser,$dbpass) or die("connect error");
+mysql_select_db($dbname,$fspodb);
+mysql_query("set names utf8") or die('UTF8 ERROR');
 ?>
