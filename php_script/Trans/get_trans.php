@@ -1,5 +1,6 @@
 <?php
 require '../dbconnect.php';
+require '../dbFspoConnect.php';
 include '../function.php';
 $page = 1; // The current page
 $sortname = 'name'; // Sort column
@@ -76,11 +77,11 @@ $limitSql";
            $direction =  parseNumSql($_GET['direction']);
            $sql.=" WHERE id_direction=$direction";
        }
-       $trans =  mysql_query($sql,$fsdb) or die("ERROR 1");
+       $trans =  mysql_query($sql,$ifmodb) or die("ERROR 1");
        while($tran =  mysql_fetch_array($trans))
        {
-           $disp_name =  mysql_query("SELECT name,id_direction FROM discipline WHERE id=$tran[1]", $fsdb) or die("ERROR 2");
-           $subj_name =  mysql_query("SELECT Name FROM predmeti_table WHERE Predmet_ID=$tran[2]", $fsdb) or die("ERROR 3");
+           $disp_name =  mysql_query("SELECT name,id_direction FROM discipline WHERE id=$tran[1]", $ifmodb) or die("ERROR 2");
+           $subj_name =  mysql_query("SELECT Name FROM predmeti_table WHERE Predmet_ID=$tran[2]", $fspodb) or die(mysql_error($fspodb));
            $dir_id=0;
            $dir_name="Общий";
            if($disp_name = mysql_fetch_array($disp_name)) { $disp_name=$disp_name['name'];}
@@ -88,7 +89,7 @@ $limitSql";
            
                 if($tran[3]!=0) 
                 {
-                    $dir_names = mysql_query("SELECT name FROM direction WHERE id=$tran[3]");//получаем название направление подготовки для перехода
+                    $dir_names = mysql_query("SELECT name FROM direction WHERE id=$tran[3]",$ifmodb) or die(mysql_error($ifmodb));//получаем название направление подготовки для перехода
                     $dir_name =  mysql_fetch_array($dir_names);
                 }
                 else
