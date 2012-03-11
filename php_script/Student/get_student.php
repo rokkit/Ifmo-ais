@@ -9,7 +9,13 @@ if (isset($_SERVER['HTTP_X_PJAX']))
   {
       $id =  parseNumSql($_GET['id']);
       $student =  Student::getStudentById($id);//получаем студента со всей инфой
-      echo $student->name;
+      $data=array('id'=>$id,
+                  'name'=>$student->name,
+                  'last_name'=>$student->last_name,
+                  'second_name'=>$student->second_name,
+                  'group'=>$student->group,
+                  'programm'=>$student->programm);
+      echo "l";
   }
 }
 else {

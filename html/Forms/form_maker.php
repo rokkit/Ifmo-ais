@@ -9,6 +9,7 @@ require '../../php_script/auth.php';
         <link type="text/css" rel="stylesheet" href="/content/css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="/content/css/bootstrap-responsive.min.css">
         <link type="text/css" rel="stylesheet" href="/content/css/main.css">
+        <link type="text/css" rel="stylesheet" href="/content/flexigrid.css">
         <script type="text/javascript" src="/content/js/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="/content/js/jquery.chainedSelects.js"></script>
         <script type="text/javascript" src="/content/js/bootstrap-dropdown.js"></script>
@@ -30,7 +31,7 @@ require '../../php_script/auth.php';
                                     <a href=""><i class="icon-file icon-white"></i>Выписки</a>
                                 </li>
                                 <li>
-                                    <a href="inbox.php"><i class="icon-inbox"></i>Заявки <?php include 'get_inbox_choose.php'; ?></a>
+                                    <a href="/html/Forms/inbox.php"><i class="icon-inbox"></i>Заявки <?php include 'get_inbox_choose.php'; ?></a>
                                 </li>
                             </ul>
                             <div class="span3 well" style="width: 200px;">
@@ -67,28 +68,23 @@ require '../../php_script/auth.php';
 $.hash = '#!/';
 $.siteurl = '<?php echo $_SERVER['HTTP_HOST']; ?>';
 $.container = '#studs-table';
-      $('a').pjax('#studs-table');
+      $('#studs-table a').pjax('#studs-table');//аякс запрос студента по ид
     })
   </script>
-        <!-- Таблица студентов
+         
         <script>
         $(function(){
             
-       $("div#studs-table").flexigrid({
-           url:'/php_script/Forms/get_studs.php',
+       $("div#studs-table").flexigrid({ //Таблица студентов
+           url:'/php_script/Student/get_students.php?choosed_direction=true&group=423',
            dataType: 'json',
            colModel : [
                         
                         {display: 'ФИО', name : 'name', width : 150, sortable : true, align: 'left'},
-                        {display: 'Кафедра', name : 'name', width : 150, sortable : true, align: 'left'},
+                        {display: 'Группа', name : 'name', width : 150, sortable : true, align: 'left'},
                         {display: 'Направление', name : 'name', width : 150, sortable : true, align: 'left'}
                         
            ],
-           buttons : [
-                        {name: 'Подтвердить', bclass: 'create', onpress : doCommand},
-                        {name: 'Удалить', bclass: 'delete', onpress : doCommand},
-                        {separator: false}
-                ],
            
            searchitems : [
                         {display: 'ФИО', name : 'name'}
@@ -96,7 +92,7 @@ $.container = '#studs-table';
                 sortname: "name",
                 sortorder: "asc",
                 usepager: false,
-                title: "Заявки",
+                title: "Студенты",
                 useRp: false,
                 rp: 300,
                 showToggleBtn:false,
@@ -138,6 +134,6 @@ $.container = '#studs-table';
                     }
                     
             }
-        </script>-->
+        </script>
     </body>
 </html>

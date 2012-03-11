@@ -47,7 +47,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                                     <select id="faculty" class="input-medium" name="faculty">
                 <option disabled>Факультет</option>
                 <?php
-    require '../../php_script/dbconnect.php';
+                require '../../php_script/dbconnect.php';
     
                 $facs=mysql_query('SELECT id,name FROM faculty');
                 while($fac = mysql_fetch_assoc($facs))
@@ -87,7 +87,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
         </div>
     </div>
 
-    <!-- js inc -->
+        <!-- js inc -->
         <script type="text/javascript" src="../../content/js/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="../../content/js/jquery.chainedSelects.js"></script>
         <script type="text/javascript" src="../../content/js/bootstrap-dropdown.js"></script>

@@ -87,7 +87,7 @@ $limitSql";
            if($disp_name = mysql_fetch_array($disp_name)) { $disp_name=$disp_name['name'];}
            if($subj_name = mysql_fetch_array($subj_name)) $subj_name=$subj_name['Name'];
            
-                if($tran[3]!=0) 
+                if($tran[3]!=0) //если указано направление (конкретизировано)
                 {
                     $dir_names = mysql_query("SELECT name FROM direction WHERE id=$tran[3]",$ifmodb) or die(mysql_error($ifmodb));//получаем название направление подготовки для перехода
                     $dir_name =  mysql_fetch_array($dir_names);

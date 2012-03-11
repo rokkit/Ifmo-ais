@@ -22,6 +22,17 @@ class Student {
         $this->group=$group;
         $this->programm=$programm;
     }
+    static function connectToFspoDB()
+    {
+        $dbhost="localhost";
+        $dbname="ifmodb";
+        $dbuser="root";
+        $dbpass="1405";
+        $fspodb=mysql_connect($dbhost,$dbuser,$dbpass) or die("connect error");
+        mysql_select_db($dbname,$fspodb);
+        mysql_query("set names utf8") or die('UTF8 ERROR');
+        return $fspodb;
+    }
     
     
     static function getStudentById($id_student)
@@ -33,6 +44,58 @@ class Student {
             $student=new Student($id_student,$st['Ima'],$st['Familia'],$st['Otchestvo'],$st['gruppa'],$st['programm']);
         }
         return $student;
+    }
+    static function getStudents($params)
+    {
+        $sql="SELECT Stud_ID, Ima, Familia, Otchestvo, gruppa, programm FROM stud_table";
+        $data = array();
+        $data['rows'] = array();
+        $data['total'] = null;
+        $fspodb=Student::connectToFspoDB();
+        
+        if($params['params']=='all')//все студенты. без фильтра
+        {                      
+
+            
+        }
+        if($params['group']!=null)//фильтр по группе
+        {
+            $group = parseNumSql($params['group']);
+            $sql.=" WHERE gruppa=$group";
+        }
+        if($params['choosed_direction'])//только с выбранным направлением
+        {
+            include '../dbconnect.php';
+            $result = mysql_query("SELECT id_student FROM student_choose WHERE confirm=1", $ifmodb) or die(mysql_error($ifmodb));//получаем выбранные ид
+            while($student_id = mysql_fetch_array($result))
+            {
+                $choosed_sql=(isset($params['group'])) ? " AND Stud_ID=$student_id[0]" : " WHERE Stud_ID=$student_id[0]";
+                $t_sql=$sql;
+                $t_sql.=$choosed_sql;
+                
+                $result_choosed_students = mysql_query($t_sql, $fspodb) or die(mysql_error($fspodb));
+                if($result_choosed_student = mysql_fetch_array($result_choosed_students))
+                {
+                    $programm = ($student['programm']==1) ? "Непрерывная" : "Базовая";
+                    $data['rows'][] = array('id' => $result_choosed_student['Stud_ID'],
+                                        'cell' => array($result_choosed_student['Ima']." ".$result_choosed_student['Familia']." ".$result_choosed_student['Otchestvo'],$result_choosed_student['gruppa'],$programm) );
+                }
+                
+            }
+            echo json_encode($data);
+            return;
+            
+        }
+            
+            $result =  mysql_query($sql,$fspodb) or die(mysql_error());
+            while($student = mysql_fetch_array($result))
+            {
+                $programm = ($student['programm']==1) ? "Непрерывная" : "Базовая";
+                $data['rows'][] = array('id' => $student['Stud_ID'],
+                                        'cell' => array($student['Ima']." ".$student['Familia']." ".$student['Otchestvo'],$student['gruppa'],$programm) );
+            }
+        // Return JSON data
+        echo json_encode($data);
     }
 }
 
