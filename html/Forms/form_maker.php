@@ -34,7 +34,7 @@ require '../../php_script/auth.php';
                                     <a href="/html/Forms/inbox.php"><i class="icon-inbox"></i>Заявки <?php include 'get_inbox_choose.php'; ?></a>
                                 </li>
                             </ul>
-                            <div class="span3 well" style="width: 200px;">
+                            <div class="span3 well" id="filter-studs-table" style="width: 200px;">
                                 <form>
                                     <label for="year-sel">Год</label>
                                     <select id="year-sel" name="year-sel" class="span2">
@@ -73,23 +73,34 @@ $.container = '#studs-table';
   </script>
          
         <script>
+        var params="params=all";//параметр запроса студентов в таблице
+        //по изменению значения в фильтре изменяется параметр запроса
+        
         $(function(){
-            
+            $("#filter-studs-table #only-choosed").change(function(){
+                if($("#filter-studs-table #only-choosed").is(':checked')) params="params=choosed_direction";
+                else params="params=all";
+                $("div#studs-table").flexOptions({url:"/php_script/Student/get_students.php?"+params});
+                $("div#studs-table").flexReload();
+            });
+        });
+        
+        $(function(){ 
        $("div#studs-table").flexigrid({ //Таблица студентов
-           url:'/php_script/Student/get_students.php?choosed_direction=true&group=423',
+           url:'/php_script/Student/get_students.php?'+params,
            dataType: 'json',
            colModel : [
                         
                         {display: 'ФИО', name : 'name', width : 150, sortable : true, align: 'left'},
                         {display: 'Группа', name : 'name', width : 150, sortable : true, align: 'left'},
-                        {display: 'Направление', name : 'name', width : 150, sortable : true, align: 'left'}
+                        {display: 'Программа', name : 'name', width : 150, sortable : true, align: 'left'}
                         
            ],
            
            searchitems : [
                         {display: 'ФИО', name : 'name'}
                 ],
-                sortname: "name",
+                sortname: "Familia",
                 sortorder: "asc",
                 usepager: false,
                 title: "Студенты",
