@@ -81,9 +81,11 @@ class Student {
                 $result_choosed_students = mysql_query($t_sql.$sortSql, $fspodb) or die(mysql_error($fspodb));
                 if($result_choosed_student = mysql_fetch_array($result_choosed_students))
                 {
-                    $programm = ($student['programm']==1) ? "Непрерывная" : "Базовая";
+                    $programm = ($student['programm']==0) ? "Непрерывная" : "Базовая";
+                    $fio=$result_choosed_student['Familia']." ".$result_choosed_student['Ima']." ".$result_choosed_student['Otchestvo'];
+                    $link_to_student="<a href=/php_script/Student/get_student.php?id=".$result_choosed_student['Stud_ID'].">$fio</a>";
                     $data['rows'][] = array('id' => $result_choosed_student['Stud_ID'],
-                                        'cell' => array($result_choosed_student['Ima']." ".$result_choosed_student['Familia']." ".$result_choosed_student['Otchestvo'],$result_choosed_student['gruppa'],$programm) );
+                                        'cell' => array($link_to_student,$result_choosed_student['gruppa'],$programm) );
                 }    
             }
             echo json_encode($data);
@@ -93,9 +95,11 @@ class Student {
             $result =  mysql_query($sql.$sortSql,$fspodb) or die(mysql_error());
             while($student = mysql_fetch_array($result))
             {
-                $programm = ($student['programm']==1) ? "Непрерывная" : "Базовая";
+                $programm = ($student['programm']==0) ? "Непрерывная" : "Базовая";
+                $fio=$student['Familia']." ".$student['Ima']." ".$student['Otchestvo'];
+                $link_to_student="<a href=/php_script/Student/get_student.php?id=".$student['Stud_ID'].">$fio</a>";
                 $data['rows'][] = array('id' => $student['Stud_ID'],
-                                        'cell' => array($student['Familia']." ".$student['Ima']." ".$student['Otchestvo'],$student['gruppa'],$programm) );
+                                        'cell' => array($link_to_student,$student['gruppa'],$programm) );
             }
         // Return JSON data
         echo json_encode($data);

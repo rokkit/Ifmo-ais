@@ -52,8 +52,10 @@ require '../../php_script/auth.php';
                         
                         <div class="span6">
                             <div id="fcd-content">
-                                <div class="studs-table" id="studs-table">
-                                    <a href="/php_script/Student/get_student.php?id=1">Student 1231</a>
+                                <div id="studs-container">
+                                    <div class="studs-table" id="studs-table">
+                                        <!--<a href="/php_script/Student/get_student.php?id=1">Student 1231</a>-->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -67,8 +69,8 @@ require '../../php_script/auth.php';
       // pjax
 $.hash = '#!/';
 $.siteurl = '<?php echo $_SERVER['HTTP_HOST']; ?>';
-$.container = '#studs-table';
-      $('#studs-table a').pjax('#studs-table');//аякс запрос студента по ид
+$.container = '#studs-container';
+      $('#studs-table a').pjax('#studs-container');//аякс запрос студента по ид
     })
   </script>
          
@@ -92,8 +94,8 @@ $.container = '#studs-table';
            colModel : [
                         
                         {display: 'ФИО', name : 'name', width : 150, sortable : true, align: 'left'},
-                        {display: 'Группа', name : 'name', width : 150, sortable : true, align: 'left'},
-                        {display: 'Программа', name : 'name', width : 150, sortable : true, align: 'left'}
+                        {display: 'Группа', name : 'group', width : 150, sortable : true, align: 'left'},
+                        {display: 'Программа', name : 'programm', width : 150, sortable : true, align: 'left'}
                         
            ],
            
