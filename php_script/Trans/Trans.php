@@ -21,9 +21,9 @@ class Trans {
     static function getTransfersByIdDirection($direction)//получить переходы согласно выбранному направлению и студенту
     {
         $direction = parseNumSql($direction);
-        $student = parseNumSql($student);
+        if(!$direction) return;
         $sql="SELECT * FROM transfer WHERE id_direction=null OR id_direction=$direction";
-        $result = mysql_query($sql);// получаем переходы
+        $result = mysql_query($sql) or die(mysql_error());// получаем переходы
         $transfers=array();
         while ($row = mysql_fetch_array($result)) 
         {
@@ -31,12 +31,22 @@ class Trans {
         }
         return $transfers;//возвращаем массив переходов
     }
-    static function getStudentChooseByIdStudent($student)
+    static function getStudentChooseByIdStudent($student,$ifmodb)
     {
         $student = parseNumSql($student);
-        $result =  mysql_query("SELECT id_direction, id_cathedra FROM student_choose WHERE id_student=$student");
+        $result =  mysql_query("SELECT id_direction, id_cathedra FROM student_choose WHERE id_student=$student",$ifmodb);
         $choose=array();
-        $choose = mysql_fetch_assoc($result);
+        $choose = mysql_fetch_assoc($result);//выбор студента
+        $result = mysql_query("SELECT name, full_name FROM cathedra WHERE id=".$choose["id_cathedra"],$ifmodb) or die(mysql_error());
+        $result= mysql_fetch_assoc($result);
+        $choose['name_cathedra']=$result['name'];//записываем в выбор название кафедры
+        $choose['full_name_cathedra']=$result['full_name'];//записываем в выбор полное название кафедры
+        
+        $result = mysql_query("SELECT name, description FROM direction WHERE id=".$choose["id_direction"],$ifmodb) or die(mysql_error());
+        $result= mysql_fetch_assoc($result);
+        $choose['name_direction'] = $result['name'];//записываем в выбор название направления
+        $choose['full_name_direction'] = $result['description'];//записываем в выбор полное навзвание напрвления
+        
         return $choose;
     }
     static function getSubjectById($subject,$fspodb)
@@ -51,6 +61,7 @@ class Trans {
         $result = mysql_query("SELECT name FROM discipline WHERE id=$discipline", $ifmodb) or die(mysql_error());
         echo mysql_result($result, 0);
     }
+    
     
 }
 
