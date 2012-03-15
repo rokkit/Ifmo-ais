@@ -34,6 +34,10 @@ class Student {
         return $fspodb;
     }
     
+    public function getFio()
+    {
+        return $this->last_name." ".$this->name." ".$this->second_name;
+    }
     
     static function getStudentById($id_student)
     {

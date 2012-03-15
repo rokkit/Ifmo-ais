@@ -1,6 +1,7 @@
 <?php
-require '../dbconnect.php';
-require '../dbFspoConnect.php';
+//require '../dbconnect.php';
+//require '../dbFspoConnect.php';
+require '../auth.php';
 include '../function.php';
 $page = 1; // The current page
 $sortname = 'name'; // Sort column
@@ -26,6 +27,8 @@ if (isset($_POST['rp'])) {
         $rp = mysql_real_escape_string($_POST['rp']);
 }
 
+$fspodb = connectToFspoDB();
+$ifmodb = connectToIfmoDb(); 
 // Setup sort and search SQL using posted data
 $sortSql = "order by $sortname $sortorder";
 $searchSql = ($qtype != '' && $query != '') ? "where $qtype = '$query'" : '';
@@ -33,7 +36,7 @@ $searchSql = ($qtype != '' && $query != '') ? "where $qtype = '$query'" : '';
 $sql = "select count(*)
 from discipline
 $searchSql";
-$result = mysql_query($sql);
+$result = mysql_query($sql,$ifmodb);
 $row = mysql_fetch_array($result);
 $total = $row[0];
 // Setup paging SQL
@@ -77,10 +80,10 @@ $limitSql";
            $direction =  parseNumSql($_GET['direction']);
            $sql.=" WHERE id_direction=$direction";
        }
-       $trans =  mysql_query($sql,$ifmodb) or die("ERROR 1");
+       $trans =  mysql_query($sql,$ifmodb) or die(mysql_error());
        while($tran =  mysql_fetch_array($trans))
        {
-           $disp_name =  mysql_query("SELECT name,id_direction FROM discipline WHERE id=$tran[1]", $ifmodb) or die("ERROR 2");
+           $disp_name =  mysql_query("SELECT name,id_direction FROM discipline WHERE id=$tran[1]", $ifmodb) or die(mysql_error($ifmodb));
            $subj_name =  mysql_query("SELECT Name FROM predmeti_table WHERE Predmet_ID=$tran[2]", $fspodb) or die(mysql_error($fspodb));
            $dir_id=0;
            $dir_name="Общий";

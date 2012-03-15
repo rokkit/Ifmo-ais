@@ -94,7 +94,7 @@ $.container = '#studs-container';
            colModel : [
                         
                         {display: 'ФИО', name : 'name', width : 150, sortable : true, align: 'left'},
-                        {display: 'Группа', name : 'group', width : 150, sortable : true, align: 'left'},
+                        {display: 'Группа', name : 'group', width : 50, sortable : true, align: 'left'},
                         {display: 'Программа', name : 'programm', width : 150, sortable : true, align: 'left'}
                         
            ],

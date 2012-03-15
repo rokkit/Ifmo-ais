@@ -53,9 +53,9 @@
            dataType: 'json',
            colModel : [
                         
-                        {display: 'ФИО', name : 'name', width : 150, sortable : true, align: 'left'},
+                        {display: 'ФИО', name : 'name', width : 200, sortable : true, align: 'left'},
                         {display: 'Кафедра', name : 'name', width : 150, sortable : true, align: 'left'},
-                        {display: 'Направление', name : 'name', width : 150, sortable : true, align: 'left'},
+                        {display: 'Направление', name : 'name', width : 50, sortable : true, align: 'left'},
                         {display: 'Форма обучения', name : 'name', width : 150, sortable : true, align: 'left'}
                         
            ],
@@ -90,8 +90,9 @@
             var id = $(this).attr('id');
             id = id.substring(id.lastIndexOf('row')+3);
                         $.get("/php_script/Forms/set_inbox.php",{id:id,"confirm":"true"},
-                            function(data)
+                            function()
                             {
+                             $("div#inbox-table").flexReload();   
                             });
   
             });

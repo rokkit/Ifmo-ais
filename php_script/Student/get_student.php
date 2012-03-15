@@ -13,15 +13,16 @@ if (isset($_SERVER['HTTP_X_PJAX']))
       $id =  parseNumSql($_GET['id']);
       $student =  Student::getStudentById($id);//получаем студента со всей инфой
       $choose = Trans::getStudentChooseByIdStudent($student->id,$ifmodb);//получаем его выбранное направление и кафедру
-      $transfers = Trans::getTransfersByIdDirection($choose['id_direction']);//плучаем переход для него для этого направления
-  
+      if($choose) 
+      {
+          $transfers = Trans::getTransfersByIdDirection($choose['id_direction']);//плучаем переход для него для этого направления
+          $disciplines = Trans::getDisciplinesByDirection($choose['id_direction'], $ifmodb);
+      }
 //вывод информации о студенте
       ?>
 <div>
   <div id="stud-info">    
-    Фамилия: <?= $student->last_name ?>
-    Имя: <?= $student->name ?>
-    Отчество: <?= $student->second_name ?>
+    ФИО: <?= $student->getFio() ?>
     Группа: <?= $student->group ?>
     Программа: <?= ($student->programm==0) ? "Непрерывная" : "Базовая" ?>
     Выбранная кафедра: <?= $choose['name_cathedra']." ".$choose['full_name_cathedra'] ?>
@@ -29,7 +30,7 @@ if (isset($_SERVER['HTTP_X_PJAX']))
   </div>
     <?php if($transfers) {?>
     <div id="stud-predmet">
-        <table class="table-bordered">
+        <table class="table table-striped table-bordered">
             <thead>
                 <tr>
                     <th>Предмет СПО</th>
@@ -38,12 +39,12 @@ if (isset($_SERVER['HTTP_X_PJAX']))
             </thead>
             <tbody>
             <?php
-                foreach ($transfers as $transfer) //формируем таблицу соотсвествия предметов и дисциплин
+                foreach ($disciplines as $discipline) //формируем таблицу соотсвествия предметов и дисциплин
                 {
             ?>
-                <tr>
-                    <td><?= Trans::getSubjectById($transfer->subject, $fspodb); ?></td>
-                    <td><?= Trans::getDisciplineById($transfer->discipline, $ifmodb) ?></td>
+                <tr><!--Формируем таблицу дисциплин и соответствующих предметов-->
+                    <td><?= Trans::getSubjectByDiscipline($discipline, $fspodb, $ifmodb) ?></td>
+                    <td><?= Trans::getDisciplineById($discipline, $ifmodb) ?></td>
                 </tr>
             <?php
                 } 

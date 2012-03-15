@@ -103,8 +103,8 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
            dataType: 'json',
            colModel : [
                         
-                        {display: 'Дисциплина СПО', name : 'name', width : 150, sortable : true, align: 'left'},
-                        {display: 'Дисциплина ВПО', name : 'name', width : 150, sortable : true, align: 'left'},
+                        {display: 'Дисциплина СПО', name : 'name', width : 180, sortable : true, align: 'left'},
+                        {display: 'Дисциплина ВПО', name : 'name', width : 180, sortable : true, align: 'left'},
                         {display: 'Направление', name : 'name', width : 150, sortable : true, align: 'left'}
                         
            ],

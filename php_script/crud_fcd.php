@@ -1,4 +1,5 @@
 <?php
+require 'auth.php';
 require 'dbconnect.php';
 
 if(isset($_POST['update-state']))//нажата кнопка отправить на апдейт и факультет
