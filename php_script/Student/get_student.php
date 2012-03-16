@@ -21,13 +21,16 @@ if (isset($_SERVER['HTTP_X_PJAX']))
 //вывод информации о студенте
       ?>
 <div>
-  <div id="stud-info">    
-    ФИО: <?= $student->getFio() ?>
-    Группа: <?= $student->group ?>
-    Программа: <?= ($student->programm==0) ? "Непрерывная" : "Базовая" ?>
-    Выбранная кафедра: <?= $choose['name_cathedra']." ".$choose['full_name_cathedra'] ?>
-    Выбранное направление: <?= $choose['name_direction']." ".$choose['full_name_direction'] ?>
+  <div id="stud-info" style="margin-bottom: 20px; float: left;">    
+    <div>ФИО: <?= $student->getFio() ?></div>
+    <div>Группа: <?= $student->group ?></div>
+    <div>Программа: <?= ($student->programm==1) ? "Непрерывная" : "Базовая" ?></div>
+    <div>Выбранная кафедра: <?= $choose['name_cathedra']." ".$choose['full_name_cathedra'] ?></div>
+    <div>Выбранное направление: <?= $choose['name_direction']." ".$choose['full_name_direction'] ?></div>
   </div>
+    <div>
+        <a class="btn btn-large" id="create-student-form-btn" href="../Forms/Form_docxgen/form_creator.php?id=<?=$student->id?>"><i class="icon-list"></i> Создать</a>
+    </div>
     <?php if($transfers) {?>
     <div id="stud-predmet">
         <table class="table table-striped table-bordered">

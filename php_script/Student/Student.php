@@ -99,7 +99,7 @@ class Student {
             $result =  mysql_query($sql.$sortSql,$fspodb) or die(mysql_error());
             while($student = mysql_fetch_array($result))
             {
-                $programm = ($student['programm']==0) ? "Непрерывная" : "Базовая";
+                $programm = ($student['programm']==1) ? "Непрерывная" : "Базовая";
                 $fio=$student['Familia']." ".$student['Ima']." ".$student['Otchestvo'];
                 $link_to_student="<a href=/php_script/Student/get_student.php?id=".$student['Stud_ID'].">$fio</a>";
                 $data['rows'][] = array('id' => $student['Stud_ID'],
