@@ -33,7 +33,7 @@ if (isset($_SERVER['HTTP_X_PJAX']))
     </div>
     <?php if($transfers) {?>
     <div id="stud-predmet">
-        <table class="table table-striped table-bordered" id="stud-subject-table">
+        <table class="table table-bordered" id="stud-subject-table">
             <thead>
                 <tr>
                     <th>Предмет СПО</th>
@@ -49,7 +49,7 @@ if (isset($_SERVER['HTTP_X_PJAX']))
             ?>
                 <tr>
                     <td><?php $subject=Trans::getSubjectByDiscipline($discipline, $fspodb, $ifmodb);echo $subject['name']; ?></td>
-                    <td><?php  $point=$student->getPoint($fspodb,$subject['id']); echo $point['point']; ?></td>
+                    <td id="point"><?php  $point=$student->getPoint($fspodb,$subject['id']); echo $point['point']; ?></td>
                     <td><?= Trans::getDisciplineById($discipline, $ifmodb) ?></td>
                 </tr>
             <?php
@@ -61,7 +61,12 @@ if (isset($_SERVER['HTTP_X_PJAX']))
         <script>//красим ячейки
             $(function(){
                 $("#stud-subject-body tr").each(function(){
-                    alert($(this).html())
+                    var point=parseInt($(this).children("#point").html());
+                    if(point<3 || isNaN(point))
+                        {
+                            $(this).addClass("badResult")
+                            //$(this).css("background-color", "red")
+                        }
                 });
             });
         </script>
