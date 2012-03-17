@@ -15,7 +15,7 @@ if (isset($_SERVER['HTTP_X_PJAX']))
       $choose = Trans::getStudentChooseByIdStudent($student->id,$ifmodb);//получаем его выбранное направление и кафедру
       if($choose) 
       {
-          $transfers = Trans::getTransfersByIdDirection($choose['id_direction']);//плучаем переход для него для этого направления
+          $transfers = Trans::getTransfersByIdDirection($choose['id_direction']);//получаем переход для него для этого направления
           $disciplines = Trans::getDisciplinesByDirection($choose['id_direction'], $ifmodb);
       }
 //вывод информации о студенте
@@ -33,20 +33,23 @@ if (isset($_SERVER['HTTP_X_PJAX']))
     </div>
     <?php if($transfers) {?>
     <div id="stud-predmet">
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered" id="stud-subject-table">
             <thead>
                 <tr>
                     <th>Предмет СПО</th>
+                    <th>Оценка</th>
                     <th>Предмет ВПО</th>
                 </tr>
             </thead>
-            <tbody>
+            <!--Формируем таблицу дисциплин и соответствующих предметов-->
+            <tbody id="stud-subject-body">
             <?php
                 foreach ($disciplines as $discipline) //формируем таблицу соотсвествия предметов и дисциплин
                 {
             ?>
-                <tr><!--Формируем таблицу дисциплин и соответствующих предметов-->
-                    <td><?= Trans::getSubjectByDiscipline($discipline, $fspodb, $ifmodb) ?></td>
+                <tr>
+                    <td><?php $subject=Trans::getSubjectByDiscipline($discipline, $fspodb, $ifmodb);echo $subject['name']; ?></td>
+                    <td><?php  $point=$student->getPoint($fspodb,$subject['id']); echo $point['point']; ?></td>
                     <td><?= Trans::getDisciplineById($discipline, $ifmodb) ?></td>
                 </tr>
             <?php
@@ -55,6 +58,13 @@ if (isset($_SERVER['HTTP_X_PJAX']))
             </tbody>
         </table>
     </div>
+        <script>//красим ячейки
+            $(function(){
+                $("#stud-subject-body tr").each(function(){
+                    alert($(this).html())
+                });
+            });
+        </script>
     <?php } ?>
 </div>
       <?php

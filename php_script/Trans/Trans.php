@@ -75,11 +75,13 @@ class Trans {
         $result = mysql_query("SELECT id_subject FROM transfer WHERE id_discipline=$discipline",$ifmodb) or die(mysql_error());
             if($subject = @mysql_result($result, 0))
             {
-                //получаем имя предмета и вовзращаем его
+                //получаем имя предмета и возвращаем его
                 $result = mysql_query("SELECT Name FROM predmeti_table WHERE Predmet_ID=$subject",$fspodb)or die(mysql_error());
-                return mysql_result($result, 0);
+                $subj['id']=$subject;
+                $subj['name'] = mysql_result($result, 0);
+                return $subj;
             }
-            else {return "Пусто";}
+            else {return null;}
         }
         
     }

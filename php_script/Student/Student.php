@@ -108,6 +108,25 @@ class Student {
         // Return JSON data
         echo json_encode($data);
     }
+    function getPoint($fspodb,$subject)
+    {
+        $student = parseNumSql($this->id);
+        $sql="SELECT Ocenka,Predmet_ID FROM ocenki_table WHERE Stud_ID=$student";
+        $subject = parseNumSql($subject);
+        if(!empty($subject))//если указан предмет
+        {   
+            //получаем оценки по предметам для студента
+            
+            $sql.=" AND Predmet_ID=$subject";
+        
+        $result = mysql_query($sql, $fspodb) or die(mysql_error());
+        
+        while ($row = mysql_fetch_array($result)) {
+            $points = array('point'=>$row['Ocenka'],'subject'=>$row['Predmet_ID']);
+        }
+        return $points;
+        }
+    }
 }
 
 ?>

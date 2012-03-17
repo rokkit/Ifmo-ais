@@ -3363,3 +3363,6 @@ a.thumbnail:hover {
 .invisible {
   visibility: hidden;
 }
+.badResult {
+    background-color: rgb(248, 219, 219);
+}

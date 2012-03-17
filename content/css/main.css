@@ -110,3 +110,6 @@ root {
 #stud-info {
     margin-bottom: 40px;
 }
+.badResult {
+    background-color: rgb(248, 219, 219);
+}
