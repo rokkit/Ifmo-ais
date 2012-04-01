@@ -1,7 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
-{
+include '../../php_script/auth.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +15,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
-<body> 
+<body>
    <?php require '../header-menu.php'; ?>
     <!-- end header menu -->
     <div class="container">
@@ -39,32 +38,40 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
   <li>
       <a href="" id="delete-trans"><i class="icon-remove"></i>Удалить</a>
   </li>
- 
+
                             </ul>
-                        </div>
-                        <div class="span6" id="fcd-content">
-                            <form id="trans-filter" class="form-inline trans-filter">
+                        <div id="trans-filter-block" class="well">
+                        <h3 class="filter-header">Отображать переходы</h3>
+                            <form id="trans-filter" class="trans-filter">
+                                    <label for="faculty">Факультет</label>
                                     <select id="faculty" class="input-medium" name="faculty">
                 <option disabled>Факультет</option>
                 <?php
                 require '../../php_script/dbconnect.php';
-    
+
                 $facs=mysql_query('SELECT id,name FROM faculty');
                 while($fac = mysql_fetch_assoc($facs))
-                { 
+                {
                     echo '<option value="'.$fac['id'].'">'.$fac['name'].'</option>';
                 }
                 ?>
                                     </select>
+            <label for="cathedra">Кафедра</label>
             <select id="cathedra" class="input-medium" name="cathedra" style="display: none">
               <option disabled value>Кафедра</option>
             </select>
+            <label for="direction">Направление</label>
             <select id="direction" class="input-medium" name="direction" style="display: none">
               <option disabled value>Направление</option>
             </select>
                                 </form>
+                            </div>
+
+
+                        </div>
+                        <div class="span6" id="fcd-content">
                             <div id="trans-table">
-                                
+
                             </div>
                             <div id="ModalDelDisp" class="modal hide">
                                 <div class="modal-header">
@@ -74,8 +81,8 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                                 <h2>Удаление выбранных переходов</h2>
                                 </div>
                             <form id="modal-delete">
-                                <div class="modal-footer">                                
-                                    <input type='submit' id='delete-trans-btn' class='btn btn-danger' value='Удалить'/>
+                                <div class="modal-footer">
+                                <input type='submit' id='delete-trans-btn' class='btn btn-danger' value='Удалить'/>
                                     <a href='#' class='btn' data-dismiss='modal'>Отмена</a>
                                 </div>
                             </form>
@@ -95,20 +102,20 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
         <script type="text/javascript" src="../../content/js/bootstrap-modal.js"></script>
         <!-- js scripts-->
         <script>
-           
+
         $(function(){
-            
+
        $("div#trans-table").flexigrid({
            url:'../../php_script/Trans/get_trans.php?type=all',
            dataType: 'json',
            colModel : [
-                        
+
                         {display: 'Дисциплина СПО', name : 'name', width : 180, sortable : true, align: 'left'},
                         {display: 'Дисциплина ВПО', name : 'name', width : 180, sortable : true, align: 'left'},
                         {display: 'Направление', name : 'name', width : 150, sortable : true, align: 'left'}
-                        
+
            ],
-           
+
            searchitems : [
                         {display: 'Дисциплина СПО', name : 'name'},
                         {display: 'Дисциплина СПО', name : 'name'}
@@ -125,52 +132,52 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                 width: 600,
                 height: 400,
                 singleSelect: false
-       }); 
-    });        
+       });
+    });
         </script>
         <script>
 $(function()
 {
         $('#faculty').chainSelect('#cathedra','../../php_script/data_edit_get.php',
-        { 
+        {
                 before:function (target) //before request hide the target combobox and display the loading message
-                { 
+                {
                         //$("#loading").css("display","block");
                         $(target).css("display","none");
-                        
+
                 },
                 after:function (target) //after request show the target combobox and hide the loading message
-                { 
+                {
                         //$("#loading").css("display","none");
                         $(target).css("display","inline");
-                       
+
                 }
-                
+
         });
         $("#cathedra").click(function(){
             $('#cathedra').chainSelect('#direction','../../php_script/data_edit_get.php',
-        { 
+        {
                 before:function (target) //before request hide the target combobox and display the loading message
-                { 
+                {
                         //$("#loading").css("display","block");
                         $(target).css("display","none");
                 },
                 after:function (target) //after request show the target combobox and hide the loading message
-                { 
+                {
                         //$("#loading").css("display","none");
                         $(target).css("display","inline");
                 }
         });
         });
-        
-});        
+
+});
         $(function(){
     $("#trans-filter select").change(function(){
         var form=$("form#trans-filter").serialize();
-          $("div#trans-table").flexOptions({url:'../../php_script/Trans/get_trans.php?type=all&'+form}).flexReload();  
+          $("div#trans-table").flexOptions({url:'../../php_script/Trans/get_trans.php?type=all&'+form}).flexReload();
         });
     });
-    
+
 
         </script>
         <script>
@@ -192,12 +199,4 @@ $(function(){//on modal click do delete trans
         </script>
 </body>
 </html>
-        
-<?php
-}
-else 
-{
-header("Location: http://".$_SERVER['HTTP_HOST']."/");
-}
-exit;
-?>
+

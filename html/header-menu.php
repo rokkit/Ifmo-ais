@@ -1,4 +1,4 @@
-<?php ?>        
+<?php ?>
 <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
@@ -10,7 +10,7 @@
                         <a href="/main.php"><i class="icon-home icon-white"></i>Домой</a>
                     </li>
                     <li>
-                        <a href="/html/Forms/form_maker.php">Формирование выписок</a>
+                        <a href="/html/Forms/form_maker.php">Формирование документов</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -22,9 +22,9 @@
                             <li><a id="data_edit_link" href="/html/data_editor.php">Изменение данных</a></li>
                             <li><a href="#">Статистика</a></li>
                         </ul>
-                    </li>    
+                    </li>
                 </ul>
                 </div>
             </div>
         </div>
-<?php ?> 
+<?php ?>

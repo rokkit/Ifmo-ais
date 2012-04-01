@@ -21,16 +21,27 @@ if (isset($_SERVER['HTTP_X_PJAX']))
 //вывод информации о студенте
       ?>
 <div>
-  <div id="stud-info" style="margin-bottom: 20px; float: left;">    
+    <div class="row-fluid">
+  <div id="stud-info" class="span9" style="margin-bottom: 20px;">    
     <div>ФИО: <?= $student->getFio() ?></div>
     <div>Группа: <?= $student->group ?></div>
     <div>Программа: <?= ($student->programm==1) ? "Непрерывная" : "Базовая" ?></div>
     <div>Выбранная кафедра: <?= $choose['name_cathedra']." ".$choose['full_name_cathedra'] ?></div>
     <div>Выбранное направление: <?= $choose['name_direction']." ".$choose['full_name_direction'] ?></div>
   </div>
-    <div>
-        <a class="btn btn-large" id="create-student-form-btn" href="../Forms/Form_docxgen/form_creator.php?id=<?=$student->id?>"><i class="icon-list"></i> Создать</a>
+    <?php if(!empty($choose['name_cathedra'])) { ?>
+    <div class="btn-group span3">
+        <a class="btn btn-large dropdown-toggle" data-toggle="dropdown" id="create-student-form-btn" href="#">
+            <i class="icon-list"></i> Документы
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="../Forms/Form_docxgen/form_creator.php?type=form&id=<?=$student->id?>">Выписка</a></li>
+            <li><a>Согласование</a></li>
+        </ul>
     </div>
+    <?php } ?>
+     </div>
     <?php if($transfers) {?>
     <div id="stud-predmet">
         <table class="table table-bordered" id="stud-subject-table">

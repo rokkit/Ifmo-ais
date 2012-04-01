@@ -38,18 +38,21 @@ require '../../php_script/auth.php';
                                 <form>
                                     <label for="year-sel">Год</label>
                                     <select id="year-sel" name="year-sel" class="span2">
-                                        
+
                                     </select>
                                     <label for="group-sel">Группа</label>
                                     <select id="group-sel" name="group-sel" class="span2">
-                                        
+
                                     </select>
-                                     <label for="only-choosed">С указанным направлением</label>
-                                     <input type="checkbox" id="only-choosed" name="only-choosed"/>
+                                    <div id="only-choosed-lbl">
+                                     С учётом направления
+<input type="checkbox" id="only-choosed" name="only-choosed"/>
+                                    </div>
+
                                 </form>
                             </div>
                         </div>
-                        
+
                         <div class="span6">
                             <div id="fcd-content">
                                 <div id="studs-container">
@@ -73,11 +76,11 @@ $.container = '#studs-container';
       $('#studs-table a').pjax('#studs-container');//аякс запрос студента по ид
     })
   </script>
-         
+
         <script>
         var params="params=all";//параметр запроса студентов в таблице
         //по изменению значения в фильтре изменяется параметр запроса
-        
+
         $(function(){
             $("#filter-studs-table #only-choosed").change(function(){
                 if($("#filter-studs-table #only-choosed").is(':checked')) params="params=choosed_direction";
@@ -86,19 +89,19 @@ $.container = '#studs-container';
                 $("div#studs-table").flexReload();
             });
         });
-        
-        $(function(){ 
+
+        $(function(){
        $("div#studs-table").flexigrid({ //Таблица студентов
            url:'/php_script/Student/get_students.php?'+params,
            dataType: 'json',
            colModel : [
-                        
+
                         {display: 'ФИО', name : 'name', width : 150, sortable : true, align: 'left'},
                         {display: 'Группа', name : 'group', width : 50, sortable : true, align: 'left'},
                         {display: 'Программа', name : 'programm', width : 150, sortable : true, align: 'left'}
-                        
+
            ],
-           
+
            searchitems : [
                         {display: 'ФИО', name : 'name'}
                 ],
@@ -115,8 +118,8 @@ $.container = '#studs-container';
                 height: 400,
                 singleSelect: false,
                 minwidth:200
-       }); 
-    });           
+       });
+    });
 
 //Кнопки таблицы
     function doCommand(com, grid) {
@@ -128,24 +131,24 @@ $.container = '#studs-container';
                             function(data)
                             {
                             });
-  
+
             });
             } else if (com == 'Удалить') {
                     $('.trSelected', grid).each(function() {
                     var id = $(this).attr('id');
                     id = id.substring(id.lastIndexOf('row')+3);
-                    
+
                     $.get("../php_script/set_disps.php", {id:id,get_delete:"true"}, function(data){
                         $("form#modal-delete").html(data);
                     });
                     $("#ModalDelDisp").modal('show');
                     });
                     }
-                     else if (com == 'Добавить') 
+                     else if (com == 'Добавить')
                     {
                     $("#ModalAddDisp").modal();
                     }
-                    
+
             }
         </script>
 
