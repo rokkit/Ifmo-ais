@@ -1,2 +1,4 @@
 /App_Data/
 /nbproject/
+*.swp
+*.swo
