@@ -8,7 +8,9 @@
 
 root {
     display: block;
+    
 }
+
 .main-container {
     width: 150px;
     margin: 80px 100px;

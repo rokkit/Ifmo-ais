@@ -1,0 +1,66 @@
+/* 
+    Document   : student-main
+    Created on : 09.04.2012, 12:40:47
+    Author     : rokkitlanchaz
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#content-nav ul {
+    list-style-position: inside;
+}
+#content-nav li {
+    height: 71px;
+    width: 182px;
+    list-style: none;
+    float:left;
+    background-color: #EBEBEB;
+    background-image: url(/content/images/Student/navBtn.gif);
+    background-repeat: no-repeat;
+    background-position: right top;
+    cursor:pointer;
+}
+
+#content-nav li:hover {
+    background-color: #aaa;
+    color: whitesmoke;
+}
+
+#content-nav li a {
+    height: 71px;
+    display: block;
+}
+#content-nav li a:hover {
+    color:whitesmoke;
+}
+
+#content-nav li a em {
+    width: 150px;
+    display: block;
+    margin: 6px 0 0 10px;
+    font-style: normal;
+    font-weight: bold;
+}
+#content-nav li a span {
+    width: 150px;
+    display: block;
+    margin-left: 10px;
+    font-weight: normal;
+}
+#content-nav .current-nav {
+    background-color: #05C;
+}
+#content-nav .complete-nav {
+    background-color: lightgreen;
+}
+#content-nav .last-nav {
+    background-image: none;
+}
+.clearboth {
+    clear:both;
+    display: block;
+}
+
+.step-nav-row {
+    margin:50px 0 20px 0;
+}

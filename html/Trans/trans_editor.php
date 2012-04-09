@@ -20,15 +20,13 @@ include '../../php_script/auth.php';
     <!-- end header menu -->
     <div class="container">
         <div class="span12" id="content">
+            <h1>Переходы</h1>
             <div class="row row-content">
                 <div class="container-fluid">
                     <div class="row-fluid">
                         <div class="span3">
-                            <h1>Переходы</h1>
+                            
                             <ul class="nav nav-list">
-  <li class="nav-header">
-    List header
-  </li>
   <li class="active">
       <a href="trans_editor.php">Показать все</a>
   </li>

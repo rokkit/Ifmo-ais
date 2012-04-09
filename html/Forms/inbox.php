@@ -22,10 +22,11 @@
                 <h1>Формирование выписок</h1>
                 <div class="row row-content">
                     <div class="container-fluid">
-                        <div class="span3">
+                        <div class="row-fluid">                        
+                            <div class="span3">
                             <ul class="nav nav-list">
                                 <li>
-                                    <a href="form_maker.php"><i class="icon-file"></i>Выписки</a>
+                                    <a href="form_maker.php"><i class="icon-file"></i>Студенты</a>
                                 </li>
                                 <li class="active">
                                     <a href=""><i class="icon-inbox icon-white"></i>Заявки <?php include 'get_inbox_choose.php'; ?></a>
@@ -38,6 +39,7 @@
                                     
                                 </div>
                             </div>
+                        </div>                   
                         </div>
                     </div>
                 </div>

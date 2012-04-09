@@ -19,10 +19,11 @@
                         </a>
                         <ul class="dropdown-menu" id="action-drop">
                             <li><a id="trans_edit_link" href="/html/Trans/trans_editor.php">Изменение переходов</a></li>
-                            <li><a id="data_edit_link" href="/html/data_editor.php">Изменение данных</a></li>
+                            <li><a id="data_edit_link" href="/html/data_editor.php">Структура бакалавриата</a></li>
                             <li><a href="#">Статистика</a></li>
                         </ul>
                     </li>
+                    <li class="divider-vertical pull-right"></li>
                 </ul>
                 </div>
             </div>

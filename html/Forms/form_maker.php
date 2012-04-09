@@ -25,17 +25,18 @@ require '../../php_script/auth.php';
                 <h1>Формирование выписок</h1>
                 <div class="row row-content">
                     <div class="container-fluid">
-                        <div class="span3">
+                        <div class="row-fluid">                        
+                            <div class="span3">
                             <ul class="nav nav-list">
                                 <li class="active">
-                                    <a href=""><i class="icon-file icon-white"></i>Выписки</a>
+                                    <a href=""><i class="icon-file icon-white"></i>Студенты</a>
                                 </li>
                                 <li>
                                     <a href="/html/Forms/inbox.php"><i class="icon-inbox"></i>Заявки <?php include 'get_inbox_choose.php'; ?></a>
                                 </li>
                             </ul>
-                            <div class="span3 well" id="filter-studs-table" style="width: 200px;">
-                                <form>
+                                <div class="span3 well" id="filter-studs-table" style="width: 200px;">
+                                    <form>
                                     <label for="year-sel">Год</label>
                                     <select id="year-sel" name="year-sel" class="span2">
 
@@ -50,16 +51,17 @@ require '../../php_script/auth.php';
                                     </div>
 
                                 </form>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="span6">
-                            <div id="fcd-content">
+                            <div class="span6">
+                                <div id="fcd-content">
                                 <div id="studs-container">
                                     <div class="studs-table" id="studs-table">
                                         <!--<a href="/php_script/Student/get_student.php?id=1">Student 1231</a>-->
                                     </div>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
