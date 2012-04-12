@@ -1,4 +1,4 @@
-<?php include '../../php_script/StudentService/studentService.php'; ?>
+<?php include '../../php_script/StudentService/studentService.php'; setcookie("idst",1); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,8 +11,7 @@
         <script>
 $(function(){
     $("ul#content-nav li").click(function(){
-        $(this).removeClass("current-nav").next().addClass("current-nav");
-        
+        $(this).addClass("current-nav").prev().removeClass("current-nav");       
     });
 });        
         </script>
@@ -22,9 +21,11 @@ $(function(){
 $.hash = '#!/';
 $.siteurl = '<?php echo $_SERVER['HTTP_HOST']; ?>';
 $.container = '#st-content';
-      $('div.fc-block').pjax({
-          url:'cservice.php?faculty='+$("div.fc-block").attr("id"),
-          container:'#st-content'});//аякс запрос кафедр
+            $('.fc-block').click(function(){       
+                $('div.fc-block').pjax({
+                url:'cservice.php?faculty='+$(this).attr("id"),
+                container:'#st-content'});//аякс запрос кафедр
+            })
     })
   </script>
     </head>
@@ -33,31 +34,31 @@ $.container = '#st-content';
         <div class="container">
          <div class="row step-nav-row">
             <ul id="content-nav">
-                <li class="current-nav">
+                <li class="current-nav" id="step1">
                     <a title>
                         <em>Шаг 1</em>
                         <span>Выбор факультета</span>
                     </a>
                 </li>
-                <li>
+                <li id="step2">
                     <a>
                         <em>Шаг 2</em>
                         <span>Выбор кафедры</span>
                     </a>
                 </li>
-                <li>
+                <li id="step3">
                     <a>
                         <em>Шаг 3</em>
                         <span>Выбор направления</span>
                     </a>
                 </li>
-                <li>
+                <li id="step4">
                     <a>
                         <em>Шаг 4</em>
                         <span>Планируемая успеваемость</span>
                     </a>
                 </li>
-                <li class="last-nav">
+                <li class="last-nav" id="step5">
                     <a>
                         <em>Шаг 5</em>
                         <span>Подача заявки</span>
@@ -80,7 +81,8 @@ $.container = '#st-content';
                                Image 
                             </div>
                             <div class="span4">
-                                <?= $f->description; ?>
+                                <?= $f->name ?>
+                                <?= $f->description ?>
                             </div>
                         </div>
                         <?php } ?>

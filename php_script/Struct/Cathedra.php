@@ -10,7 +10,7 @@ include_once '../../php_script/function.php';
  *
  * @author rokkitlanchaz
  */
-class Faculty {
+class Cathedra {
     public $id;
     public $name;
     public $full_name;
@@ -25,30 +25,28 @@ class Faculty {
         $this->dekan=$dekan;
         $this->description=$description;
     }
-    
-    static function getFaculty($id=null)
+    static function getCathedra($faculty=null)
     {
-        $query="SELECT * FROM FACULTY";
-        $id=  parseNumSql($id);
+        $query="SELECT * FROM cathedra";
+        $id =  parseNumSql($faculty);
         if(!empty($id))
         {
             
-            $query.=" WHERE id=$id";
+            $query.=" WHERE id_faculty=$id";
         }
         $data=array();
         $results =  mysql_query($query,  connectToIfmoDb()) or die(mysql_error());
         while($result =  mysql_fetch_array($results))
         {
-            $data[]=new Faculty($result['id'], $result['name'], $result['full_name'], $result['dekan'], $result['description']);
+            $data[]=new Cathedra($result['id'], $result['name'], $result['full_name'], $result['dekan'], $result['description']);
         }
         return json_encode($data);
     }
-    static function getName($faculty){
-        $id =  parseNumSql($faculty);
-        $name=mysql_query("SELECT name FROM faculty WHERE id=$id",connectToIfmoDb()) or die(mysql_error());
+    static function getName($cathedra)
+    {
+        $id =  parseNumSql($cathedra);
+        $name=mysql_query("SELECT name FROM cathedra WHERE id=$id",connectToIfmoDb()) or die(mysql_error());
         return $name = mysql_result($name, 0);
     }
-    
 }
-
 ?>
