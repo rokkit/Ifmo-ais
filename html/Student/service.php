@@ -8,6 +8,9 @@
         <link type="text/css" rel="stylesheet" href="/content/css/student-main.css">
         <script type="text/javascript" src="/content/js/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="/content/js/jquery.pjax.js"></script>
+        <script type="text/javascript" src="/content/js/bootstrap-tooltip.js"></script>
+        <script type="text/javascript" src="/content/js/bootstrap-popover.js"></script>
+        <script type="text/javascript" src="/content/js/student-function.js"></script>
         <script>
 $(function(){
     $("ul#content-nav li").click(function(){
@@ -35,7 +38,7 @@ $.container = '#st-content';
          <div class="row step-nav-row">
             <ul id="content-nav">
                 <li class="current-nav" id="step1">
-                    <a title>
+                    <a href="/html/Student/service.php">
                         <em>Шаг 1</em>
                         <span>Выбор факультета</span>
                     </a>
@@ -77,16 +80,28 @@ $.container = '#st-content';
                         <?php $facultys = getBlockFaculty(); ?>
                         <?php foreach($facultys as $f) {?>
                         <div class="fc-block well" id="<?= $f->id ?>">
-                            <div class="span2 img">
+                            <div class="span1 img">
                                Image 
                             </div>
                             <div class="span4">
                                 <?= $f->name ?>
                                 <?= $f->description ?>
                             </div>
+                            <div class="favourite span1">
+                                <a class="add" title="Добавить в избранное" href="#"></a>
+                            </div>
                         </div>
+
                         <?php } ?>
-                    </div>                   
+                    </div>
+                    <script>                        
+                        $(function() {
+                            $("#content-nav").children("li").each(function(){
+                               $(this).removeClass("current-nav"); 
+                            });                            
+                            $("#content-nav #step1").addClass("current-nav");
+                        });
+                    </script>
                 </div>
             </div>
             

@@ -22,6 +22,14 @@ $.container = '#st-content';
             })
     })
 </script>
+                    <script>                        
+                        $(function() {
+                            $("#content-nav").children("li").each(function(){
+                               $(this).removeClass("current-nav"); 
+                            });
+                            $("#content-nav #step2").addClass("current-nav");
+                        });
+                    </script>
                         <?php
                         }
                         else if($_REQUEST['cathedra']) {
@@ -43,17 +51,28 @@ $.container = '#st-content';
             })
     })
   </script>
+                    <script>                        
+                        $(function() {
+                            $("#content-nav").children("li").each(function(){
+                               $(this).removeClass("current-nav"); 
+                            });
+                            $("#content-nav #step3").addClass("current-nav");
+                        });
+                    </script>
                         <?php
                         }
                         ?>
                         <?php foreach($data as $f) {?>
                         <div class="cf-block well" id="<?= $f->id ?>">
-                            <div class="span2 img">
+                            <div class="span1 img">
                                Image 
                             </div>
                             <div class="span4">
                                 <?= $f->name ?>
                                 <?= $f->description ?>
+                            </div>
+                            <div class="favourite span1">
+                                <a class="add" title="Добавить в избранное" onclick="add_to_favourite(this,<?= $f->id ?>)" href="#"></a>
                             </div>
                         </div>
                         <?php } ?>

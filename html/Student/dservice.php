@@ -5,8 +5,8 @@
 ?>
 <title>Результаты</title>
 
-<div class="row span9">
-    <div id="choose-info" class="span4">
+<div class="row span10">
+    <div id="choose-info" class="span4 well">
     <h2>Вы выбрали:</h2>
     <ul class="">
         <?php $direction=getFullInfoDirection($_REQUEST['direction']); ?>
@@ -17,12 +17,24 @@
         <li>Примерная стоимость:</li>
     </ul>
     </div>
-<div class="span8">
+<div class="span3 well" id="counter">
+    <h2>Это направление уже было выбрано</h2>
+    <?= getCountStudentByIdDirection($direction->id) ?>
+    <h2>раз</h2>
+</div>
+
+    <div id="do-choose-btn" class="span1">
+        <a id="do-choose" class="btn btn-primary btn-large" rel="popover" data-content="Нажав кнопку, вы подадите заявление, которое будет рассмотрено в течении нескольких дней" data-original-title="Внимание">Выбрать</a>
+    </div>
+    <script>
+    $(function(){
+        $("#do-choose").popover();
+    })
+    </script>
     
 </div>
-    
-</div>
-<div class="row span9">
+<div class="row points-row">
+    <div class="span7">
 <h2>Оценки, на первом курсе</h2>
 <div class="points">
     <?php
@@ -66,7 +78,7 @@
         </script>
         <script>//красим ячейки
             $(function(){
-                $("#stud-subject-body tr").each(function(){
+                $("#stud-subject-body tr").each(function() {
                     var point=parseInt($(this).children("#point").html());
                     if(point<3 || isNaN(point))
                         {
@@ -78,3 +90,16 @@
         </script>    
 </div>
 </div>
+<div class="span2">
+d
+</div>
+</div>
+                    <script>                        
+                        $(function() {
+                            $("#content-nav").children("li").each(function(){
+                               $(this).removeClass("current-nav"); 
+                            });
+                           
+                            $("#content-nav #step4").addClass("current-nav");
+                        });
+                    </script>
