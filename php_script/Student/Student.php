@@ -4,6 +4,7 @@
  *
  * @author rokkitlanchaz
  */
+include_once '../../php_script/function.php';
 class Student {
     
     public $id;//Ид
@@ -38,7 +39,18 @@ class Student {
     {
         return $this->last_name." ".$this->name." ".$this->second_name;
     }
-    
+    static function getFioQuery($id)
+    {
+        $id = parseNumSql($id);
+        $result = mysql_query("SELECT Ima,Familia,Otchestvo FROM stud_table WHERE Stud_ID=$id",  connectToFspoDB());
+        if($fio=mysql_fetch_assoc($result))
+        {
+            $name=$fio['Familia']." ".$fio['Ima']." ".$fio['Otchestvo'];
+        }
+        echo $name;
+    }
+
+
     static function getStudentById($id_student)
     {
         $sql="SELECT Ima, Familia, Otchestvo, gruppa, programm FROM stud_table WHERE Stud_ID=$id_student";

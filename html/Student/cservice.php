@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <title>НИУ ИТМО | Кафедра</title>
 <?php include '../../php_script/StudentService/studentService.php'; ?>
 
@@ -15,7 +16,7 @@
 $.hash = '#!/';
 $.siteurl = '<?php echo $_SERVER['HTTP_HOST']; ?>';
 $.container = '#st-content';
-           $('.cf-block').click(function(){     
+$('.cf-block').click(function(){  
            $('.cf-block').pjax({
                 url:'cservice.php?cathedra='+$(this).attr("id"),
                 container:'#st-content'});//аякс запрос направлений            
@@ -44,7 +45,7 @@ $.container = '#st-content';
 $.hash = '#!/';
 $.siteurl = '<?php echo $_SERVER['HTTP_HOST']; ?>';
 $.container = '#st-content';
-           $('.cf-block').click(function(){     
+$('.cf-block').click(function(){   
            $('.cf-block').pjax({
                 url:'dservice.php?direction='+$(this).attr("id"),
                 container:'#st-content'});//аякс запрос направлений            
@@ -71,9 +72,10 @@ $.container = '#st-content';
                                 <?= $f->name ?>
                                 <?= $f->description ?>
                             </div>
-                            <div class="favourite span1">
-                                <a class="add" title="Добавить в избранное" onclick="add_to_favourite(this,<?= $f->id ?>)" href="#"></a>
-                            </div>
+                            
+                        </div>
+                        <div class="favourite span1">
+                                <a class="star <?=checkFavourite($f->id)?>" title="Добавить в избранное" onclick="add_to_favourite(this,<?= $f->id ?>)" href="#"></a>
                         </div>
                         <?php } ?>
 

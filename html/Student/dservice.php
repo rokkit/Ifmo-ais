@@ -13,7 +13,12 @@
         <li>Факультет:<?= Faculty::getName($direction->faculty) ?></li>
         <li>Кафедра:<?= Cathedra::getName($direction->cathedra) ?></li>
         <li>Направление:<?= $direction->name." ".$direction->description ?></li>
-        <li>Форма обучения:</li>
+        <li>Форма обучения:
+            <select id="education-form">
+                <option>Дневная</option>
+                <option>Вечерняя</option>
+            </select>
+        </li>
         <li>Примерная стоимость:</li>
     </ul>
     </div>
@@ -94,6 +99,28 @@
 d
 </div>
 </div>
+                    <div id="check-dlg" class="modal hide in">
+                        <div class="modal-header">
+                            <h2>Отправка заявки</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="">
+                                <ul>
+                                    <li>
+                                        ФИО:<p id="fio"></p>
+                                    </li>
+                                    <li>Факультет:<p id="faculty-choose"></p></li>
+                                    <li>Кафедра:<p id="cathedra-choose"></p></li>
+                                    <li>Направление:<p id="direction-choose"></p></li>
+                                    <li>Форма обучения<p id="education-form-choose"></p></li>
+                                </ul>
+                            </div>   
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn btn-primary">Отправить</a>
+                            <a href="#" class="btn" data-dismiss="modal">Отмена</a>
+                        </div>
+                    </div>
                     <script>                        
                         $(function() {
                             $("#content-nav").children("li").each(function(){
@@ -103,3 +130,18 @@ d
                             $("#content-nav #step4").addClass("current-nav");
                         });
                     </script>
+                    <script>
+                    //диалог отправки заявки
+                    $(function(){
+                        $("#do-choose").click(function(){
+                            //грузим данные в диалог                            
+                            $.get("/php_script/StudentService/getFio.php", {id:<?= $_SESSION['user_id'] ?>}, 
+                            function(data){
+                                $("#check-dlg #fio").text(data);
+                            });
+ 
+                            $("#check-dlg").modal();
+                        });                        
+                    });
+                    </script>
+                      

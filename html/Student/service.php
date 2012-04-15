@@ -10,6 +10,7 @@
         <script type="text/javascript" src="/content/js/jquery.pjax.js"></script>
         <script type="text/javascript" src="/content/js/bootstrap-tooltip.js"></script>
         <script type="text/javascript" src="/content/js/bootstrap-popover.js"></script>
+        <script type="text/javascript" src="/content/js/bootstrap-modal.js"></script>
         <script type="text/javascript" src="/content/js/student-function.js"></script>
         <script>
 $(function(){
@@ -86,9 +87,6 @@ $.container = '#st-content';
                             <div class="span4">
                                 <?= $f->name ?>
                                 <?= $f->description ?>
-                            </div>
-                            <div class="favourite span1">
-                                <a class="add" title="Добавить в избранное" href="#"></a>
                             </div>
                         </div>
 

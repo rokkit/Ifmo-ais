@@ -11,9 +11,10 @@ function add_to_favourite(link, id) {//тип:добавить/удалить, i
            $(link).removeClass("remove").addClass("add");
            var action="remove";
         }
-        $.post("/php_script/StudentService/studentService.php", 
+        $.post("/php_script/StudentService/add_to_favourites.php", 
                {id:id,action:action},
                function(data){
-                   alert(data);
-               }, 'json')
+                   
+               }, 'json');
+               return false;
 }

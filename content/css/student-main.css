@@ -131,3 +131,8 @@ body {
     display: block;
     margin-top: 1px;
 }
+.favourite {
+    position: relative;
+    top:-52px;
+    right: -680px;
+}

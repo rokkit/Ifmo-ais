@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../../php_script/Struct/Faculty.php';
 include '../../php_script/Struct/Cathedra.php';
 include '../../php_script/Struct/Direction.php';
@@ -32,11 +33,15 @@ function getCountStudentByIdDirection($direction)
     $result=  mysql_query("SELECT COUNT(*) FROM student_choose WHERE id_direction=$id", connectToIfmoDb()) or die(mysql_error()); 
     
     echo mysql_result($result, 0);
-    
-       
-        
-    
-        
-    
+   
 }
+function checkFavourite($id) {
+    $cookie_name='favourites'.$_SESSION['user_id'].$id;//название+айди студента+айди направления
+    if(isset($_COOKIE[$cookie_name])) {//если уже добавлено в избранное то выводим класс удалить и наоборот
+        echo "remove";
+    }
+    else echo "add";
+}
+
+
 ?>
