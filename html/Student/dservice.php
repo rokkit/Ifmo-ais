@@ -8,19 +8,20 @@
 <div class="row span10">
     <div id="choose-info" class="span4 well">
     <h2>Вы выбрали:</h2>
-    <ul class="">
+    <dl>
         <?php $direction=getFullInfoDirection($_REQUEST['direction']); ?>
-        <li>Факультет:<?= Faculty::getName($direction->faculty) ?></li>
-        <li>Кафедра:<?= Cathedra::getName($direction->cathedra) ?></li>
-        <li>Направление:<?= $direction->name." ".$direction->description ?></li>
-        <li>Форма обучения:
+        <input type="hidden" id="direction-temp" value="<?= $_REQUEST['direction'] ?>"/>
+        <dt>Факультет:</dt><dd id="faculty-temp-choose"><?= Faculty::getName($direction->faculty) ?></dd>
+        <dt>Кафедра:</dt><dd id="cathedra-temp-choose"><?= Cathedra::getName($direction->cathedra) ?></dd>
+        <dt>Направление:</dt><dd id="direction-temp-choose"><?= $direction->name." ".$direction->description ?></dd>
+        <dt>Форма обучения:</dt><dd id="edu-temp-choose">
             <select id="education-form">
-                <option>Дневная</option>
-                <option>Вечерняя</option>
+                <option value="1">Дневная</option>
+                <option value="0">Вечерняя</option>
             </select>
-        </li>
-        <li>Примерная стоимость:</li>
-    </ul>
+        </dd>
+        <dt>Примерная стоимость:</dt><dd id="cost"></dd>
+    </dl>
     </div>
 <div class="span3 well" id="counter">
     <h2>Это направление уже было выбрано</h2>
@@ -96,11 +97,13 @@
 </div>
 </div>
 <div class="span2">
-d
+
 </div>
 </div>
-                    <div id="check-dlg" class="modal hide in">
+
+                    <div id="check-dlg" class="modal fade">
                         <div class="modal-header">
+                            <a class="close" data-dismiss="modal">×</a>
                             <h2>Отправка заявки</h2>
                         </div>
                         <div class="modal-body">
@@ -117,7 +120,7 @@ d
                             </div>   
                         </div>
                         <div class="modal-footer">
-                            <a href="#" class="btn btn-primary">Отправить</a>
+                            <a href="#" id="send-choose" class="btn btn-primary">Отправить</a>
                             <a href="#" class="btn" data-dismiss="modal">Отмена</a>
                         </div>
                     </div>
@@ -139,9 +142,26 @@ d
                             function(data){
                                 $("#check-dlg #fio").text(data);
                             });
- 
+                            $("#faculty-choose").text($("#faculty-temp-choose").text());
+                            $("#cathedra-choose").text($("#cathedra-temp-choose").text());
+                            $("#direction-choose").text($("#direction-temp-choose").text());
                             $("#check-dlg").modal();
-                        });                        
+                        });
+                        //отправка заявки
+                        $("#send-choose").click(function(){
+                            var direction=$("#direction-temp").val();
+                            var edu_form=$("#education-form").val();
+                            $.post("/php_script/StudentService/doChoose.php", 
+                                {
+                                    id_student:<?= $_SESSION['user_id'] ?>,
+                                    id_direction:direction,
+                                    edu_form:edu_form
+                                }
+                            , function(){
+                                $("#check-dlg").modal('hide');
+                            })
+                        })
+                        return false;
                     });
                     </script>
                       
