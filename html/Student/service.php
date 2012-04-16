@@ -12,6 +12,7 @@
         <script type="text/javascript" src="/content/js/bootstrap-tooltip.js"></script>
         <script type="text/javascript" src="/content/js/bootstrap-popover.js"></script>
         <script type="text/javascript" src="/content/js/bootstrap-modal.js"></script>
+        <script type="text/javascript" src="/content/js/bootstrap-tab.js"></script>
         <script type="text/javascript" src="/content/js/student-function.js"></script>
         <script>
 $(function(){

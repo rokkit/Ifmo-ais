@@ -33,12 +33,14 @@ class Trans {
     static function getStudentChooseByIdStudent($student,$ifmodb)
     {
         $student = parseNumSql($student);
-        $result =  mysql_query("SELECT id_direction, id_cathedra FROM student_choose WHERE id_student=$student",$ifmodb);
+        $result =  mysql_query("SELECT id_direction  FROM student_choose WHERE id_student=$student",$ifmodb);
         $choose=array();
         if($choose = mysql_fetch_assoc($result))
         {
           ////выбор студента
-        $result = mysql_query("SELECT name, full_name FROM cathedra WHERE id=".$choose["id_cathedra"],$ifmodb) or die(mysql_error());
+            $cathedra=  mysql_query("SELECT id_cathedra FROM direction WHERE id=".$choose['id_direction'],$ifmodb);
+            $cathedra=  mysql_result($cathedra, 0);
+        $result = mysql_query("SELECT name, full_name FROM cathedra WHERE id=$cathedra",$ifmodb) or die(mysql_error());
         $result= mysql_fetch_assoc($result);
         $choose['name_cathedra']=$result['name'];//записываем в выбор название кафедры
         $choose['full_name_cathedra']=$result['full_name'];//записываем в выбор полное название кафедры

@@ -1,8 +1,8 @@
 <?php
 if (isset($_SERVER['HTTP_X_PJAX']))
 {   
-    //require '../dbFspoConnect.php';
-    include '../function.php';
+    
+    include_once '../function.php';
     include 'Student.php';
     include '../Trans/Trans.php';
     

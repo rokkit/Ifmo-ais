@@ -43,16 +43,22 @@ $data = array();
 
 $data['total'] = $total;
 $data['rows'] = array();
-$result=mysql_query("SELECT * FROM student_choose WHERE confirm=0 
+$result=@mysql_query("SELECT * FROM student_choose WHERE confirm=0 
     $searchSql ",$ifmodb);
-    while($row = mysql_fetch_array($result))
+    while($row = @mysql_fetch_array($result))
     {
-        $cathedra=$row['id_cathedra'];
-        $cath=mysql_query("SELECT name FROM cathedra WHERE id=$cathedra",$ifmodb);
-        if($cath = mysql_fetch_array($cath)) $name_cathedra=$cath[0];
+        
+        
         $direction=$row['id_direction'];
-        $dir=mysql_query("SELECT name FROM direction WHERE id=$direction",$ifmodb);
-        if($dir) $name_direction=  mysql_result ($dir, 0); 
+        $dir=mysql_query("SELECT name,id_cathedra FROM direction WHERE id=$direction",$ifmodb);
+        if($dir =  mysql_fetch_assoc($dir)) 
+        {
+            $name_direction= $dir['name'];
+        
+            $cathedra =  $dir["id_cathedra"];
+        }
+        $cath=@mysql_query("SELECT name FROM cathedra WHERE id=$cathedra",$ifmodb);
+        if($cath = @mysql_fetch_array($cath)) $name_cathedra=$cath[0];
         //получаем фио студента сделавшего заявку
         $student = Student::getStudentById($row['id_student']);
         

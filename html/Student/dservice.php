@@ -5,6 +5,18 @@
 ?>
 <title>Результаты</title>
 
+<div id="favourite-nav" class="span1">
+<div class="tabbable tabs-left">
+    <ul class="nav nav-tabs" id="nav-tabs" onload="load_favourites(<?= $_SESSION['user_id'] ?>)">
+    <li class="active"><a href="#1" data-toggle="tab">Section 1</a></li>
+    <li><a href="#2" data-toggle="tab">Section 2</a></li>
+    
+  </ul>
+  <div class="tab-content">
+
+  </div>
+</div>
+</div>
 <div class="row span10">
     <div id="choose-info" class="span4 well">
     <h2>Вы выбрали:</h2>
@@ -15,7 +27,7 @@
         <dt>Кафедра:</dt><dd id="cathedra-temp-choose"><?= Cathedra::getName($direction->cathedra) ?></dd>
         <dt>Направление:</dt><dd id="direction-temp-choose"><?= $direction->name." ".$direction->description ?></dd>
         <dt>Форма обучения:</dt><dd id="edu-temp-choose">
-            <select id="education-form">
+            <select id="education-form" class="span2">
                 <option value="1">Дневная</option>
                 <option value="0">Вечерняя</option>
             </select>
@@ -30,7 +42,9 @@
 </div>
 
     <div id="do-choose-btn" class="span1">
-        <a id="do-choose" class="btn btn-primary btn-large" rel="popover" data-content="Нажав кнопку, вы подадите заявление, которое будет рассмотрено в течении нескольких дней" data-original-title="Внимание">Выбрать</a>
+        <a id="do-choose" class="btn btn-primary btn-large" 
+           rel="popover" data-content="Нажав кнопку, вы подадите заявление, которое будет рассмотрено в течении нескольких дней" 
+           data-original-title="Внимание"><i class="icon-ok icon-white"></i>Выбрать</a>
     </div>
     <script>
     $(function(){
@@ -40,7 +54,7 @@
     
 </div>
 <div class="row points-row">
-    <div class="span7">
+    <div id="points-table" class="span7">
 <h2>Оценки, на первом курсе</h2>
 <div class="points">
     <?php
