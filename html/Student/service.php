@@ -114,7 +114,8 @@ $.container = '#st-content';
     <script>
     $(function(){
         $.getJSON("/php_script/StudentService/get_stats.php", {}, function(json){
-            drawWebChart(150,2,json);
+            drawWebChart(150,2,json,{"stroke-width": 0.8},
+                                    {stroke:"05C","stroke-width": 2});
         })        
     })    
     </script>

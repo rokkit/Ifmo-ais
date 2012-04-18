@@ -30,7 +30,7 @@ function load_favourites(user_id) {
 }
 
 //рисуем паутиновый график
-function drawWebChart(line,kf,json) {
+function drawWebChart(line,kf,json,params_line,params_pline) {
     var count=0;
     
     //считаем сколько секций пришло
@@ -40,8 +40,8 @@ function drawWebChart(line,kf,json) {
     var angleplus=360/count;//круг делим на количество секций        
     
     //размеры листа вычисляем относительно длины линии
-    var cx=line*2+50,
-        cy=line*2+50,
+    var cx=line*2+55,
+        cy=line*2+55,
         sx=cx/2,
         sy=cy/2;
     
@@ -66,16 +66,16 @@ function drawWebChart(line,kf,json) {
             py=cy-num*Math.sin(angle);//координаты точки со значением параметра
             points.push([px,py]);
             
-        return paper.path(["M",cx,cy,"L",x,y]);
+        return paper.path(["M",cx,cy,"L",x,y]).attr(params_line);
     }
     function draw_parametric_line(x1,y1,x2,y2) {//координаты начала  конца, значение параметра
-        return paper.path(["M",x1,y1,"L",x2,y2]);
+        return paper.path(["M",x1,y1,"L",x2,y2]).attr(params_pline);
     }
 
     for(var section in json)//выбираем по секции и рисуем линии
         {           
             draw_line(sx, sy, line, angle,section);//рисуем линии координат
-            draw_text(sx, sy ,line, angle, section);
+            draw_text(sx, sy ,line+15, angle, section);
             angle+=angleplus;//двигаем по углу
         }
     for(i=0;i<=points.length-1;i++) 
