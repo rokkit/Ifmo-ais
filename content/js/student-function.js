@@ -30,33 +30,57 @@ function load_favourites(user_id) {
 }
 
 //рисуем паутиновый график
-function drawWebChart(line,json) {
+function drawWebChart(line,kf,json) {
     var count=0;
+    
     //считаем сколько секций пришло
     for(section in json) count++;
-    
+    var points=[];//массив точек параметров
     var angle=90;//начальный угол
     var angleplus=360/count;//круг делим на количество секций        
     
     //размеры листа вычисляем относительно длины линии
-    var cx=line*2,
-        cy=line*2,
+    var cx=line*2+50,
+        cy=line*2+50,
         sx=cx/2,
         sy=cy/2;
     
-    var paper = Raphael("holder-web-chart", cx, cy);
+    var paper = Raphael("holder-web-chart", cx,cy);
     paper.circle(sx, sy, line);
-    
-    function draw_line(cx,cy,line,angle){//центр графика, длина линии, угол наклона
+    var px=0,py=0;
+    function draw_text(cx,cy,delta,angle,text) {
+     angle=angle*(Math.PI/180);//перегоняем в рады
+     var tx=cx-delta*Math.cos(angle),
+         ty=cy-delta*Math.sin(angle);//
+        return paper.text(tx,ty,text);
+    }
+    function draw_line(cx,cy,line,angle, label){//центр графика, длина линии, угол наклона
         angle=angle*(Math.PI/180);//перегоняем в рады
         var x=cx-line*Math.cos(angle),
-            y=cy-line*Math.sin(angle);
-        return paper.path(["M",cx,cy,"L",x,y]);
-    }    
-    for(var section in json)//выбираем по секции и рисуем линии
-        {
+            y=cy-line*Math.sin(angle);//координаты конца линии
             
-            draw_line(sx, sy, line, angle);
-            angle+=angleplus;
+         
+            
+        var num=line/kf+json[label];//нормализуем масштаб графика
+            px=cx-num*Math.cos(angle),
+            py=cy-num*Math.sin(angle);//координаты точки со значением параметра
+            points.push([px,py]);
+            
+        return paper.path(["M",cx,cy,"L",x,y]);
+    }
+    function draw_parametric_line(x1,y1,x2,y2) {//координаты начала  конца, значение параметра
+        return paper.path(["M",x1,y1,"L",x2,y2]);
+    }
+
+    for(var section in json)//выбираем по секции и рисуем линии
+        {           
+            draw_line(sx, sy, line, angle,section);//рисуем линии координат
+            draw_text(sx, sy ,line, angle, section);
+            angle+=angleplus;//двигаем по углу
+        }
+    for(i=0;i<=points.length-1;i++) 
+        {
+            if(i!=points.length-1) draw_parametric_line(points[i][0], points[i][1], points[i+1][0], points[i+1][1]);
+            else draw_parametric_line(points[i][0], points[i][1], points[0][0], points[0][1])
         }
 }

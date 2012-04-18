@@ -114,7 +114,7 @@ $.container = '#st-content';
     <script>
     $(function(){
         $.getJSON("/php_script/StudentService/get_stats.php", {}, function(json){
-            drawWebChart(150,json);
+            drawWebChart(150,2,json);
         })        
     })    
     </script>
