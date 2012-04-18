@@ -36,11 +36,16 @@ function getCountStudentByIdDirection($direction)
    
 }
 function checkFavourite($id) {
-    $cookie_name='favourites'.$_SESSION['user_id'].$id;//название+айди студента+айди направления
-    if(isset($_COOKIE[$cookie_name])) {//если уже добавлено в избранное то выводим класс удалить и наоборот
-        echo "remove";
+    $cookie_name='favourites'.$_SESSION['user_id'];//название+айди студента+айди направления
+    if(isset($_COOKIE[$cookie_name]))
+        {//если уже добавлено в избранное то выводим класс удалить и наоборот
+        $pos=strpos($_COOKIE[$cookie_name], $id);
+        if($pos!==false)
+            echo "remove";
+        else echo "add";
     }
     else echo "add";
+    
 }
 
 

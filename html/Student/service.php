@@ -13,7 +13,9 @@
         <script type="text/javascript" src="/content/js/bootstrap-popover.js"></script>
         <script type="text/javascript" src="/content/js/bootstrap-modal.js"></script>
         <script type="text/javascript" src="/content/js/bootstrap-tab.js"></script>
+        <script type="text/javascript" src="/content/js/raphael-min.js"></script>
         <script type="text/javascript" src="/content/js/student-function.js"></script>
+        
         <script>
 $(function(){
     $("ul#content-nav li").click(function(){
@@ -106,6 +108,16 @@ $.container = '#st-content';
             </div>
             
         </div>
+        <div id="holder-web-chart">
+            RRRR
+        </div>
+    <script>
+    $(function(){
+        $.getJSON("/php_script/StudentService/get_stats.php", {}, function(json){
+            drawWebChart(150,json);
+        })        
+    })    
+    </script>
         <div class="row footer well">
                 
         </div>

@@ -37,7 +37,7 @@ $('.cf-block').click(function(){
                         $data=getBlockDirection($_REQUEST['cathedra']);
                         ?>
 <script>
-    $(function(){$(".page-header h3").text("Выбор направления")});
+    //$(function(){$(".page-header h3").text("Выбор направления")});
 </script>
 <script type="text/javascript">
     $(function(){

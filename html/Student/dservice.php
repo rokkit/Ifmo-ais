@@ -7,11 +7,11 @@
 
 <div id="favourite-nav" class="span1">
 <div class="tabbable tabs-left">
-    <ul class="nav nav-tabs" id="nav-tabs" onload="load_favourites(<?= $_SESSION['user_id'] ?>)">
+    <ul class="nav nav-tabs" id="nav-tabs">
     <li class="active"><a href="#1" data-toggle="tab">Section 1</a></li>
     <li><a href="#2" data-toggle="tab">Section 2</a></li>
     
-  </ul>
+    </ul>
   <div class="tab-content">
 
   </div>
@@ -177,5 +177,12 @@
                         })
                         return false;
                     });
+                    </script>
+                    <script>
+                    //получение списка избранного
+                    $(function(){
+                        load_favourites(<?= $_SESSION['user_id'] ?>)
+                    })
+                    
                     </script>
                       
