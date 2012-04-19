@@ -29,6 +29,18 @@ function load_favourites(user_id) {
     })
 }
 
+//получение данных и наполнение полей
+function load_dir_data(direction) {
+    $.getJSON("/php_script/StudentService/load_dir_data.php", {direction:direction}, function(json) {
+        $("#direction-temp").val(direction);
+        $("#faculty-temp-choose").text(json['name_faculty']);//название факультета
+        $("#cathedra-temp-choose").text(json['name_cathedra']);//название кафедры
+        $("#direction-temp-choose").text(json['name_direction']);//название направления
+        $("#count-num").text(json['count-num']);//название направления
+        })
+    }
+
+
 //рисуем паутиновый график
 function drawWebChart(line,kf,json,params_line,params_pline) {
     var count=0;

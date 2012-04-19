@@ -20,6 +20,7 @@ if (isset($_SERVER['HTTP_X_PJAX']))
       }
 //вывод информации о студенте
       ?>
+<title>Студент</title>
 <div>
     <div class="row-fluid">
   <div id="stud-info" class="span9" style="margin-bottom: 20px;">    

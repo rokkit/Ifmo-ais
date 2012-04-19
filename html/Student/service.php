@@ -108,17 +108,7 @@ $.container = '#st-content';
             </div>
             
         </div>
-        <div id="holder-web-chart">
-            RRRR
-        </div>
-    <script>
-    $(function(){
-        $.getJSON("/php_script/StudentService/get_stats.php", {}, function(json){
-            drawWebChart(150,2,json,{"stroke-width": 0.8},
-                                    {stroke:"05C","stroke-width": 2});
-        })        
-    })    
-    </script>
+
         <div class="row footer well">
                 
         </div>

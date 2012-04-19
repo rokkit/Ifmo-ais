@@ -1,4 +1,6 @@
-<?php include '../../php_script/StudentService/studentService.php';
+<?php
+session_start();
+include '../../php_script/StudentService/studentService.php';
       include '../../php_script/Trans/Trans.php';
       include '../../php_script/Student/Student.php';
       
@@ -6,11 +8,12 @@
 <title>Результаты</title>
 
 <div id="favourite-nav" class="span1">
+    <h3>Избранное</h3>
 <div class="tabbable tabs-left">
     <ul class="nav nav-tabs" id="nav-tabs">
     <li class="active"><a href="#1" data-toggle="tab">Section 1</a></li>
     <li><a href="#2" data-toggle="tab">Section 2</a></li>
-    
+    <!-- скрипт добавляет сюда элементы меню -->
     </ul>
   <div class="tab-content">
 
@@ -23,7 +26,7 @@
     <dl>
         <?php $direction=getFullInfoDirection($_REQUEST['direction']); ?>
         <input type="hidden" id="direction-temp" value="<?= $_REQUEST['direction'] ?>"/>
-        <dt>Факультет:</dt><dd id="faculty-temp-choose"><?= Faculty::getName($direction->faculty) ?></dd>
+        <dt>Факультет:</dt><dd id="faculty-temp-choose"></dd>
         <dt>Кафедра:</dt><dd id="cathedra-temp-choose"><?= Cathedra::getName($direction->cathedra) ?></dd>
         <dt>Направление:</dt><dd id="direction-temp-choose"><?= $direction->name." ".$direction->description ?></dd>
         <dt>Форма обучения:</dt><dd id="edu-temp-choose">
@@ -37,7 +40,7 @@
     </div>
 <div class="span3 well" id="counter">
     <h2>Это направление уже было выбрано</h2>
-    <?= getCountStudentByIdDirection($direction->id) ?>
+    <p id="count-num"><?= getCountStudentByIdDirection($direction->id) ?></p>
     <h2>раз</h2>
 </div>
 
@@ -60,7 +63,7 @@
     <?php
     $ifmodb=  connectToIfmoDb();
     $fspodb= connectToFspoDB();
-    $student_id=$_COOKIE['idst'];
+    $student_id=$_SESSION['user_id'];
     $transfers = Trans::getTransfersByIdDirection($direction->id);
     $disciplines = Trans::getDisciplinesByDirection($direction->id, $ifmodb);
     $student=Student::getStudentById($student_id);
@@ -182,7 +185,10 @@
                     //получение списка избранного
                     $(function(){
                         load_favourites(<?= $_SESSION['user_id'] ?>)
-                    })
+                        load_dir_data(<?= $_REQUEST['direction'] ?>)
+                    })           
                     
                     </script>
+
+                    
                       

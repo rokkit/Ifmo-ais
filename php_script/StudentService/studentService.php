@@ -32,7 +32,7 @@ function getCountStudentByIdDirection($direction)
     $id = parseNumSql($direction);
     $result=  mysql_query("SELECT COUNT(*) FROM student_choose WHERE id_direction=$id", connectToIfmoDb()) or die(mysql_error()); 
     
-    echo mysql_result($result, 0);
+    return mysql_result($result, 0);
    
 }
 function checkFavourite($id) {
