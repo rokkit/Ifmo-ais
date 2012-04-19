@@ -27,8 +27,8 @@ include '../../php_script/StudentService/studentService.php';
         <?php $direction=getFullInfoDirection($_REQUEST['direction']); ?>
         <input type="hidden" id="direction-temp" value="<?= $_REQUEST['direction'] ?>"/>
         <dt>Факультет:</dt><dd id="faculty-temp-choose"></dd>
-        <dt>Кафедра:</dt><dd id="cathedra-temp-choose"><?= Cathedra::getName($direction->cathedra) ?></dd>
-        <dt>Направление:</dt><dd id="direction-temp-choose"><?= $direction->name." ".$direction->description ?></dd>
+        <dt>Кафедра:</dt><dd id="cathedra-temp-choose"></dd>
+        <dt>Направление:</dt><dd id="direction-temp-choose"></dd>
         <dt>Форма обучения:</dt><dd id="edu-temp-choose">
             <select id="education-form" class="span2">
                 <option value="1">Дневная</option>
@@ -40,7 +40,7 @@ include '../../php_script/StudentService/studentService.php';
     </div>
 <div class="span3 well" id="counter">
     <h2>Это направление уже было выбрано</h2>
-    <p id="count-num"><?= getCountStudentByIdDirection($direction->id) ?></p>
+    <p id="count-num"></p>
     <h2>раз</h2>
 </div>
 
@@ -79,18 +79,7 @@ include '../../php_script/StudentService/studentService.php';
             </thead>
             <!--Формируем таблицу дисциплин и соответствующих предметов-->
             <tbody id="stud-subject-body">
-            <?php
-                foreach ($disciplines as $discipline) //формируем таблицу соотсвествия предметов и дисциплин
-                {
-            ?>
-                <tr>
-                    <td><?php $subject=Trans::getSubjectByDiscipline($discipline, $fspodb, $ifmodb);echo $subject['name']; ?></td>
-                    <td id="point"><?php  $point=$student->getPoint($fspodb,$subject['id']); echo $point['point']; ?></td>
-                    <td><?= Trans::getDisciplineById($discipline, $ifmodb) ?></td>
-                </tr>
-            <?php
-                } 
-            ?>
+
             </tbody>
         </table>
     </div>

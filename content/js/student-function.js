@@ -36,7 +36,16 @@ function load_dir_data(direction) {
         $("#faculty-temp-choose").text(json['name_faculty']);//название факультета
         $("#cathedra-temp-choose").text(json['name_cathedra']);//название кафедры
         $("#direction-temp-choose").text(json['name_direction']);//название направления
-        $("#count-num").text(json['count-num']);//название направления
+        $("#count-num").text(json['count_num']);//название направления
+        
+        var points=json['points'];
+        //заполняем таблицу оценок
+        for(var point in points)
+            {
+                var p=points[point]
+                $("#stud-subject-body")
+                .append("<tr><td>"+p['subject']+"</td><td>"+p['point']+"</td><td>"+p['discipline']+"</td></tr>");
+            }
         })
     }
 

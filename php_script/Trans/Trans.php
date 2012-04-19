@@ -60,13 +60,13 @@ class Trans {
     {
         $subject = parseNumSql($subject);
         $result = mysql_query("SELECT Name FROM predmeti_table WHERE Predmet_ID=$subject", $fspodb) or die(mysql_error());
-        echo mysql_result($result, 0);
+        return mysql_result($result, 0);
     }
     static function getDisciplineById($discipline,$ifmodb)
     {
         $discipline = parseNumSql($discipline);
         $result = mysql_query("SELECT name FROM discipline WHERE id=$discipline", $ifmodb) or die(mysql_error());
-        echo mysql_result($result, 0);
+        return mysql_result($result, 0);
     }
     static function getSubjectByDiscipline($discipline,$fspodb,$ifmodb)//получить предмет соотвествущий дисциплине
     {
