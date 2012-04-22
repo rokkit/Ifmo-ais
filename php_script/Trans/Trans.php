@@ -10,7 +10,7 @@ class Trans {
     public $discipline;//ид дисциплины
     public $subject;//ид предмета. база фспо
     public $direction;//если ноль, то глобально для всех направлений
-    
+
     function __construct($id,$discipline,$subject,$direction) {
         $this->id=$id;
         $this->discipline=$discipline;
@@ -24,7 +24,7 @@ class Trans {
         $sql="SELECT * FROM transfer WHERE id_direction IS NULL OR id_direction=$direction";
         $result = mysql_query($sql) or die(mysql_error());// получаем переходы
         $transfers=array();
-        while ($row = mysql_fetch_array($result)) 
+        while ($row = mysql_fetch_array($result))
         {
             $transfers[]=new Trans($row['id'], $row['id_discipline'], $row['id_subject'], $row['id_direction']);
         }
@@ -44,17 +44,17 @@ class Trans {
         $result= mysql_fetch_assoc($result);
         $choose['name_cathedra']=$result['name'];//записываем в выбор название кафедры
         $choose['full_name_cathedra']=$result['full_name'];//записываем в выбор полное название кафедры
-        
+
         $result = mysql_query("SELECT name, description FROM direction WHERE id=".$choose["id_direction"],$ifmodb) or die(mysql_error());
         $result= mysql_fetch_assoc($result);
         $choose['name_direction'] = $result['name'];//записываем в выбор название направления
         $choose['full_name_direction'] = $result['description'];//записываем в выбор полное навзвание напрвления
-        
+
         return $choose;
         }
         else return null;
-        
-        
+
+
     }
     static function getSubjectById($subject,$fspodb)
     {
@@ -71,7 +71,7 @@ class Trans {
     static function getSubjectByDiscipline($discipline,$fspodb,$ifmodb)//получить предмет соотвествущий дисциплине
     {
         $discipline = parseNumSql($discipline);
-        if($discipline) 
+        if($discipline)
         {
         $result = mysql_query("SELECT id_subject FROM transfer WHERE id_discipline=$discipline",$ifmodb) or die(mysql_error());
             if($subject = @mysql_result($result, 0))
@@ -84,12 +84,12 @@ class Trans {
             }
             else {return null;}
         }
-        
+
     }
     static function getDisciplinesByDirection($direction,$ifmodb)//получить набор дисциплин для направления
     {
         $direction = parseNumSql($direction);
-        $result = mysql_query("SELECT id, name FROM discipline WHERE id_direction = $direction",$ifmodb) or die(mysql_error());
+        $result = mysql_query("SELECT id, name FROM discipline WHERE id_direction IS NULL OR id_direction = $direction",$ifmodb) or die(mysql_error());
         $disciplines = array();
         while($row = mysql_fetch_array($result))
         {
@@ -97,7 +97,7 @@ class Trans {
         }
         return $disciplines;
     }
-    
+
 }
 
 ?>

@@ -11,7 +11,7 @@ var urlParams = <?php echo json_encode($_GET);?>;
                             function(data)
                             {
                                 data=JSON.parse(data);
-                    
+
                                 for(i=1;i<data.length;i++)
                                 {
                                     for(key in data[i])
@@ -21,30 +21,30 @@ var urlParams = <?php echo json_encode($_GET);?>;
                                     }
                                 }
                             });
-  
+
             });
             } else if (com == 'Удалить') {
                     $('.trSelected', grid).each(function() {
                     var id = $(this).attr('id');
                     id = id.substring(id.lastIndexOf('row')+3);
-                    
+
                     $.get("../php_script/set_disps.php", {id:id,get_delete:"true"}, function(data){
                         $("form#modal-delete").html(data);
                     });
                     $("#ModalDelDisp").modal('show');
                     });
                     }
-                     else if (com == 'Добавить') 
+                     else if (com == 'Добавить')
                     {
                     $("#ModalAddDisp").modal();
                     }
-                    
+
             }
             //вешаем на закрытие модала очистку внутри него
             $(function(){
             $("div#ModalDelDisp").on('hidden',function(){$("form#modal-delete").empty();})
             });
-            
+
     $(function(){
        $("div#disp-table").flexigrid({
            url:'../php_script/get_disps.php?direction='+urlParams['direction'],
@@ -65,7 +65,7 @@ var urlParams = <?php echo json_encode($_GET);?>;
                         {separator: true}
                 ],
            searchitems : [
-                        {display: 'Дисциплина', name : 'name'}   
+                        {display: 'Дисциплина', name : 'name'}
                 ],
                 sortname: "name",
                 sortorder: "asc",
@@ -79,9 +79,9 @@ var urlParams = <?php echo json_encode($_GET);?>;
                 width: 700,
                 height: 370,
                 singleSelect: true
-       }); 
+       });
     });
-    
+
     //вешаем на сохранить сохранение
     $(function(){
         $("#save-changes").click(function(){
@@ -98,7 +98,7 @@ var urlParams = <?php echo json_encode($_GET);?>;
 </script>
 
 <div id="disp-table">
-    
+
 </div>
 
 <div id="ModalAddDisp" class="modal hide fade">
@@ -136,7 +136,7 @@ var urlParams = <?php echo json_encode($_GET);?>;
 require 'dbconnect.php';
 
                 $cats =  mysql_query("SELECT id,name FROM cathedra");
-                if($cat =  mysql_fetch_array($cats))
+                while($cat =  mysql_fetch_array($cats))
                 {
                     echo "<option value=".$cat['id'].">".$cat['name']."</option>";
                 }
@@ -157,7 +157,7 @@ require 'dbconnect.php';
         <a href="#" class="btn" data-dismiss="modal">Close</a>
     </div>
                 </fieldset>
-              </form> 
+              </form>
 </div>
 
 <div id="ModalEditDisp" class="modal hide">
@@ -196,12 +196,12 @@ $dbhost="localhost";
 $dbname="ifmodb";
 $dbuser="root";
 $dbpass="1405";
-mysql_connect($dbhost,$dbuser,$dbpass) or die("connect error"); 
+mysql_connect($dbhost,$dbuser,$dbpass) or die("connect error");
 mysql_select_db($dbname) or die("select error");
 mysql_query("set names utf8") or die('UTF8 ERROR');
 
                 $cats =  mysql_query("SELECT id,name FROM cathedra");
-                if($cat =  mysql_fetch_array($cats))
+                while($cat =  mysql_fetch_array($cats))
                 {
                     echo "<option value=".$cat['id'].">".$cat['name']."</option>";
                 }
