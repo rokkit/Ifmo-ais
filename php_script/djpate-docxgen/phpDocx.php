@@ -248,20 +248,36 @@
 			$this->content = str_replace("<!-- end ".$blockname." -->","<!-- block_".$blockname."_".$this->block_count[$blockname]." -->".$block."<!-- end_block_".$blockname."_".$this->block_count[$blockname]." --><!-- end ".$blockname." -->",$this->content);
 
 		}
-                private function fillCell($value) {
-                    return '<w:tc><w:tcPr><w:tcW w:w="4045" w:type="dxa"/><w:tcMar><w:left w:w="57" w:type="dxa"/><w:right w:w="57" w:type="dxa"/></w:tcMar></w:tcPr><w:p w:rsidRPr="00E87BBB" w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t>'.$value.'</w:t></w:r></w:p></w:tc>';
+                private function Table($value) {
+                    $border='<w:tblPr><w:tblW w:w="0" w:type="auto"/><w:tblBorders><w:top w:color="auto" w:space="0" w:sz="4" w:val="single"/><w:left w:color="auto" w:space="0" w:sz="4" w:val="single"/><w:bottom w:color="auto" w:space="0" w:sz="4" w:val="single"/><w:right w:color="auto" w:space="0" w:sz="4" w:val="single"/><w:insideH w:color="auto" w:space="0" w:sz="4" w:val="single"/><w:insideV w:color="auto" w:space="0" w:sz="4" w:val="single"/></w:tblBorders><w:tblLook w:val="04A0" w:noVBand="1" w:noHBand="0" w:lastColumn="0" w:firstColumn="1" w:lastRow="0" w:firstRow="1"/></w:tblPr>';
+                    return '<w:tbl>'.$border.$value.'</w:tbl>';
+                }
+                private function addCell($value) {
+                         return '<w:tc>
+                                    <w:p>
+                                        <w:r>
+                                            <w:t>'.$value.'</w:t>
+                                        </w:r>
+                                    </w:p>
+                                 </w:tc>';
+//return '<w:tc><w:tcPr><w:tcW w:w="4045" w:type="dxa"/><w:tcMar><w:left w:w="57" w:type="dxa"/><w:right w:w="57" w:type="dxa"/></w:tcMar></w:tcPr><w:p w:rsidRPr="00E87BBB" w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t>'.$value.'</w:t></w:r></w:p></w:tc>';
                 }
                 private function addRow($value) {
                     return '<w:tr>'.$value.'</w:tr>';
                 }
                 private function addTable($table,$values) {
-
-
-                    $table_head='<w:tbl><w:tblPr><w:tblStyle w:val="a3"/><w:tblW w:w="10734" w:type="dxa"/><w:jc w:val="center"/><w:tblLayout w:type="fixed"/><w:tblLook w:val="01E0" w:noVBand="0" w:noHBand="0" w:lastColumn="1" w:firstColumn="1" w:lastRow="1" w:firstRow="1"/></w:tblPr><w:tblGrid><w:gridCol w:w="464"/><w:gridCol w:w="4045"/><w:gridCol w:w="792"/><w:gridCol w:w="762"/><w:gridCol w:w="1061"/><w:gridCol w:w="3610"/></w:tblGrid><w:tr w:rsidTr="006C6F0B" w:rsidRPr="00A976CA" w:rsidR="00D61978"><w:trPr><w:trHeight w:val="760"/><w:jc w:val="center"/></w:trPr><w:tc><w:tcPr><w:tcW w:w="464" w:type="dxa"/><w:tcMar><w:left w:w="57" w:type="dxa"/><w:right w:w="57" w:type="dxa"/></w:tcMar></w:tcPr><w:p w:rsidRPr="00E87BBB" w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t>№</w:t></w:r></w:p><w:p w:rsidRPr="00E87BBB" w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr></w:p></w:tc><w:tc><w:tcPr><w:tcW w:w="4045" w:type="dxa"/><w:tcMar><w:left w:w="57" w:type="dxa"/><w:right w:w="57" w:type="dxa"/></w:tcMar></w:tcPr><w:p w:rsidRPr="00E87BBB" w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t>Дисциплина</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW w:w="792" w:type="dxa"/><w:tcMar><w:left w:w="57" w:type="dxa"/><w:right w:w="57" w:type="dxa"/></w:tcMar></w:tcPr><w:p w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr><w:proofErr w:type="spellStart"/><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/><w:lang w:val="enUS"/></w:rPr><w:t>Объем</w:t></w:r><w:proofErr w:type="spellEnd"/></w:p><w:p w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr><w:r><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t>р</w:t></w:r><w:proofErr w:type="spellStart"/><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/><w:lang w:val="enUS"/></w:rPr><w:t>аботы</w:t></w:r><w:proofErr w:type="spellEnd"/></w:p><w:p w:rsidRPr="00E87BBB" w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr><w:proofErr w:type="spellStart"/><w:proofErr w:type="gramStart"/><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/><w:lang w:val="enUS"/></w:rPr><w:t>студ</w:t></w:r><w:proofErr w:type="spellEnd"/><w:proofErr w:type="gramEnd"/><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/><w:lang w:val="enUS"/></w:rPr><w:t>.</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW w:w="762" w:type="dxa"/><w:tcMar><w:left w:w="57" w:type="dxa"/><w:right w:w="57" w:type="dxa"/></w:tcMar></w:tcPr><w:p w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t>Форма</w:t></w:r></w:p><w:p w:rsidRPr="00E87BBB" w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t>итог</w:t></w:r><w:proofErr w:type="gramStart"/><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t>.</w:t></w:r><w:proofErr w:type="gramEnd"/><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:br/></w:r><w:proofErr w:type="gramStart"/><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t>к</w:t></w:r><w:proofErr w:type="gramEnd"/><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t>онтр.</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW w:w="1061" w:type="dxa"/><w:tcMar><w:left w:w="57" w:type="dxa"/><w:right w:w="57" w:type="dxa"/></w:tcMar></w:tcPr><w:p w:rsidRPr="00E87BBB" w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr><w:r w:rsidRPr="00E87BBB"><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t>Оценка</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW w:w="3610" w:type="dxa"/><w:tcMar><w:left w:w="57" w:type="dxa"/><w:right w:w="57" w:type="dxa"/></w:tcMar></w:tcPr><w:p w:rsidRPr="00E87BBB" w:rsidR="00D61978" w:rsidP="006C6F0B" w:rsidRDefault="00D61978"><w:pPr><w:jc w:val="center"/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:pPr><w:r><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr><w:t xml:space="preserve">Состав аттестационной комиссии </w:t></w:r></w:p></w:tc></w:tr>';
-                    $table_body=$this->fillCell("HUI");
-                    $table_footer='</w:tbl>';
-                    $table=$table_head.$this->addRow($this->fillCell("HUI")).$table_footer;
-                    $this->content=str_replace("[starttable test]",$table,$this->content);
+                    $table='test';
+                    $values=array(array(1,2,3),array(4,5,6));
+                    $rows="";
+                    foreach($values as $row) {//по строкам
+                        $cels="";
+                        foreach($row as $cell) {//по столбцам
+                            $cels.=$this->addCell($cell);
+                        }
+                        $rows.=$this->addRow($cels);
+                    }
+                    $tab=$this->Table($rows);
+                    $this->content=str_replace("[starttable $table]",$tab,$this->content);
                 }
 
 
