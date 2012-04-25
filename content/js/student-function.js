@@ -11,10 +11,9 @@ function add_to_favourite(link, id) {//тип:добавить/удалить, i
            $(link).removeClass("remove").addClass("add");
            var action="remove";
         }
-        $.post("/php_script/StudentService/add_to_favourites.php", 
+        $.post("/php_script/StudentService/add_to_favourites.php",
                {id:id,action:action},
                function(){
-                   
                }, 'json');
                return false;
 }
@@ -37,7 +36,7 @@ function load_dir_data(direction) {
         $("#cathedra-temp-choose").text(json['name_cathedra']);//название кафедры
         $("#direction-temp-choose").text(json['name_direction']);//название направления
         $("#count-num").text(json['count_num']);//название направления
-        
+
         var points=json['points'];
         //заполняем таблицу оценок
         for(var point in points)
@@ -53,19 +52,19 @@ function load_dir_data(direction) {
 //рисуем паутиновый график
 function drawWebChart(line,kf,json,params_line,params_pline) {
     var count=0;
-    
+
     //считаем сколько секций пришло
     for(section in json) count++;
     var points=[];//массив точек параметров
     var angle=90;//начальный угол
-    var angleplus=360/count;//круг делим на количество секций        
-    
+    var angleplus=360/count;//круг делим на количество секций
+
     //размеры листа вычисляем относительно длины линии
     var cx=line*2+55,
         cy=line*2+55,
         sx=cx/2,
         sy=cy/2;
-    
+
     var paper = Raphael("holder-web-chart", cx,cy);
     paper.circle(sx, sy, line);
     var px=0,py=0;
@@ -79,14 +78,14 @@ function drawWebChart(line,kf,json,params_line,params_pline) {
         angle=angle*(Math.PI/180);//перегоняем в рады
         var x=cx-line*Math.cos(angle),
             y=cy-line*Math.sin(angle);//координаты конца линии
-            
-         
-            
+
+
+
         var num=line/kf+json[label];//нормализуем масштаб графика
             px=cx-num*Math.cos(angle),
             py=cy-num*Math.sin(angle);//координаты точки со значением параметра
             points.push([px,py]);
-            
+
         return paper.path(["M",cx,cy,"L",x,y]).attr(params_line);
     }
     function draw_parametric_line(x1,y1,x2,y2) {//координаты начала  конца, значение параметра
@@ -94,12 +93,12 @@ function drawWebChart(line,kf,json,params_line,params_pline) {
     }
 
     for(var section in json)//выбираем по секции и рисуем линии
-        {           
+        {
             draw_line(sx, sy, line, angle,section);//рисуем линии координат
             draw_text(sx, sy ,line+15, angle, section);
             angle+=angleplus;//двигаем по углу
         }
-    for(i=0;i<=points.length-1;i++) 
+    for(i=0;i<=points.length-1;i++)
         {
             if(i!=points.length-1) draw_parametric_line(points[i][0], points[i][1], points[i+1][0], points[i+1][1]);
             else draw_parametric_line(points[i][0], points[i][1], points[0][0], points[0][1])

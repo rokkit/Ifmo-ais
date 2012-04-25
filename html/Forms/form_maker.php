@@ -25,7 +25,7 @@ require '../../php_script/auth.php';
                 <h1>Формирование выписок</h1>
                 <div class="row row-content">
                     <div class="container-fluid">
-                        <div class="row-fluid">                        
+                        <div class="row-fluid">
                             <div class="span3">
                             <ul class="nav nav-list">
                                 <li class="active">
@@ -58,7 +58,7 @@ require '../../php_script/auth.php';
                                 <div id="fcd-content">
                                 <div id="studs-container">
                                     <div class="studs-table" id="studs-table">
-                                        <!--<a href="/php_script/Student/get_student.php?id=1">Student 1231</a>-->
+
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +116,7 @@ $.container = '#studs-container';
                 showToggleBtn:false,
                 showTableToggleBtn: false,
                 resizable: false,
-                width: 600,
+                width: 450,
                 height: 400,
                 singleSelect: false,
                 minwidth:200

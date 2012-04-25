@@ -4,17 +4,17 @@
  *
  * @author rokkitlanchaz
  */
-include_once '../../php_script/function.php';
+//include_once '../../php_script/function.php';
 class Student {
-    
+
     public $id;//Ид
     public $name;//Имя
     public $last_name;//Фамилия
     public $second_name;//Отчество
     public $group;//Группа
     public $programm;//Непрерывная или базовая
-    
-    function __construct($id,$name,$last_name,$second_name,$group,$programm) 
+
+    function __construct($id,$name,$last_name,$second_name,$group,$programm)
     {
         $this->id=$id;
         $this->name=$name;
@@ -34,7 +34,7 @@ class Student {
         mysql_query("set names utf8") or die('UTF8 ERROR');
         return $fspodb;
     }
-    
+
     public function getFio()
     {
         return $this->last_name." ".$this->name." ".$this->second_name;
@@ -73,11 +73,11 @@ class Student {
         $data['rows'] = array();
         $data['total'] = null;
         $fspodb=Student::connectToFspoDB();
-        
-        if($params['params']=='all')//все студенты. без фильтра
-        {                      
 
-            
+        if($params['params']=='all')//все студенты. без фильтра
+        {
+
+
         }
         if($params['group']!=null)//фильтр по группе
         {
@@ -93,7 +93,7 @@ class Student {
                 $choosed_sql=(isset($params['group'])) ? " AND Stud_ID=$student_id[0]" : " WHERE Stud_ID=$student_id[0]";
                 $t_sql=$sql;
                 $t_sql.=$choosed_sql;
-                
+
                 $result_choosed_students = mysql_query($t_sql.$sortSql, $fspodb) or die(mysql_error($fspodb));
                 if($result_choosed_student = mysql_fetch_array($result_choosed_students))
                 {
@@ -102,12 +102,12 @@ class Student {
                     $link_to_student="<a href=/php_script/Student/get_student.php?id=".$result_choosed_student['Stud_ID'].">$fio</a>";
                     $data['rows'][] = array('id' => $result_choosed_student['Stud_ID'],
                                         'cell' => array($link_to_student,$result_choosed_student['gruppa'],$programm) );
-                }    
+                }
             }
             echo json_encode($data);
             return;
          }
-            
+
             $result =  mysql_query($sql.$sortSql,$fspodb) or die(mysql_error());
             while($student = mysql_fetch_array($result))
             {
@@ -126,13 +126,13 @@ class Student {
         $sql="SELECT Ocenka,Predmet_ID FROM ocenki_table WHERE Stud_ID=$student";
         $subject = parseNumSql($subject);
         if(!empty($subject))//если указан предмет
-        {   
+        {
             //получаем оценки по предметам для студента
-            
+
             $sql.=" AND Predmet_ID=$subject";
-        
+
         $result = mysql_query($sql, $fspodb) or die(mysql_error());
-        
+
         while ($row = mysql_fetch_array($result)) {
             $points = array('point'=>$row['Ocenka'],'subject'=>$row['Predmet_ID']);
         }

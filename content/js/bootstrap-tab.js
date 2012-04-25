@@ -46,7 +46,7 @@
       }
 
       if ( $this.parent('li').hasClass('active') ) return
-
+      load_dir_data($this.parent('li').attr("id"));
       previous = $ul.find('.active a').last()[0]
 
       $this.trigger({

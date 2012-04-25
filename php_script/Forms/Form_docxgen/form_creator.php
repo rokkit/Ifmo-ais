@@ -1,8 +1,9 @@
 <?php
 require '../../auth.php';
-include '../../function.php';
-include '../../Student/Student.php';
-require '../../djpate-docxgen/phpDocx.php';
+require_once '../../function.php';
+require_once '../../Student/Student.php';
+require '../../../php_script/djpate-docxgen/phpDocx.php';
+
 if(isset($_GET['id'])) {//формируем документ
     $fspodb = connectToFspoDB();
     $student=Student::getStudentById($_GET['id']);

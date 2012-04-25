@@ -3,7 +3,7 @@ session_start();
 include '../../php_script/StudentService/studentService.php';
       include '../../php_script/Trans/Trans.php';
       include '../../php_script/Student/Student.php';
-      
+
 ?>
 <title>Результаты</title>
 
@@ -11,8 +11,7 @@ include '../../php_script/StudentService/studentService.php';
     <h3>Избранное</h3>
 <div class="tabbable tabs-left">
     <ul class="nav nav-tabs" id="nav-tabs">
-    <li class="active"><a href="#1" data-toggle="tab">Section 1</a></li>
-    <li><a href="#2" data-toggle="tab">Section 2</a></li>
+
     <!-- скрипт добавляет сюда элементы меню -->
     </ul>
   <div class="tab-content">
@@ -29,24 +28,19 @@ include '../../php_script/StudentService/studentService.php';
         <dt>Факультет:</dt><dd id="faculty-temp-choose"></dd>
         <dt>Кафедра:</dt><dd id="cathedra-temp-choose"></dd>
         <dt>Направление:</dt><dd id="direction-temp-choose"></dd>
-        <dt>Форма обучения:</dt><dd id="edu-temp-choose">
-            <select id="education-form" class="span2">
-                <option value="1">Дневная</option>
-                <option value="0">Вечерняя</option>
-            </select>
         </dd>
         <dt>Примерная стоимость:</dt><dd id="cost"></dd>
     </dl>
     </div>
 <div class="span3 well" id="counter">
     <h2>Это направление уже было выбрано</h2>
-    <p id="count-num"></p>
+    <h2 id="count-num"></h2>
     <h2>раз</h2>
 </div>
 
     <div id="do-choose-btn" class="span1">
-        <a id="do-choose" class="btn btn-primary btn-large" 
-           rel="popover" data-content="Нажав кнопку, вы подадите заявление, которое будет рассмотрено в течении нескольких дней" 
+        <a id="do-choose" class="btn btn-primary btn-large"
+           rel="popover" data-content="Нажав кнопку, вы подадите заявление, которое будет рассмотрено в течении нескольких дней"
            data-original-title="Внимание"><i class="icon-ok icon-white"></i>Выбрать</a>
     </div>
     <script>
@@ -54,7 +48,7 @@ include '../../php_script/StudentService/studentService.php';
         $("#do-choose").popover();
     })
     </script>
-    
+
 </div>
 <div class="row points-row">
     <div id="points-table" class="span7">
@@ -85,7 +79,7 @@ include '../../php_script/StudentService/studentService.php';
     </div>
         <script>
             $(function() {
-                
+
             })
         </script>
         <script>//красим ячейки
@@ -99,7 +93,7 @@ include '../../php_script/StudentService/studentService.php';
                         }
                 });
             });
-        </script>    
+        </script>
 </div>
 </div>
 <div class="span2">
@@ -123,19 +117,19 @@ include '../../php_script/StudentService/studentService.php';
                                     <li>Направление:<p id="direction-choose"></p></li>
                                     <li>Форма обучения<p id="education-form-choose"></p></li>
                                 </ul>
-                            </div>   
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <a href="#" id="send-choose" class="btn btn-primary">Отправить</a>
                             <a href="#" class="btn" data-dismiss="modal">Отмена</a>
                         </div>
                     </div>
-                    <script>                        
+                    <script>
                         $(function() {
                             $("#content-nav").children("li").each(function(){
-                               $(this).removeClass("current-nav"); 
+                               $(this).removeClass("current-nav");
                             });
-                           
+
                             $("#content-nav #step4").addClass("current-nav");
                         });
                     </script>
@@ -143,8 +137,8 @@ include '../../php_script/StudentService/studentService.php';
                     //диалог отправки заявки
                     $(function(){
                         $("#do-choose").click(function(){
-                            //грузим данные в диалог                            
-                            $.get("/php_script/StudentService/getFio.php", {id:<?= $_SESSION['user_id'] ?>}, 
+                            //грузим данные в диалог
+                            $.get("/php_script/StudentService/getFio.php", {id:<?= $_SESSION['user_id'] ?>},
                             function(data){
                                 $("#check-dlg #fio").text(data);
                             });
@@ -157,7 +151,7 @@ include '../../php_script/StudentService/studentService.php';
                         $("#send-choose").click(function(){
                             var direction=$("#direction-temp").val();
                             var edu_form=$("#education-form").val();
-                            $.post("/php_script/StudentService/doChoose.php", 
+                            $.post("/php_script/StudentService/doChoose.php",
                                 {
                                     id_student:<?= $_SESSION['user_id'] ?>,
                                     id_direction:direction,
@@ -173,11 +167,12 @@ include '../../php_script/StudentService/studentService.php';
                     <script>
                     //получение списка избранного
                     $(function(){
-                        load_favourites(<?= $_SESSION['user_id'] ?>)
-                        load_dir_data(<?= $_REQUEST['direction'] ?>)
-                    })           
-                    
+                        load_favourites(<?= $_SESSION['user_id'] ?>);
+                        load_dir_data(<?= $_REQUEST['direction'] ?>);
+                    })
+                    //загрузка данных по клику в избранном
+
                     </script>
 
-                    
-                      
+
+
