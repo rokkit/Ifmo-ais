@@ -266,8 +266,8 @@
                     return '<w:tr>'.$value.'</w:tr>';
                 }
                 private function addTable($table,$values) {
-                    $table='test';
-                    $values=array(array(1,2,3),array(4,5,6));
+                    //$table='test';
+                    //$values=array(array(1,2,3),array(4,5,6));
                     $rows="";
                     foreach($values as $row) {//по строкам
                         $cels="";
@@ -277,7 +277,7 @@
                         $rows.=$this->addRow($cels);
                     }
                     $tab=$this->Table($rows);
-                    $this->content=str_replace("[starttable $table]",$tab,$this->content);
+                    $this->content=str_replace("[table $table]",$tab,$this->content);
                 }
 
 

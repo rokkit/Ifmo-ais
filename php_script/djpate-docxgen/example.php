@@ -2,11 +2,10 @@
 
 require("phpDocx.php");
 
-$phpdocx = new phpdocx("starttable.docx");
+$phpdocx = new phpdocx("workingtworkingt.docx");
 
 
-$phpdocx->assign("#NAME#","ХУЙ"); // basic field mapping
-$phpdocx->assignTable("test",array("#DATA"=>array(1,2,3),"#DATA2"=>array(4,5,6)));
+$phpdocx->assignTable("points",array(array("№","Дисциплина","Объём работы студ.","Форма итог. контр.","Оценка","Состав аттестационной комиссии"),array(1,2,3,4,5,6)));
 //$phpdocx->assignBlock("members",array(array("#NAME#"=>"John","#SURNAME#"=>"DOE"),array("#NAME#"=>"Jane","#SURNAME#"=>"DOE"))); // this would replicate two members block with the associated values
 //
 //$phpdocx->assignNestedBlock("pets",array(array("#PETNAME#"=>"Rex")),array("members"=>1)); // would create a block pets for john doe with the name rex
