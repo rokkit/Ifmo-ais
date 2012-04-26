@@ -1,5 +1,6 @@
 <?php
 require '../../php_script/auth.php';
+include_once '../../php_script/function.php';
     ?>
     <!DOCTYPE html>
 <html>
@@ -39,11 +40,11 @@ require '../../php_script/auth.php';
                                     <form>
                                     <label for="year-sel">Год</label>
                                     <select id="year-sel" name="year-sel" class="span2">
-
                                     </select>
                                     <label for="group-sel">Группа</label>
-                                    <select id="group-sel" name="group-sel" class="span2">
-
+                                    <select id="group-sel" name="group-sel" class="span4">
+                                        <option value="all">Все</option>
+                                            <!-- Грузим группы скриптом -->
                                     </select>
                                     <div id="only-choosed-lbl">
                                      С учётом направления
@@ -78,19 +79,50 @@ $.container = '#studs-container';
       $('#studs-table a').pjax('#studs-container');//аякс запрос студента по ид
     })
   </script>
+  <script>
+      $(function() {//грузим список групп
+          $.getJSON("/php_script/Forms/get_groups.php", {}, function(json) {
+              for(var id in json) {
+                  $("#group-sel").append("<option value="+json[id]+">"+json[id]+"</option>");
+              }
+          })
+      });
+  </script>
+
 
         <script>
-        var params="params=all";//параметр запроса студентов в таблице
+        var params="";//параметр запроса студентов в таблице
         //по изменению значения в фильтре изменяется параметр запроса
+        var arr_params=[];
 
+    function applyParams() {
+        var amper="";
+        params="";
+      for(var key in arr_params) {
+         params+=amper+key+"="+arr_params[key];
+         amper="&";
+      }
+      $("div#studs-table").flexOptions({url:"/php_script/Student/get_students.php?"+params});
+      $("div#studs-table").flexReload();
+    }
         $(function(){
             $("#filter-studs-table #only-choosed").change(function(){
-                if($("#filter-studs-table #only-choosed").is(':checked')) params="params=choosed_direction";
-                else params="params=all";
-                $("div#studs-table").flexOptions({url:"/php_script/Student/get_students.php?"+params});
-                $("div#studs-table").flexReload();
+                if($("#filter-studs-table #only-choosed").is(':checked'))
+                                                                          arr_params['params']="choosed_direction";
+                else
+                    arr_params['params']="all";
+                applyParams();
             });
+
+          $("#filter-studs-table #group-sel").change(function() {
+             var val=$("#group-sel").val();
+             if(val!="all")
+                arr_params['group']=val;
+             else arr_params['group']="all"
+             applyParams();
+          })
         });
+
 
         $(function(){
        $("div#studs-table").flexigrid({ //Таблица студентов
