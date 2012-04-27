@@ -79,7 +79,7 @@ class Student {
 
 
         }
-        if($params['group']!=null)//фильтр по группе
+        if($params['group']!=null && $params['group']!="all")//фильтр по группе
         {
             $group = parseNumSql($params['group']);
             $sql.=" WHERE gruppa=$group";
@@ -138,6 +138,17 @@ class Student {
         }
         return $points;
         }
+    }
+    static function getYears() {
+        //взять у андрея таблицу годов
+    }
+    static function getGroups() {
+        $result=  mysql_query("SELECT DISTINCT gruppa FROM stud_table ", connectToFspoDB());
+        $data=array();
+        while ($row = mysql_fetch_array($result,MYSQL_NUM)) {
+            $data[] = $row[0];
+        }
+        return json_encode($data);
     }
 }
 
