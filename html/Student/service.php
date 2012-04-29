@@ -15,13 +15,13 @@
         <script type="text/javascript" src="/content/js/bootstrap-tab.js"></script>
         <script type="text/javascript" src="/content/js/raphael-min.js"></script>
         <script type="text/javascript" src="/content/js/student-function.js"></script>
-        
+
         <script>
 $(function(){
     $("ul#content-nav li").click(function(){
-        $(this).addClass("current-nav").prev().removeClass("current-nav");       
+        $(this).addClass("current-nav").prev().removeClass("current-nav");
     });
-});        
+});
         </script>
   <script type="text/javascript">
     $(function(){
@@ -29,7 +29,7 @@ $(function(){
 $.hash = '#!/';
 $.siteurl = '<?php echo $_SERVER['HTTP_HOST']; ?>';
 $.container = '#st-content';
-            $('.fc-block').click(function(){       
+            $('.fc-block').click(function(){
                 $('div.fc-block').pjax({
                 url:'cservice.php?faculty='+$(this).attr("id"),
                 container:'#st-content'});//аякс запрос кафедр
@@ -38,7 +38,7 @@ $.container = '#st-content';
   </script>
     </head>
     <body>
-   
+
         <div class="container">
          <div class="row step-nav-row">
             <ul id="content-nav">
@@ -73,44 +73,40 @@ $.container = '#st-content';
                     </a>
                 </li>
             </ul>
-            <div class="clearboth">              
+            <div class="clearboth">
             </div>
-             <div class="page-header span8">
+             <!-- <div class="page-header span8">
                     <h3>Выбор факультета определит <br> общее направление будущей специальности</h3>
-             </div>
+             </div> -->
          </div>
             <div class="row" id="st-content-row">
                 <div id="st-content">
                     <div class="row">
                         <?php $facultys = getBlockFaculty(); ?>
                         <?php foreach($facultys as $f) {?>
-                        <div class="fc-block well" id="<?= $f->id ?>">
-                            <div class="span1 img">
-                               Image 
-                            </div>
-                            <div class="span4">
-                                <?= $f->name ?>
+                        <div class="fc-block well" id="<?= $f->id ?>" style="text-align: justify">
+                            <strong><?= $f->name ?></strong><br>
                                 <?= $f->description ?>
-                            </div>
+
                         </div>
 
                         <?php } ?>
                     </div>
-                    <script>                        
+                    <script>
                         $(function() {
                             $("#content-nav").children("li").each(function(){
-                               $(this).removeClass("current-nav"); 
-                            });                            
+                               $(this).removeClass("current-nav");
+                            });
                             $("#content-nav #step1").addClass("current-nav");
                         });
                     </script>
                 </div>
             </div>
-            
+
         </div>
 
         <div class="row footer well">
-                
+
         </div>
     </body>
 </html>

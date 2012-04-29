@@ -4,7 +4,7 @@
  *
  * @author rokkitlanchaz
  */
-//include_once '../../php_script/function.php';
+include_once '../../php_script/function.php';
 class Student {
 
     public $id;//Ид

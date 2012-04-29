@@ -266,8 +266,6 @@
                     return '<w:tr>'.$value.'</w:tr>';
                 }
                 private function addTable($table,$values) {
-                    //$table='test';
-                    //$values=array(array(1,2,3),array(4,5,6));
                     $rows="";
                     foreach($values as $row) {//по строкам
                         $cels="";

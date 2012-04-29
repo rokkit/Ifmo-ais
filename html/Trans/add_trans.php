@@ -16,9 +16,9 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
-<body> 
+<body>
    <?php include '../header-menu.php'; ?>
-    
+
     <div id="trans-added"  class="alert alert-success fade in alert-msg">Переход добавлен</div>
     <!-- end header menu -->
     <div class="container">
@@ -38,44 +38,44 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
   <li class="active">
     <a href=""><i class="icon-plus icon-white"></i>Добавить</a>
   </li>
- 
+
 </ul>
                         </div>
                         <div class="span6" id="fcd-content">
-                            
+
                             <div class="row-fluid">
                                 <form id="trans-filter" class="form-inline trans-filter">
                                     <select id="faculty" class="input-medium" name="faculty">
-                <option disabled>Факультет</option>
+                <option>Факультет</option>
                 <?php
     require '../../php_script/dbconnect.php';
-    
+
                 $facs=mysql_query('SELECT id,name FROM faculty');
                 while($fac = mysql_fetch_assoc($facs))
-                { 
+                {
                     echo '<option value="'.$fac['id'].'">'.$fac['name'].'</option>';
                 }
                 ?>
                                     </select>
             <select id="cathedra" class="input-medium" name="cathedra" style="display: none">
-              <option disabled value>Кафедра</option>
+              <option value>Кафедра</option>
             </select>
             <select id="direction" class="input-medium" name="direction" style="display: none">
-              <option disabled value>Направление</option>
+              <option value>Направление</option>
             </select>
                                 </form>
 
                             </div>
                             <div class="row-fluid"><div id="trans-tables">
-                                
-                                <div class="span4 fspo-table">                                
+
+                                <div class="span4 fspo-table">
                                     <div id="fspo-table">
-                                    
+
                                     </div>
                                 </div>
                                 <div class="span4">
                                     <div id="ifmo-table">
-                                    
+
                                     </div>
                                 </div>
                             </div></div>
@@ -98,18 +98,18 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
         <script>
             var height_t=200;
         $(function(){
-            
+
        $("div#fspo-table").flexigrid({
            url:'../../php_script/Trans/get_trans.php?type=fspo',
            dataType: 'json',
            colModel : [
-                        
+
                         {display: 'Дисциплина', name : 'name', width : 269, sortable : true, align: 'left'}
-                        
+
            ],
-           
+
            searchitems : [
-                        {display: 'Дисциплина', name : 'name'}   
+                        {display: 'Дисциплина', name : 'name'}
                 ],
                 sortname: "name",
                 sortorder: "asc",
@@ -123,21 +123,21 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                 width: 300,
                 height: height_t,
                 singleSelect: false
-       }); 
+       });
     });
      $(function(){
        $("div#ifmo-table").flexigrid({
            url:'../../php_script/Trans/get_trans.php?type=ifmo',
            dataType: 'json',
            colModel : [
-                        
+
                         {display: 'Дисциплина', name : 'name', width : 300, sortable : true, align: 'left'},
                         {display: 'Семестр', name : 'semester', width : 70, sortable : true, align: 'left'}
-                        
+
            ],
-           
+
            searchitems : [
-                        {display: 'Дисциплина', name : 'name'}   
+                        {display: 'Дисциплина', name : 'name'}
                 ],
                 sortname: "name",
                 sortorder: "asc",
@@ -151,7 +151,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                 width: 400,
                 height: height_t,
                 singleSelect: false
-       }); 
+       });
     });
     $(function(){
         $("#do-link").click(function(){
@@ -179,62 +179,62 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                       fspo_sel="";ifmo_sel="";
                       //$("#trans-added").show("slow").hide('slow')});
                       $("#trans-added").show("slow",function(){setTimeout(function(){$("#trans-added").hide('slow');},2500);});
-                }); return false;         
+                }); return false;
     });
-    
+
     });
         </script>
         <script>
 $(function()
 {
         $('#faculty').chainSelect('#cathedra','../../php_script/data_edit_get.php',
-        { 
+        {
                 before:function (target) //before request hide the target combobox and display the loading message
-                { 
+                {
                         //$("#loading").css("display","block");
                         $(target).css("display","none");
-                        
+
                 },
                 after:function (target) //after request show the target combobox and hide the loading message
-                { 
+                {
                         //$("#loading").css("display","none");
                         $(target).css("display","inline");
-                       
+
                 }
-                
+
         });
         $("#cathedra").click(function(){
             $('#cathedra').chainSelect('#direction','../../php_script/data_edit_get.php',
-        { 
+        {
                 before:function (target) //before request hide the target combobox and display the loading message
-                { 
+                {
                         //$("#loading").css("display","block");
                         $(target).css("display","none");
                 },
                 after:function (target) //after request show the target combobox and hide the loading message
-                { 
+                {
                         //$("#loading").css("display","none");
                         $(target).css("display","inline");
                 }
         });
         });
-        
-});        
+
+});
 
 $(function(){
     $("#trans-filter select").change(function(){
         var form=$("form#trans-filter").serialize();
-          $("div#ifmo-table").flexOptions({url:'../../php_script/Trans/get_trans.php?type=ifmo&'+form}).flexReload();  
+          $("div#ifmo-table").flexOptions({url:'../../php_script/Trans/get_trans.php?type=ifmo&'+form}).flexReload();
         });
     });
 
         </script>
 </body>
 </html>
-        
+
 <?php
 }
-else 
+else
 {
 header("Location: http://".$_SERVER['HTTP_HOST']."/");
 }

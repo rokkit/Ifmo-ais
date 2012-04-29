@@ -48,8 +48,18 @@ include_once '../../php_script/function.php';
                                     </select>
                                     <div id="only-choosed-lbl">
                                      С учётом направления
-<input type="checkbox" id="only-choosed" name="only-choosed"/>
+                                        <input type="checkbox" id="only-choosed" name="only-choosed"/>
                                     </div>
+    <div class="btn-group span3">
+        <a class="btn btn-large dropdown-toggle" data-toggle="dropdown" id="create-student-form-btn" href="#">
+            <i class="icon-list"></i> Документы
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a id="form-link">Выписка</a></li>
+            <li><a>Согласование</a></li>
+        </ul>
+    </div>
 
                                 </form>
                                 </div>
@@ -83,7 +93,7 @@ $.container = '#studs-container';
       $(function() {//грузим список групп
           $.getJSON("/php_script/Forms/get_groups.php", {}, function(json) {
               for(var id in json) {
-                  $("#group-sel").append("<option value="+json[id]+">"+json[id]+"</option>");
+                  if(json[id]!="0")$("#group-sel").append("<option value="+json[id]+">"+json[id]+"</option>");
               }
           })
       });
@@ -184,6 +194,15 @@ $.container = '#studs-container';
                     }
 
             }
+            $(function() {
+                $("#form-link").click(function() {
+                    var data=[];
+                    $('.trSelected').each(function() {
+                        var id = $(this).attr('id');
+                        id = id.substring(id.lastIndexOf('row')+3);alert(id)
+                    });
+                })
+            });
         </script>
 
     </body>

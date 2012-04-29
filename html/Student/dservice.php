@@ -37,8 +37,8 @@ include '../../php_script/StudentService/studentService.php';
     <h2 id="count-num"></h2>
     <h2>раз</h2>
 </div>
-
-    <div id="do-choose-btn" class="span1">
+  <div class="span1" id="btns">
+    <div id="do-choose-btn">
         <a id="do-choose" class="btn btn-primary btn-large"
            rel="popover" data-content="Нажав кнопку, вы подадите заявление, которое будет рассмотрено в течении нескольких дней"
            data-original-title="Внимание"><i class="icon-ok icon-white"></i>Выбрать</a>
@@ -48,11 +48,12 @@ include '../../php_script/StudentService/studentService.php';
         $("#do-choose").popover();
     })
     </script>
-
+    <a class="btn btn-mini add" id="add-to-favs" >В избранное</a>
+  </div>
 </div>
 <div class="row points-row">
     <div id="points-table" class="span7">
-<h2>Оценки, на первом курсе</h2>
+<h2>Оценки, за первый курс</h2>
 <div class="points">
     <?php
     $ifmodb=  connectToIfmoDb();
@@ -115,7 +116,7 @@ include '../../php_script/StudentService/studentService.php';
                                     <li>Факультет:<p id="faculty-choose"></p></li>
                                     <li>Кафедра:<p id="cathedra-choose"></p></li>
                                     <li>Направление:<p id="direction-choose"></p></li>
-                                    <li>Форма обучения<p id="education-form-choose"></p></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -150,12 +151,11 @@ include '../../php_script/StudentService/studentService.php';
                         //отправка заявки
                         $("#send-choose").click(function(){
                             var direction=$("#direction-temp").val();
-                            var edu_form=$("#education-form").val();
+
                             $.post("/php_script/StudentService/doChoose.php",
                                 {
                                     id_student:<?= $_SESSION['user_id'] ?>,
-                                    id_direction:direction,
-                                    edu_form:edu_form
+                                    id_direction:direction
                                 }
                             , function(){
                                 $("#check-dlg").modal('hide');
@@ -170,8 +170,14 @@ include '../../php_script/StudentService/studentService.php';
                         load_favourites(<?= $_SESSION['user_id'] ?>);
                         load_dir_data(<?= $_REQUEST['direction'] ?>);
                     })
-                    //загрузка данных по клику в избранном
-
+                    //добавление в избранное
+                    $(function() {
+                        $("#add-to-favs").click(function() {
+                            var dir=$("#direction-temp").val();
+                            add_to_favourite($(this), dir);
+                            load_favourites(<?= $_SESSION['user_id'] ?>);
+                        });
+                    });
                     </script>
 
 
