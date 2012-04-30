@@ -10,11 +10,11 @@ if(!empty($_POST['id']) && !empty($_POST['action']))
         if(isset($_COOKIE[$cookie_name]))
         {
         $favs=$_COOKIE[$cookie_name];
+            if(strstr($favs, $_POST['id'])===false) {
+                $favs.=",".$_POST['id'];
 
-        $favs.=",".$_POST['id'];
-
-        if(setcookie($cookie_name,$favs,time()+3600,"/")) echo "OVERSET $cookie_name";
-
+                if(setcookie($cookie_name,$favs,time()+3600,"/")) echo "OVERSET $cookie_name";
+            }
         }
         else if(setcookie($cookie_name,$_POST['id'],time()+3600,"/")) echo "SET $cookie_name";
     }

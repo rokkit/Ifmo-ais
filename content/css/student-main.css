@@ -138,6 +138,13 @@ body {
     padding: 2px 6px;
     line-height: 14px;
 }
+#do-choose-btn .remove {
+    background-color: red;
+}
+#do-choose-btn .add {
+    background-color: green;
+
+}
 #btns {
     width: 90px;
 }

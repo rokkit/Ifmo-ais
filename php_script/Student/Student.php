@@ -4,7 +4,7 @@
  *
  * @author rokkitlanchaz
  */
-include_once '../../php_script/function.php';
+
 class Student {
 
     public $id;//Ид
@@ -54,7 +54,7 @@ class Student {
     static function getStudentById($id_student)
     {
         $sql="SELECT Ima, Familia, Otchestvo, gruppa, programm FROM stud_table WHERE Stud_ID=$id_student";
-        $students =  mysql_query($sql) or die (mysql_error());
+        $students =  mysql_query($sql,  connectToFspoDB()) or die (mysql_error());
         if($st =  mysql_fetch_array($students))
         {
             $student=new Student($id_student,$st['Ima'],$st['Familia'],$st['Otchestvo'],$st['gruppa'],$st['programm']);

@@ -196,11 +196,15 @@ $.container = '#studs-container';
             }
             $(function() {
                 $("#form-link").click(function() {
-                    var data=[];
+                    var data="";
                     $('.trSelected').each(function() {
                         var id = $(this).attr('id');
-                        id = id.substring(id.lastIndexOf('row')+3);alert(id)
+                        id = id.substring(id.lastIndexOf('row')+3);
+                        data+=id+";";
                     });
+                    $.post("/php_script/Forms/Form_docxgen/form_creator.php", {form:"form",type:"archive",ids:data}, function() {
+
+                    },"text");
                 })
             });
         </script>

@@ -1,26 +1,31 @@
 //набор функций для сервиса студента
 
 //добавление в избранное
-function add_to_favourite(link, id) {//тип:добавить/удалить, id: ид направления
+function add_to_favourite(link, id,user_id) {//тип:добавить/удалить, id: ид направления
     if($(link).hasClass("add"))
         {
             $(link).removeClass("add").addClass("remove");
+            $("#add-to-favs").text("Удалить");
             var action="add";
         }
         else {
            $(link).removeClass("remove").addClass("add");
+           $("#add-to-favs").text("Добавить");
            var action="remove";
         }
         $.post("/php_script/StudentService/add_to_favourites.php",
                {id:id,action:action},
                function(){
-               }, 'json');
-               return false;
+                    load_favourites(user_id)
+               }, 'text');
+               event.preventDefault();
 }
 
 //загрузка списка с избранным
-function load_favourites(user_id) {
+function load_favourites(user_id,dir) {
     $.getJSON("/php_script/StudentService/get_favourites.php", {user_id:user_id}, function(data) {
+        $("#nav-tabs").empty();
+        if(data)
         for(i=0;i<data.length;i++)
             {
                 $("#nav-tabs").append("<li id="+data[i]['id']+"><a href='#' data-toggle=tab>"+data[i]['name']+" "+data[i]['name_faculty']+"</a></li>")
@@ -29,7 +34,7 @@ function load_favourites(user_id) {
 }
 
 //получение данных и наполнение полей
-function load_dir_data(direction) {
+function load_dir_data(direction,user_id,dir) {
     $.getJSON("/php_script/StudentService/load_dir_data.php", {direction:direction}, function(json) {
         $("#direction-temp").val(direction);
         $("#faculty-temp-choose").text(json['name_faculty']);//название факультета
@@ -45,8 +50,28 @@ function load_dir_data(direction) {
                 $("#stud-subject-body")
                 .append("<tr><td>"+p['subject']+"</td><td>"+p['point']+"</td><td>"+p['discipline']+"</td></tr>");
             }
+            if(checkFavourite(user_id, dir)=="add") {
+                                $("#add-to-favs").removeClass("remove").addClass("add").text("Добавить");
+                            }
+                            else $("#add-to-favs").removeClass("add").addClass("remove").text("Удалить");
         })
+
+
     }
+function checkFavourite(user_id,fav_id) {
+
+    var favs=$.cookie("favourites"+user_id)
+    if(favs) {
+        favs = favs.split(",");
+        for(var fav in favs) {alert(favs[fav])
+           if(favs[fav]==fav_id) return "remove";
+        }
+
+        return "add";//если еще не добавлено то выводим добавить
+    }
+        return "add";
+}
+
 
 
 //рисуем паутиновый график

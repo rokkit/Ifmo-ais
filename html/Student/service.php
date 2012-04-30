@@ -8,6 +8,7 @@
         <link type="text/css" rel="stylesheet" href="/content/css/student-main.css">
         <script type="text/javascript" src="/content/js/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="/content/js/jquery.pjax.js"></script>
+        <script type="text/javascript" src="/content/js/jquery.cookie.js"></script>
         <script type="text/javascript" src="/content/js/bootstrap-transition.js"></script>
         <script type="text/javascript" src="/content/js/bootstrap-tooltip.js"></script>
         <script type="text/javascript" src="/content/js/bootstrap-popover.js"></script>

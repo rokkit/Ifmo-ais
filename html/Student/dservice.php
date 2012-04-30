@@ -48,7 +48,7 @@ include '../../php_script/StudentService/studentService.php';
         $("#do-choose").popover();
     })
     </script>
-    <a class="btn btn-mini add" id="add-to-favs" >В избранное</a>
+    <a class="btn btn-mini" id="add-to-favs" >В избранное</a>
   </div>
 </div>
 <div class="row points-row">
@@ -78,11 +78,7 @@ include '../../php_script/StudentService/studentService.php';
             </tbody>
         </table>
     </div>
-        <script>
-            $(function() {
 
-            })
-        </script>
         <script>//красим ячейки
             $(function(){
                 $("#stud-subject-body tr").each(function() {
@@ -167,15 +163,17 @@ include '../../php_script/StudentService/studentService.php';
                     <script>
                     //получение списка избранного
                     $(function(){
-                        load_favourites(<?= $_SESSION['user_id'] ?>);
-                        load_dir_data(<?= $_REQUEST['direction'] ?>);
+                         var dir=$("#direction-temp").val();
+                        load_favourites(<?= $_SESSION['user_id'] ?>,dir);
+                        load_dir_data(<?= $_REQUEST['direction'] ?>,<?= $_SESSION['user_id'] ?>,dir);
                     })
                     //добавление в избранное
                     $(function() {
                         $("#add-to-favs").click(function() {
                             var dir=$("#direction-temp").val();
-                            add_to_favourite($(this), dir);
-                            load_favourites(<?= $_SESSION['user_id'] ?>);
+                            add_to_favourite($(this), dir, <?= $_SESSION['user_id'] ?>);
+
+
                         });
                     });
                     </script>

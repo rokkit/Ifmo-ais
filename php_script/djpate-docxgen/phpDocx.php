@@ -118,6 +118,9 @@
 
 			$this->compact($outputFile);
 		}
+                function write($file_name) {
+                    echo "write ".$file_name;
+                }
 
 		private function processImages(){
 
