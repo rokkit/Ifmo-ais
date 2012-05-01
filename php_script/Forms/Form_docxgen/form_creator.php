@@ -36,11 +36,14 @@ if(isset($_GET['id'])) {//формируем документ
                 try {
                     $template="template_end_form.docx";
                     $phpdocx = new phpdocx($template);
+
                 } catch (Exception $exc) {
                     echo $exc->getTraceAsString();
                 }
 
                 //creating documents
+                $files=array();
+                $directory="files/";
                 foreach($ids as $id) {
                     $id = parseNumSql($id);
                     $student=Student::getStudentById($id);
@@ -50,7 +53,9 @@ if(isset($_GET['id'])) {//формируем документ
                                                   "#FIO#"=>$student->getFio())));
         $phpdocx->assignTable("points",array(array("№","Дисциплина","Объём работы студ.","Форма итог. контр.","Оценка","Состав аттестационной комиссии"),
                                              array(1,2,3,4,5,6)));
-        $phpdocx->write($student->name.$student->last_name.$student->group);
+        $filename = $directory.encodestring($student->name."_".$student->last_name)."_".$student->group.".docx";
+
+        @$phpdocx->save($filename);//тут вылезают ошибки на денаид но они никак не влияют
 
                 }
                 $valid_files = array();

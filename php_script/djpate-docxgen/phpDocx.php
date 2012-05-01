@@ -5,7 +5,7 @@
 	class phpdocx{
 
 		private $template;
-		private $tmpDir = "/tmp/phpdocx"; // must be writable
+		private $tmpDir = "/tmp/"; // must be writable
 		private $assigned_field = array();
 		private $assigned_block = array();
 		private $assigned_nested_block = array();
@@ -118,9 +118,7 @@
 
 			$this->compact($outputFile);
 		}
-                function write($file_name) {
-                    echo "write ".$file_name;
-                }
+
 
 		private function processImages(){
 
