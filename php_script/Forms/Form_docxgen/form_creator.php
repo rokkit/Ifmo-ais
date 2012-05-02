@@ -1,16 +1,16 @@
 <?php
 
 $root = $_SERVER['DOCUMENT_ROOT'];
-require '../../auth.php';
+//require '../../auth.php';
 require_once '../../function.php';
 require_once '../../Student/Student.php';
 require '../../../php_script/djpate-docxgen/phpDocx.php';
 //require '../../../php_script/includes/ZipArchive.php';
 require_once "../../djpate-docxgen/lib/pclzip.lib.php";
 
-if(isset($_GET['id'])) {//формируем документ
+if(isset($_REQUEST['id'])) {//формируем документ
     $fspodb = connectToFspoDB();
-    $student=Student::getStudentById($_GET['id']);
+    $student=Student::getStudentById($_REQUEST['id']);
     $phpdocx="";
     try {
         $template="template_end_form.docx";
@@ -26,14 +26,14 @@ if(isset($_GET['id'])) {//формируем документ
                                                   "#FIO#"=>$student->getFio())));
 
     $phpdocx->assignTable("points",array(array("№","Дисциплина","Объём работы студ.","Форма итог. контр.","Оценка","Состав аттестационной комиссии"),array(1,2,3,4,5,6)));
-    $phpdocx->download();
+    @$phpdocx->download();
     }
   }
-    if($_POST['type']=="archive") {
-        if($_POST['form']=="form") {
-            if(isset($_POST['ids'])) {
+    if($_REQUEST['type']=="archive") {
+        if($_REQUEST['form']=="form") {
+            if(isset($_REQUEST['ids'])) {
                 /* split the querystring */
-                $ids = rtrim($_POST['ids'], ";");
+                $ids = rtrim($_REQUEST['ids'], ";");
                 $ids = explode(";", $ids);
                 $phpdocx="";
                 try {
@@ -87,21 +87,39 @@ if(isset($_GET['id'])) {//формируем документ
                     $zip->add($file);
                 }
 
-                if(!file_exists($path)) {  return false; }
+                if(!file_exists($path)) {  return false; echo 'no'; }
  /* force download zip */
     if(ini_get('zlib.output_compression')) { ini_set('zlib.output_compression', 'Off');  }
-    header('Pragma: public');
-    header('Expires: 0');
-    header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
-    header('Last-Modified: '.gmdate('D, d M Y H:i:s', filemtime($path)).' GMT');
-    header('Cache-Control: private',false);
-    header('Content-Type: application/zip');
-    header('Content-Disposition: attachment; filename="package.zip"');
-    header('Content-Transfer-Encoding: binary');
-    header('Content-Length: '.filesize($path));
-    header('Connection: close');
-    readfile($path);
-    exit();
+
+			header('Content-Description: File Transfer');
+			header('Content-Type: application/zip');
+			header('Content-Disposition: attachment; filename='.basename($path));
+                        header('Content-Transfer-Encoding:binary');
+			header('Expires: 0');
+			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+                        header('Last-Modified: '.gmdate('D, d M Y H:i:s', filemtime($path)).' GMT');
+                        header('Cache-Control: private',false);
+			header('Pragma: public');
+			header('Content-Length: ' . filesize($path));
+//        		ob_clean();
+//			flush();
+//                        mysql_close();
+//                        session_write_close();
+//			readfile($path);
+//			exit;
+                        $file = @fopen($path,"rb");
+if ($file) {
+  while(!feof($file)) {
+    print(fread($file, 1024*8));
+    flush();
+    if (connection_status()!=0) {
+      @fclose($file);
+      die();
+    }
+  }
+  @fclose($file);
+}
+
                 }
             }
         }

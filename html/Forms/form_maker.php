@@ -202,9 +202,13 @@ $.container = '#studs-container';
                         id = id.substring(id.lastIndexOf('row')+3);
                         data+=id+";";
                     });
-                    $.post("/php_script/Forms/Form_docxgen/form_creator.php", {form:"form",type:"archive",ids:data}, function() {
-
-                    },"text");
+//                   $.post("/php_script/Forms/Form_docxgen/form_creator.php", {form:"form",type:"archive",ids:data}, function() {
+//
+//                    });
+//$.post("/php_script/Forms/Form_docxgen/download.php?f=1.zip", {}, function() {
+//
+//    });
+    document.location.href="/php_script/Forms/Form_docxgen/form_creator.php?form=form&type=archive&ids="+data;
                 })
             });
         </script>
