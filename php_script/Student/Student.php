@@ -4,7 +4,8 @@
  *
  * @author rokkitlanchaz
  */
-require_once '../function.php';
+define('ABSPATH', $_SERVER['DOCUMENT_ROOT']."/php_script/");
+require_once ABSPATH.'function.php';
 class Student {
 
     public $id;//Ид
