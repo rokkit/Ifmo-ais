@@ -23,7 +23,7 @@ include_once '../../php_script/function.php';
         <!-- main content -->
         <div class="container">
             <div class="span12" id="content">
-                <h1>Формирование выписок</h1>
+                <h1>Работа со студентами</h1>
                 <div class="row row-content">
                     <div class="container-fluid">
                         <div class="row-fluid">
@@ -35,34 +35,47 @@ include_once '../../php_script/function.php';
                                 <li>
                                     <a href="/html/Forms/inbox.php"><i class="icon-inbox"></i>Заявки <?php include 'get_inbox_choose.php'; ?></a>
                                 </li>
-                            </ul>
-                                <div class="span3 well" id="filter-studs-table" style="width: 200px;">
-                                    <form>
+                                <li class="nav-header">Отображать записи</li>
+                                <li class="span3 well" id="filter-studs-table" style="width: 200px; margin-top:9px;">
+                                    <form class="nform">
                                     <label for="year-sel">Год</label>
-                                    <select id="year-sel" name="year-sel" class="span2">
+                                    <select id="year-sel" name="year-sel" class="span4">
                                     </select>
                                     <label for="group-sel">Группа</label>
                                     <select id="group-sel" name="group-sel" class="span4">
                                         <option value="all">Все</option>
                                             <!-- Грузим группы скриптом -->
                                     </select>
-                                    <div id="only-choosed-lbl">
-                                     С учётом направления
-                                        <input type="checkbox" id="only-choosed" name="only-choosed"/>
-                                    </div>
-    <div class="btn-group span3">
-        <a class="btn btn-large dropdown-toggle" data-toggle="dropdown" id="create-student-form-btn" href="#">
-            <i class="icon-list"></i> Документы
-            <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a id="form-link">Выписка</a></li>
-            <li><a>Согласование</a></li>
-        </ul>
-    </div>
-
+                                    <label class="checkbox">
+                   <input type="checkbox" id="only-choosed" name="only-choosed"/>Выбравшие ВПО
+                                    </label>
                                 </form>
-                                </div>
+                                    <div class="nav-header"><i class="icon-book"></i>Документы</div>
+                                    <div>
+                                        <ul class="nav nav-list">
+                                            <li>
+                                                <a id="form-options-link">Выписка</a>
+                                                <div id="form-options">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" id="forall"/>Для всех студентов
+                                                    </label>
+                                                    <label class="checkbox">
+                                                      <input type="checkbox" id="with-filter"/>С учетом фильтра
+                                                    </label>
+
+                                                    <a id="form-link" class="btn btn-small btn-primary">Скачать</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a id="extract-options-link">Согласование</a>
+                                                <div id="extract-options">
+                                                    <a id="extract-link" class="btn btn-small btn-primary">Скачать</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                </ul>
                             </div>
 
                             <div class="span6">
@@ -95,6 +108,21 @@ $.container = '#studs-container';
               for(var id in json) {
                   if(json[id]!="0")$("#group-sel").append("<option value="+json[id]+">"+json[id]+"</option>");
               }
+          })
+      });
+  </script>
+  <script>
+      //выводим опции формы
+      $(function() {
+          $("#form-options-link").click(function() {
+              $(this).addClass("active");
+              $("#form-options").slideToggle("normal", function() {
+          })
+          })
+          $("#extract-options-link").click(function() {
+              $(this).addClass("active");
+              $("#extract-options").slideToggle("normal", function() {
+          })
           })
       });
   </script>
@@ -197,19 +225,37 @@ $.container = '#studs-container';
             $(function() {
                 $("#form-link").click(function() {
                     var data="";
+                    if($("#forall").is(":checked")) {
+                        data="all";
+                    }
+                    else {
                     $('.trSelected').each(function() {
                         var id = $(this).attr('id');
                         id = id.substring(id.lastIndexOf('row')+3);
                         data+=id+";";
                     });
-//                   $.post("/php_script/Forms/Form_docxgen/form_creator.php", {form:"form",type:"archive",ids:data}, function() {
-//
-//                    });
-//$.post("/php_script/Forms/Form_docxgen/download.php?f=1.zip", {}, function() {
-//
-//    });
+                    }
+
     document.location.href="/php_script/Forms/Form_docxgen/form_creator.php?form=form&type=archive&ids="+data;
                 })
+            });
+
+            $(function() {
+                $("#extract-link").click(function() {
+                    var data="";
+                    if($("#forall").is(":checked")) {
+                        data="all";
+                    }
+                    else {
+                    $('.trSelected').each(function() {
+                        var id = $(this).attr('id');
+                        id = id.substring(id.lastIndexOf('row')+3);
+                        data+=id+";";
+                    });
+                    }
+            document.location.href="/php_script/Forms/Form_docxgen/form_creator.php?form=extract&type=archive&ids="+data;
+
+            });
             });
         </script>
 

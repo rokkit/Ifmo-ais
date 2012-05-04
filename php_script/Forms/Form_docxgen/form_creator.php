@@ -1,11 +1,10 @@
 <?php
 
 $root = $_SERVER['DOCUMENT_ROOT'];
-//require '../../auth.php';
+require '../../auth.php';
 require_once '../../function.php';
 require_once '../../Student/Student.php';
 require '../../../php_script/djpate-docxgen/phpDocx.php';
-//require '../../../php_script/includes/ZipArchive.php';
 require_once "../../djpate-docxgen/lib/pclzip.lib.php";
 
 if(isset($_REQUEST['id'])) {//формируем документ
@@ -33,8 +32,16 @@ if(isset($_REQUEST['id'])) {//формируем документ
         if($_REQUEST['form']=="form") {
             if(isset($_REQUEST['ids'])) {
                 /* split the querystring */
+                if($_REQUEST['ids']!="all") {
                 $ids = rtrim($_REQUEST['ids'], ";");
                 $ids = explode(";", $ids);
+                }
+                else if($_REQUEST['ids']=="all") {
+                    $result=  mysql_query("SELECT id_student FROM student_choose WHERE confirm=1", connectToIfmoDb()) or die(mysql_error());
+                    while($st = mysql_fetch_assoc($result)) {
+                        $ids[] = $st['id_student'];
+                    }
+                }
                 $phpdocx="";
                 try {
                     $template="template_end_form.docx";
@@ -75,12 +82,7 @@ if(isset($_REQUEST['id'])) {//формируем документ
                     $zipfilename=time().".zip";
                     $path = $zipdir.$zipfilename;
 
-//                    $zip = new ZipArchive();
-//                    if($zip->open($path, ZIPARCHIVE::CREATE)!==true)
-//                            return false;
                         $zip=new PclZip($path);
-
-
 
                 /* add files */
                 foreach($valid_files as $file) {
@@ -101,12 +103,6 @@ if(isset($_REQUEST['id'])) {//формируем документ
                         header('Cache-Control: private',false);
 			header('Pragma: public');
 			header('Content-Length: ' . filesize($path));
-//        		ob_clean();
-//			flush();
-//                        mysql_close();
-//                        session_write_close();
-//			readfile($path);
-//			exit;
                         $file = @fopen($path,"rb");
 if ($file) {
   while(!feof($file)) {
@@ -123,6 +119,39 @@ if ($file) {
                 }
             }
         }
+        else if($_REQUEST['form']=='extract') { //запрос выписки
+            $phpdocx="";
+                try {
+                    $template="extract_template.docx";
+                    $phpdocx = new phpdocx($template);
+
+                } catch (Exception $exc) {
+                    echo $exc->getTraceAsString();
+                }
+                $ifmodb=connectToIfmoDb();
+                /* split the querystring */
+                if($_REQUEST['ids']!="all") {
+                $ids = rtrim($_REQUEST['ids'], ";");
+                $ids = explode(";", $ids);
+                }
+                else if($_REQUEST['ids']=="all") {
+                    $result = mysql_query("SELECT id_student FROM student_choose WHERE confirm=1",$ifmodb ) or die(mysql_error());
+                    while($st = mysql_fetch_assoc($result)) {
+                        $ids[] = $st['id_student'];
+                    }
+                }
+                //распределяем студентов по направлениям
+                $students=array();
+                foreach($ids as $id) {
+                    $id = parseNumSql($id);
+                    $result = mysql_query("SELECT id_direction FROM student_choose WHERE confirm=1 AND id_student=$id", $ifmodb) or die(mysql_error());
+                    $students[$id] =  mysql_result($result, 0);
+                }
+                $dirs =  array_unique($students);//выбираем уникальные  направления
+                var_dump($dirs);
+
+        }
+
     }
 
 

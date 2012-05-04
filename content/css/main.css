@@ -8,7 +8,7 @@
 
 root {
     display: block;
-    
+
 }
 
 .main-container {
@@ -125,5 +125,20 @@ margin-bottom:5px;
     background-color: rgb(248, 219, 219);
 }
 #only-choosed {
-    margin-left: 5px;
+
+}
+
+.nform {
+    margin-bottom: 9px;
+}
+#form-options, #extract-options {
+    display: none;
+}
+#form-options label {
+    float:left;
+    margin-right: 12px;
+}
+#documents-link {
+    margin-top: 9px;
+    cursor: pointer;
 }
