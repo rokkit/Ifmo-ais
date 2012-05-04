@@ -4,7 +4,7 @@
  *
  * @author rokkitlanchaz
  */
-
+require_once '../function.php';
 class Student {
 
     public $id;//Ид

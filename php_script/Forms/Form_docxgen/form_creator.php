@@ -148,7 +148,12 @@ if ($file) {
                     $students[$id] =  mysql_result($result, 0);
                 }
                 $dirs =  array_unique($students);//выбираем уникальные  направления
-                var_dump($dirs);
+                $dirs = array_flip($dirs);
+                $t_dirs = $dirs;
+                foreach($dirs as $dir => $values) {
+                    $t_dirs[$dir] = array_keys($students, $dir);
+                }
+                //массив вида направление => массив студентов
 
         }
 

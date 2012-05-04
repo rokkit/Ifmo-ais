@@ -22,7 +22,7 @@
                 <h1>Формирование выписок</h1>
                 <div class="row row-content">
                     <div class="container-fluid">
-                        <div class="row-fluid">                        
+                        <div class="row-fluid">
                             <div class="span3">
                             <ul class="nav nav-list">
                                 <li>
@@ -36,36 +36,36 @@
                         <div class="span6">
                             <div id="fcd-content">
                                 <div id="inbox-table">
-                                    
+
                                 </div>
                             </div>
-                        </div>                   
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Таблица заявок -->
         <script>
         $(function(){
-            
+
        $("div#inbox-table").flexigrid({
            url:'/php_script/Forms/get_inbox.php',
            dataType: 'json',
            colModel : [
-                        
+
                         {display: 'ФИО', name : 'name', width : 200, sortable : true, align: 'left'},
                         {display: 'Кафедра', name : 'name', width : 150, sortable : true, align: 'left'},
                         {display: 'Направление', name : 'name', width : 50, sortable : true, align: 'left'},
                         {display: 'Форма обучения', name : 'name', width : 150, sortable : true, align: 'left'}
-                        
+
            ],
            buttons : [
                         {name: '<i class="icon-check"></i>Принять', bclass: 'create', onpress : doCommand},
                         {name: '<i class="icon-share"></i>Отклонить', bclass: 'delete', onpress : doCommand}
                 ],
-           
+
            searchitems : [
                         {display: 'ФИО', name : 'name'}
                 ],
@@ -82,8 +82,8 @@
                 height: 400,
                 singleSelect: false,
                 minwidth:200
-       }); 
-    });           
+       });
+    });
 
 //Кнопки таблицы
     function doCommand(com, grid) {
@@ -94,22 +94,22 @@
                         $.get("/php_script/Forms/set_inbox.php",{id:id,"confirm":"true"},
                             function()
                             {
-                             $("div#inbox-table").flexReload();   
+                             $("div#inbox-table").flexReload();
                             });
-  
+
             });
             } else if (com == '<i class="icon-share"></i>Отклонить') {
                     $('.trSelected', grid).each(function() {
                     var id = $(this).attr('id');
                     id = id.substring(id.lastIndexOf('row')+3);
-                    
+
                     $.get("/php_script/Forms/set_inbox.php", {id:id,"confirm":"false"}, function(data){
-                        
+
                     });
-                    
+
                     });
                     }
-                    
+
             }
         </script>
     </body>
