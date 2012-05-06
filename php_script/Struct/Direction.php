@@ -1,5 +1,5 @@
 <?php
-include_once '../../php_script/function.php';
+//include_once '../../php_script/function.php';
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -17,7 +17,7 @@ class Direction {
     public $description;
     public $cathedra;
     public $faculty;
-    
+
     function __construct($id,$name,$full_name,$description)
     {
         $this->id=$id;
@@ -31,7 +31,7 @@ class Direction {
         $id =  parseNumSql($cathedra);
         if(!empty($id))
         {
-            
+
             $query.=" WHERE id_cathedra=$id";
         }
         $data=array();
@@ -51,7 +51,7 @@ class Direction {
             $direction=new Direction($result['id'], $result['name'], $result['full_name'], $result['description']);
         //теперь получаем инф о кафедре и факультете
         $direction->cathedra=$result['id_cathedra'];
-        
+
         $faculty = mysql_query("SELECT id_faculty FROM cathedra WHERE id=$direction->cathedra",$ifmodb);
         $direction->faculty = mysql_result($faculty, 0);
         }

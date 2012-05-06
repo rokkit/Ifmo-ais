@@ -1,11 +1,15 @@
 <?php
 
 $root = $_SERVER['DOCUMENT_ROOT'];
+define('SCRIPTPATH', $_SERVER['DOCUMENT_ROOT']."/php_script/");
 require '../../auth.php';
-require_once '../../function.php';
+require_once SCRIPTPATH.'/function.php';
 require_once '../../Student/Student.php';
 require '../../../php_script/djpate-docxgen/phpDocx.php';
 require_once "../../djpate-docxgen/lib/pclzip.lib.php";
+require_once SCRIPTPATH.'Struct/Cathedra.php';
+require_once SCRIPTPATH.'Struct/Direction.php';
+require_once SCRIPTPATH.'Struct/Faculty.php';
 
 if(isset($_REQUEST['id'])) {//формируем документ
     $fspodb = connectToFspoDB();
@@ -120,14 +124,7 @@ if ($file) {
             }
         }
         else if($_REQUEST['form']=='extract') { //запрос выписки
-            $phpdocx="";
-                try {
-                    $template="extract_template.docx";
-                    $phpdocx = new phpdocx($template);
 
-                } catch (Exception $exc) {
-                    echo $exc->getTraceAsString();
-                }
                 $ifmodb=connectToIfmoDb();
                 /* split the querystring */
                 if($_REQUEST['ids']!="all") {
@@ -154,6 +151,50 @@ if ($file) {
                     $t_dirs[$dir] = array_keys($students, $dir);
                 }
                 //массив вида направление => массив студентов
+                $dirs=$t_dirs;
+                unset($t_dirs);
+
+                    /* формируем документ
+                     * #DATE# => Дата составления
+                     * #FACNAME# => Название факультета
+                     * #FIODEKAN# => ФИО декана
+                     * #FIODEKAN2# => ФИО декана в дательном падеже
+                     * #STATUS# => Заведущей / Заведущему кафедры
+                     * #ZAVCATHEDR# => ФИО завкафедры
+                     * #CATHEDRA# => Название Кафедры
+                     * #DIRECTION# => Направление
+                     * #STUDENTS# => Список студентов
+                    */
+                $phpdocx="";
+                try {
+                    $template="extract_template.docx";
+                    $phpdocx = new phpdocx($template);
+
+                } catch (Exception $exc) {
+                    echo $exc->getTraceAsString();
+                }
+                $files=array();
+                foreach($dirs as $dir => $stds) {
+                    //$phpdocx->assign('#DATE#', date('d.m.Y'));
+                    $direction = json_decode(Direction::getFullInfo($dir));
+                    $faculty=Faculty::getFacultyObj($direction->faculty);
+                    $cathedra = Cathedra::getCathedraObj($direction->cathedra);
+                    $phpdocx->assign('#FACNAME#', $faculty->full_name);
+                    $phpdocx->assign("#FIODEKAN#", $faculty->dekan);
+                    $phpdocx->assign('#CATHEDRA#', $cathdra->name);
+                    $phpdocx->assign('#ZAVCATHEDR#',$cathedra->dekan);
+                    $phpdocx->assign('#DIRECTION#',$direction->name." ".$direction->description);
+                    $arr = array(); //need array like array(array(name=>value))
+                    foreach($stds as $std) {
+                        //var_dump($std);
+                        $student=Student::getStudentById($std);
+                        $arr[]=array('#FIO#'=>$student->getFio());
+                    }
+                    $phpdocx->assignBlock('students',$arr);
+                    //var_dump($arr);
+                    $phpdocx->save($direction->name." ".date("d_m_Y").".docx");
+                }
+
 
         }
 

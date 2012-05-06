@@ -65,7 +65,7 @@
 				$name = basename($tmp_filename);
 			}
 
-			$this->save($tmp_filename);
+			@$this->save($tmp_filename);
 
 			header('Content-Description: File Transfer');
 			header('Content-Type: application/octet-stream');
@@ -151,8 +151,8 @@
 
 			mkdir($this->tmpDir);
 
-			$archive = new PclZip($this->template);
-			$archive->extract(PCLZIP_OPT_PATH, $this->tmpDir);
+			@$archive = new PclZip($this->template);
+			@$archive->extract(PCLZIP_OPT_PATH, $this->tmpDir);
 
 		}
 
@@ -160,8 +160,8 @@
 
 			file_put_contents($this->tmpDir."/word/document.xml",$this->content);
 
-			$archive = new PclZip($output);
-			$archive->create($this->tmpDir,PCLZIP_OPT_REMOVE_PATH,$this->tmpDir);
+			@$archive = new PclZip($output);
+			@$archive->create($this->tmpDir,PCLZIP_OPT_REMOVE_PATH,$this->tmpDir);
 
 
 		}

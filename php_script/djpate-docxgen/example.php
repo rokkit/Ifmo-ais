@@ -1,8 +1,8 @@
-<?php
+﻿<?php
 
 require("phpDocx.php");
 
-$phpdocx = new phpdocx("workingtworkingt.docx");
+$phpdocx = new phpdocx("workingt.docx");
 
 
 $phpdocx->assignTable("points",array(array("№","Дисциплина","Объём работы студ.","Форма итог. контр.","Оценка","Состав аттестационной комиссии"),array(1,2,3,4,5,6)));
@@ -14,5 +14,5 @@ $phpdocx->assignTable("points",array(array("№","Дисциплина","Объ�
 //$phpdocx->assignNestedBlock("toys",array(array("#TOYNAME#"=>"Ball"),array("#TOYNAME#"=>"Frisbee"),array("#TOYNAME#"=>"Box")),array("members"=>1,"pets"=>1)); // would create a block toy for rex
 //$phpdocx->assignNestedBlock("toys",array(array("#TOYNAME#"=>"Frisbee")),array("members"=>2,"pets"=>1)); // would create a block toy for rox
 //
-$phpdocx->save("pets.docx");
+@$phpdocx->download();
 ?>

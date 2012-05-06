@@ -1,5 +1,5 @@
 <?php
-include_once '../../php_script/function.php';
+//include_once '../../php_script/function.php';
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -16,7 +16,7 @@ class Cathedra {
     public $full_name;
     public $dekan;
     public $description;
-    
+
     function __construct($id,$name,$full_name,$dekan,$description)
     {
         $this->id=$id;
@@ -25,13 +25,26 @@ class Cathedra {
         $this->dekan=$dekan;
         $this->description=$description;
     }
+    static function getCathedraObj($id)
+    {
+        $query="SELECT * FROM cathedra";
+        $id =  parseNumSql($id);
+          $query.=" WHERE id=$id";
+        $data=null;
+        $results =  mysql_query($query,  connectToIfmoDb()) or die(mysql_error());
+        if($result =  mysql_fetch_array($results))
+        {
+            $data=new Cathedra($result['id'], $result['name'], $result['full_name'], $result['dekan'], $result['description']);
+        }
+        return $data;
+    }
     static function getCathedra($faculty=null)
     {
         $query="SELECT * FROM cathedra";
         $id =  parseNumSql($faculty);
         if(!empty($id))
         {
-            
+
             $query.=" WHERE id_faculty=$id";
         }
         $data=array();

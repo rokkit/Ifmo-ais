@@ -4,8 +4,8 @@
  *
  * @author rokkitlanchaz
  */
-define('ABSPATH', $_SERVER['DOCUMENT_ROOT']."/php_script/");
-require_once ABSPATH.'function.php';
+define('FNPATH', $_SERVER['DOCUMENT_ROOT']."/php_script/");
+require_once FNPATH.'function.php';
 class Student {
 
     public $id;//Ид
