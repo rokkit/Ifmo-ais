@@ -234,3 +234,92 @@ mysql_query("set names utf8") or die('UTF8 ERROR');
 
     </form>
 </div>
+<script>
+    //валидация формы
+
+    $(function() {
+
+
+    $("#add_disp_form").validate({
+        rules: {
+            set_name:"required",
+            set_hours: {
+                required:true,
+                number:true
+            },
+            set_aud_hours: {
+                required:true,
+                number:true
+            },
+            set_semester: {
+                required:true,
+                number:true
+            },
+            set_point: {
+                required:true,
+                number:true
+            }
+        },
+        messages: {
+            set_name: "Введите название",
+            set_hours: {
+                required: "Введите кол-во часов",
+                number: "Введите число"
+            },
+            set_aud_hours: {
+                required:"Введите ауд. часы",
+                number: "Введите число"
+            },
+            set_semester: {
+                required:"Введите семестр",
+                number: "Введите число"
+            },
+            set_point: {
+                required:"Введите зачетные единицы",
+                number: "Введите число"
+            }
+        }
+    });
+        $("#edit_disp_form").validate({
+        rules: {
+            set_name:"required",
+            set_hours: {
+                required:true,
+                number:true
+            },
+            set_aud_hours: {
+                required:true,
+                number:true
+            },
+            set_semester: {
+                required:true,
+                number:true
+            },
+            set_point: {
+                required:true,
+                number:true
+            }
+        },
+        messages: {
+            set_name: "Введите название",
+            set_hours: {
+                required: "Введите кол-во часов",
+                number: "Введите число"
+            },
+            set_aud_hours: {
+                required:"Введите ауд. часы",
+                number: "Введите число"
+            },
+            set_semester: {
+                required:"Введите семестр",
+                number: "Введите число"
+            },
+            set_point: {
+                required:"Введите зачетные единицы",
+                number: "Введите число"
+            }
+        }
+    });
+
+    })
+</script>

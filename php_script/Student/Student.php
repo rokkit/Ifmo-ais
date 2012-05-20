@@ -68,7 +68,7 @@ class Student {
         if (isset($_POST['sortorder'])) {
         $sortorder = mysql_real_escape_string($_POST['sortorder']);
         }
-        $sql="SELECT Stud_ID, Ima, Familia, Otchestvo, gruppa, programm FROM stud_table";
+        $sql="SELECT Stud_ID, Ima, Familia, Otchestvo, gruppa, programm FROM stud_table  WHERE gruppa>0 AND programm=1";
         $sortSql = " order by Familia $sortorder";
         $data = array();
         $data['rows'] = array();
@@ -83,7 +83,7 @@ class Student {
         if($params['group']!=null && $params['group']!="all")//фильтр по группе
         {
             $group = parseNumSql($params['group']);
-            $sql.=" WHERE gruppa=$group";
+            $sql.=" AND gruppa=$group";
         }
         if($params['params']=='choosed_direction')//только с выбранным направлением
         {
@@ -91,7 +91,7 @@ class Student {
             $result = mysql_query("SELECT id_student,id_direction,id_cathedra,form_education FROM student_choose WHERE confirm=1", $ifmodb) or die(mysql_error($ifmodb));//получаем выбранные ид
             while($student_id = mysql_fetch_array($result))
             {
-                $choosed_sql=(isset($params['group'])) ? " AND Stud_ID=$student_id[0]" : " WHERE Stud_ID=$student_id[0]";
+                $choosed_sql=(isset($params['group'])) ? " AND Stud_ID=$student_id[0]" : " AND Stud_ID=$student_id[0]";
                 $t_sql=$sql;
                 $t_sql.=$choosed_sql;
 

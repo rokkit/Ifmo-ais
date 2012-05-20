@@ -110,6 +110,17 @@ $limitSql";
     $results = mysql_query($sql);
 while ($row = mysql_fetch_array($results)) 
     {
+        if($_GET['type']=="ifmo") {
+        if($row['type']==0) $type_final='Экзамен';
+        elseif($row['type']==1) $type_final='Зачёт';
+        elseif($row['type']==2) $type_final='Зачёт/Экзамен';
+
+        $cats =  mysql_query("select name from cathedra where id=".$row['id_cathedra']);
+        if($cat = mysql_fetch_assoc($cats))
+        {
+            $cathedra = $cat['name'];
+        }
+        }
      
     $data['rows'][] = array(
     'id' => $row[0],

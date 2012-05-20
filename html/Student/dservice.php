@@ -29,7 +29,7 @@ include '../../php_script/StudentService/studentService.php';
         <dt>Кафедра:</dt><dd id="cathedra-temp-choose"></dd>
         <dt>Направление:</dt><dd id="direction-temp-choose"></dd>
         </dd>
-        <dt>Примерная стоимость:</dt><dd id="cost"></dd>
+        <dt>Примерная стоимость контрактного обучения:</dt><dd id="cost"></dd>
     </dl>
     </div>
 <div class="span3 well" id="counter">
@@ -53,7 +53,7 @@ include '../../php_script/StudentService/studentService.php';
 </div>
 <div class="row points-row">
     <div id="points-table" class="span7">
-<h2>Оценки, за первый курс</h2>
+<h2>Ваши оценки за первый курс</h2>
 <div class="points">
     <?php
     $ifmodb=  connectToIfmoDb();
@@ -153,7 +153,7 @@ include '../../php_script/StudentService/studentService.php';
                                     id_student:<?= $_SESSION['user_id'] ?>,
                                     id_direction:direction
                                 }
-                            , function(){
+                            , function(data){
                                 $("#check-dlg").modal('hide');
                             })
                         })

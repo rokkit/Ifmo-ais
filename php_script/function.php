@@ -1,4 +1,19 @@
 <?php
+define("IFMO_DB_HOST","localhost");
+define("IFMO_DB_USER","root");
+define("IFMO_DB_PASS","1405");
+define("IFMO_DB_NAME","ifmodb");
+
+define("FSPO_DB_HOST","localhost");
+define("FSPO_DB_USER","root");
+define("FSPO_DB_PASS","1405");
+define("FSPO_DB_NAME","ifmodb");
+function connectToIfmo() {
+    return new mysqli(IFMO_DB_HOST,IFMO_DB_USER,IFMO_DB_PASS,IFMO_DB_NAME);
+}
+function connectToFspo() {
+    return new mysqli(FSPO_DB_HOST,FSPO_DB_USER,FSPO_DB_PASS,FSPO_DB_NAME);
+}
 function parseNumSql($num)
 {
     $num =  mysql_escape_string($num);

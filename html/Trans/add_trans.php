@@ -68,13 +68,13 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                             </div>
                             <div class="row-fluid"><div id="trans-tables">
 
-                                <div class="span4 fspo-table">
-                                    <div id="fspo-table">
+                                <div class="span9 fspo-table">
+                                    <div id="ifmo-table">
 
                                     </div>
                                 </div>
-                                <div class="span4">
-                                    <div id="ifmo-table">
+                                <div class="span7">
+                                    <div id="fspo-table">
 
                                     </div>
                                 </div>
@@ -132,7 +132,12 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
            colModel : [
 
                         {display: 'Дисциплина', name : 'name', width : 300, sortable : true, align: 'left'},
-                        {display: 'Семестр', name : 'semester', width : 70, sortable : true, align: 'left'}
+                        {display: 'Семестр', name : 'semester', width : 70, sortable : true, align: 'left'},
+                        {display: 'Кол-во часов', name : 'hours', width : 70, sortable : true, align: 'left'},
+                        {display: 'Ауд. часы', name : 'aud_hours', width : 70, sortable : true, align: 'left'},
+                        {display: 'Итог', name : 'final', width : 70, sortable : true, align: 'left'},
+                        {display: 'Кафедра', name : 'tcathedra', width : 70, sortable : true, align: 'left'}
+
 
            ],
 
@@ -148,7 +153,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                 showToggleBtn:false,
                 showTableToggleBtn: false,
                 resizable: false,
-                width: 400,
+                width: 740,
                 height: height_t,
                 singleSelect: false
        });

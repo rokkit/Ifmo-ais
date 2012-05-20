@@ -10,7 +10,55 @@ require_once "../../djpate-docxgen/lib/pclzip.lib.php";
 require_once SCRIPTPATH.'Struct/Cathedra.php';
 require_once SCRIPTPATH.'Struct/Direction.php';
 require_once SCRIPTPATH.'Struct/Faculty.php';
+function zipAndDownload($files) {
+                $valid_files = array();
+                /* for every file */
+                foreach($files as $file) {
+                /* if the file exists */
+                    if(file_exists($file)) {
+                    /* add it to our good file list */
+                    $valid_files[] = $file;
+                    }
+                }
+                if(count($valid_files)) {
+                    $zipfilename=time().".zip";
+                    $path = $zipdir.$zipfilename;
 
+                        $zip=new PclZip($path);
+
+                /* add files */
+                foreach($valid_files as $file) {
+                    $zip->add($file);
+                }
+
+                if(!file_exists($path)) {  return false; echo 'no'; }
+ /* force download zip */
+    if(ini_get('zlib.output_compression')) { ini_set('zlib.output_compression', 'Off');  }
+
+			header('Content-Description: File Transfer');
+			header('Content-Type: application/zip');
+			header('Content-Disposition: attachment; filename='.basename($path));
+                        header('Content-Transfer-Encoding:binary');
+			header('Expires: 0');
+			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+                        header('Last-Modified: '.gmdate('D, d M Y H:i:s', filemtime($path)).' GMT');
+                        header('Cache-Control: private',false);
+			header('Pragma: public');
+			header('Content-Length: ' . filesize($path));
+                        $file = @fopen($path,"rb");
+if ($file) {
+  while(!feof($file)) {
+    print(fread($file, 1024*8));
+    flush();
+    if (connection_status()!=0) {
+      @fclose($file);
+      die();
+    }
+  }
+  @fclose($file);
+}
+}
+}
 if(isset($_REQUEST['id'])) {//формируем документ
     $fspodb = connectToFspoDB();
     $student=Student::getStudentById($_REQUEST['id']);
@@ -73,54 +121,55 @@ if(isset($_REQUEST['id'])) {//формируем документ
         @$phpdocx->save($filename);//тут вылезают ошибки на денаид но они никак не влияют
         $files[]=$filename;
                 }
-                $valid_files = array();
-                /* for every file */
-                foreach($files as $file) {
-                /* if the file exists */
-                    if(file_exists($file)) {
-                    /* add it to our good file list */
-                    $valid_files[] = $file;
-                    }
-                }
-                if(count($valid_files)) {
-                    $zipfilename=time().".zip";
-                    $path = $zipdir.$zipfilename;
+                zipAndDownload($files);
+//                $valid_files = array();
+//                /* for every file */
+//                foreach($files as $file) {
+//                /* if the file exists */
+//                    if(file_exists($file)) {
+//                    /* add it to our good file list */
+//                    $valid_files[] = $file;
+//                    }
+//                }
+//                if(count($valid_files)) {
+//                    $zipfilename=time().".zip";
+//                    $path = $zipdir.$zipfilename;
+//
+//                        $zip=new PclZip($path);
+//
+//                /* add files */
+//                foreach($valid_files as $file) {
+//                    $zip->add($file);
+//                }
+//
+//                if(!file_exists($path)) {  return false; echo 'no'; }
+// /* force download zip */
+//    if(ini_get('zlib.output_compression')) { ini_set('zlib.output_compression', 'Off');  }
+//
+//			header('Content-Description: File Transfer');
+//			header('Content-Type: application/zip');
+//			header('Content-Disposition: attachment; filename='.basename($path));
+//                        header('Content-Transfer-Encoding:binary');
+//			header('Expires: 0');
+//			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+//                        header('Last-Modified: '.gmdate('D, d M Y H:i:s', filemtime($path)).' GMT');
+//                        header('Cache-Control: private',false);
+//			header('Pragma: public');
+//			header('Content-Length: ' . filesize($path));
+//                        $file = @fopen($path,"rb");
+//if ($file) {
+//  while(!feof($file)) {
+//    print(fread($file, 1024*8));
+//    flush();
+//    if (connection_status()!=0) {
+//      @fclose($file);
+//      die();
+//    }
+//  }
+//  @fclose($file);
+//}
 
-                        $zip=new PclZip($path);
-
-                /* add files */
-                foreach($valid_files as $file) {
-                    $zip->add($file);
-                }
-
-                if(!file_exists($path)) {  return false; echo 'no'; }
- /* force download zip */
-    if(ini_get('zlib.output_compression')) { ini_set('zlib.output_compression', 'Off');  }
-
-			header('Content-Description: File Transfer');
-			header('Content-Type: application/zip');
-			header('Content-Disposition: attachment; filename='.basename($path));
-                        header('Content-Transfer-Encoding:binary');
-			header('Expires: 0');
-			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
-                        header('Last-Modified: '.gmdate('D, d M Y H:i:s', filemtime($path)).' GMT');
-                        header('Cache-Control: private',false);
-			header('Pragma: public');
-			header('Content-Length: ' . filesize($path));
-                        $file = @fopen($path,"rb");
-if ($file) {
-  while(!feof($file)) {
-    print(fread($file, 1024*8));
-    flush();
-    if (connection_status()!=0) {
-      @fclose($file);
-      die();
-    }
-  }
-  @fclose($file);
-}
-
-                }
+                //}
             }
         }
         else if($_REQUEST['form']=='extract') { //запрос выписки
@@ -147,6 +196,7 @@ if ($file) {
                 $dirs =  array_unique($students);//выбираем уникальные  направления
                 $dirs = array_flip($dirs);
                 $t_dirs = $dirs;
+
                 foreach($dirs as $dir => $values) {
                     $t_dirs[$dir] = array_keys($students, $dir);
                 }
@@ -175,7 +225,7 @@ if ($file) {
                 }
                 $files=array();
                 foreach($dirs as $dir => $stds) {
-                    //$phpdocx->assign('#DATE#', date('d.m.Y'));
+                    $phpdocx->assign('#DATE#', date('d.m.Y'));
                     $direction = json_decode(Direction::getFullInfo($dir));
                     $faculty=Faculty::getFacultyObj($direction->faculty);
                     $cathedra = Cathedra::getCathedraObj($direction->cathedra);
@@ -186,16 +236,18 @@ if ($file) {
                     $phpdocx->assign('#DIRECTION#',$direction->name." ".$direction->description);
                     $arr = array(); //need array like array(array(name=>value))
                     foreach($stds as $std) {
-                        //var_dump($std);
+
                         $student=Student::getStudentById($std);
                         $arr[]=array('#FIO#'=>$student->getFio());
                     }
                     $phpdocx->assignBlock('students',$arr);
-                    //var_dump($arr);
-                    $phpdocx->save($direction->name." ".date("d_m_Y").".docx");
+
+                    $file_name=$direction->name." ".date("d_m_Y").".docx";
+                    @$phpdocx->save($file_name);
+                    $files[]=$file_name;
+
                 }
-
-
+                zipAndDownload($files);
         }
 
     }

@@ -20,7 +20,7 @@ include '../../php_script/auth.php';
     <!-- end header menu -->
     <div class="container">
         <div class="span12" id="content">
-            <h1>Переходы</h1>
+            <h1>Соответствия дисциплин ВПО и СПО</h1>
             <div class="row row-content">
                 <div class="container-fluid">
                     <div class="row-fluid">
@@ -41,7 +41,7 @@ include '../../php_script/auth.php';
                         <div id="trans-filter-block" class="well">
                         <h3 class="filter-header">Отображать переходы</h3>
                             <form id="trans-filter" class="trans-filter">
-                                    <label for="faculty">Факультет</label>
+
                                     <select id="faculty" class="input-medium" name="faculty">
                 <option disabled>Факультет</option>
                 <?php
@@ -54,11 +54,11 @@ include '../../php_script/auth.php';
                 }
                 ?>
                                     </select>
-            <label for="cathedra">Кафедра</label>
+
             <select id="cathedra" class="input-medium" name="cathedra" style="display: none">
               <option disabled value>Кафедра</option>
             </select>
-            <label for="direction">Направление</label>
+
             <select id="direction" class="input-medium" name="direction" style="display: none">
               <option disabled value>Направление</option>
             </select>
@@ -108,8 +108,8 @@ include '../../php_script/auth.php';
            dataType: 'json',
            colModel : [
 
-                        {display: 'Дисциплина СПО', name : 'name', width : 180, sortable : true, align: 'left'},
                         {display: 'Дисциплина ВПО', name : 'name', width : 180, sortable : true, align: 'left'},
+                        {display: 'Дисциплина СПО', name : 'name', width : 180, sortable : true, align: 'left'},
                         {display: 'Направление', name : 'name', width : 150, sortable : true, align: 'left'}
 
            ],

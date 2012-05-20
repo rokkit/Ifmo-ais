@@ -63,13 +63,13 @@ include_once '../../php_script/function.php';
                                                       <input type="checkbox" id="with-filter"/>С учетом фильтра
                                                     </label>
 
-                                                    <a id="form-link" class="btn btn-small btn-primary">Скачать</a>
+                                                    <a id="form-link" class="btn btn-small btn-primary">Загрузить</a>
                                                 </div>
                                             </li>
                                             <li>
                                                 <a id="extract-options-link">Согласование</a>
                                                 <div id="extract-options">
-                                                    <a id="extract-link" class="btn btn-small btn-primary">Скачать</a>
+                                                    <a id="extract-link" class="btn btn-small btn-primary">Загрузить</a>
                                                 </div>
                                             </li>
                                         </ul>

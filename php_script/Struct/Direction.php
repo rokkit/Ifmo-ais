@@ -45,6 +45,7 @@ class Direction {
     static function getFullInfo($id)
     {
         $ifmodb = connectToIfmoDb();
+        $linkfm=connectToIfmo();
         $id = parseNumSql($id);
         $result = mysql_query("SELECT * FROM direction WHERE id=$id",$ifmodb) or die(mysql_error());
         if($result=mysql_fetch_array($result)) {
@@ -54,6 +55,7 @@ class Direction {
 
         $faculty = mysql_query("SELECT id_faculty FROM cathedra WHERE id=$direction->cathedra",$ifmodb);
         $direction->faculty = mysql_result($faculty, 0);
+
         }
         return json_encode($direction);
     }
