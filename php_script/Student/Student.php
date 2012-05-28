@@ -88,7 +88,7 @@ class Student {
         if($params['params']=='choosed_direction')//только с выбранным направлением
         {
             include '../dbconnect.php';
-            $result = mysql_query("SELECT id_student,id_direction,id_cathedra,form_education FROM student_choose WHERE confirm=1", $ifmodb) or die(mysql_error($ifmodb));//получаем выбранные ид
+            $result = mysql_query("SELECT id_student,id_direction,id_cathedra,form_education FROM student_choose WHERE confirm=2", $ifmodb) or die(mysql_error($ifmodb));//получаем выбранные ид
             while($student_id = mysql_fetch_array($result))
             {
                 $choosed_sql=(isset($params['group'])) ? " AND Stud_ID=$student_id[0]" : " AND Stud_ID=$student_id[0]";

@@ -67,7 +67,7 @@ $limitSql";
 }
     elseif($_GET['type']=="fspo")
     {
-    $sql = "select Predmet_ID, Name
+    $sql = "select *
     from predmeti_table
     $searchSql
     $sortSql";
@@ -121,12 +121,22 @@ while ($row = mysql_fetch_array($results))
             $cathedra = $cat['name'];
         }
         }
-     
+    if($_GET['type']=="ifmo") {
     $data['rows'][] = array(
     'id' => $row[0],
     'cell' => array($row[1], $row['semester'], $row['hours'],
                 $row['aud_hours'],$type_final,$cathedra)
     );
+    }
+        elseif($_GET['type']=="fspo") {
+            if($row['tip']==1) $final="Экзамен";
+            else $final="Зачёт";
+            $data['rows'][] = array(
+                'id' => $row[0],
+                'cell' => array($row[1], $row['chasi'], $final
+                 )
+            );
+        }
     }
     echo json_encode($data)
 ?>

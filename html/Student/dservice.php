@@ -1,5 +1,8 @@
 <?php
 session_start();
+define('FNPATH', $_SERVER['DOCUMENT_ROOT']."/php_script/");
+require FNPATH.'auth.php';
+require FNPATH.'StudentService/auth.php';
 include '../../php_script/StudentService/studentService.php';
       include '../../php_script/Trans/Trans.php';
       include '../../php_script/Student/Student.php';
@@ -8,7 +11,7 @@ include '../../php_script/StudentService/studentService.php';
 <title>Результаты</title>
 
 <div id="favourite-nav" class="span1">
-    <h3>Избранное</h3>
+    <h3 style="color: #f5f5f5;">Избранное</h3>
 <div class="tabbable tabs-left">
     <ul class="nav nav-tabs" id="nav-tabs">
 
@@ -20,7 +23,7 @@ include '../../php_script/StudentService/studentService.php';
 </div>
 </div>
 <div class="row span10">
-    <div id="choose-info" class="span4 well">
+    <div id="choose-info" class="span4 well truewell">
     <h2>Вы выбрали:</h2>
     <dl>
         <?php $direction=getFullInfoDirection($_REQUEST['direction']); ?>
@@ -32,7 +35,7 @@ include '../../php_script/StudentService/studentService.php';
         <dt>Примерная стоимость контрактного обучения:</dt><dd id="cost"></dd>
     </dl>
     </div>
-<div class="span3 well" id="counter">
+<div class="span3 well truewell" id="counter">
     <h2>Это направление уже было выбрано</h2>
     <h2 id="count-num"></h2>
     <h2>раз</h2>
@@ -151,10 +154,12 @@ include '../../php_script/StudentService/studentService.php';
                             $.post("/php_script/StudentService/doChoose.php",
                                 {
                                     id_student:<?= $_SESSION['user_id'] ?>,
-                                    id_direction:direction
+                                    id_direction:direction,
+                                    status: <?= $_COOKIE['servstart'] ?>
                                 }
                             , function(data){
                                 $("#check-dlg").modal('hide');
+                                document.location.href="<?= 'http://'.$_SERVER['HTTP_HOST'].'/html/student/main.php' ?>";
                             })
                         })
                         return false;

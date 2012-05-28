@@ -59,9 +59,7 @@ include_once '../../php_script/function.php';
                                                     <label class="checkbox">
                                                         <input type="checkbox" id="forall"/>Для всех студентов
                                                     </label>
-                                                    <label class="checkbox">
-                                                      <input type="checkbox" id="with-filter"/>С учетом фильтра
-                                                    </label>
+
 
                                                     <a id="form-link" class="btn btn-small btn-primary">Загрузить</a>
                                                 </div>

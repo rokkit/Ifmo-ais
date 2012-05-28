@@ -1,91 +1,171 @@
-<?php session_start() ?>
-<?php include '../../php_script/function.php'; ?>
-<?php require_once '../../php_script/StudentService/studentService.php' ?>
-<?php $student=  parseNumSql($_SESSION['user_id']);
-      $result=  mysql_query("SELECT confirm FROM student_choose WHERE id_student=$student", connectToIfmoDb()) or die(mysql_error());
-      $confirm=-1;
-      if($result) {
-          $confirm=  mysql_result($result, 0);
-      }
-      if($confirm!=null) {
-          $linkifm=connectToIfmo();
-          $result=$linkifm->query("SELECT * FROM student_choose WHERE id_student=$student");
-          if($result = $result->fetch_assoc()) {
-              $direction=getFullInfoDirection($result['id_direction']);
-              $name_faculty=Faculty::getName($direction->faculty);
-              $name_cathedra=Cathedra::getName($direction->cathedra);
-              $name_direction=$direction->name." ".$direction->description;
-          }
-      }
+<?php session_start();
+define('FNPATH', $_SERVER['DOCUMENT_ROOT']."/php_script/");
+require_once FNPATH.'auth.php';
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
+        <title>Подача заявки</title>
         <link type="text/css" rel="stylesheet" href="/content/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="/content/css/bootstrap-responsive.min.css">
         <link type="text/css" rel="stylesheet" href="/content/css/student-main.css">
         <script type="text/javascript" src="/content/js/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="/content/js/jquery.pjax.js"></script>
+        <script type="text/javascript" src="/content/js/jquery.chainedSelects.js"></script>
     </head>
     <body>
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="#">
-                        ИТМО
+                    ИТМО
                     </a>
                 <ul class="nav">
-                    <li>
-                        <a href="/html/Student/main.php">Заявление</a>
+                    <li class="active">
+                        <a href="/html/Student/main.php" data-pjax="#content"><i class="icon-white icon-home"></i> Домой</a>
                     </li>
                     <li>
-                        <a href="main/study.php" data-pjax="#container">Успеваемость</a>
+                        <a href="/html/Student/main/struct.php" data-pjax="#content">Структура бакалавриата</a>
                     </li>
+                    <li>
+                        <a href="/html/Student/main/stats.php" data-pjax="#content">Статистика</a>
+                    </li>
+                    <li class="divider-vertical"></li>
                 </ul>
+                    <ul class="nav pull-right">
+                        <li class="divider-vertical"></li>
+                        <li>
+                            <a class="st-name"></a>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li>
+                            <a><i class="icon-eject"></i> Выход</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+    <div id="content">
+        <div class="container" id="head-container">
+           <div class="row well">
+               <div class="span3">
+                   <img src="http://www.ifmo.ru/images/logo.png" alt="">
+               </div>
+               <div class="span8" style="text-align: center; margin:40px 0 0 -50px;">
+                   <h1>Выбор факультета</h1>
 
-        <div class="container" id="container">
-                <div class="hero-unit">
-                    <h1>Сервис подачи заявлений</h1>
-                    <p>Лёгкий способ выбрать факультет и кафедру для поступлени в НИУ ИТМО</p>
-                    <?php if($confirm==-1) { //если заявка ещё не подавалась?>
-                    <p>
-                        <a class="btn btn-primary btn-large" href="service.php">Начать</a>
-                    </p>
-                    <?php } elseif($confirm==0) {?>
-                    <div>
-                        <p>Поданное вами заявление ещё рассматривается, вы можете изменить свой выбор</p>
-                        <div>
-                            <dl>
-                                <dt>Факультет</dt>
-                                <dd><?= $name_faculty ?></dd>
-                                <dt>Кафедра</dt>
-                                <dd><?= $name_cathedra ?></dd>
-                                <dt>Направление подготовки</dt>
-                                <dd><?= $name_direction ?></dd>
-                            </dl>
-                        </div>
-                            <div>
-                                <a class="btn btn-primary btn-large" href="service.php">Изменить</a>
-                            </div>
-                    </div>
-                    <?php } elseif($confirm==1) {?>
-                    <div class="row">
-                        <img src="/content/img/accepted.png" style="float:left"/>
-                        <h2 style="color: #62c462">Ваше заявление одобрено</h2>
-                    </div>
-                    <?php } ?>
-                </div>
+                   <h5>Сервис, позволяющий выбрать подходящее Вам направление обучения</h5>
+                   <a  href="/html/Student/service.php" style="margin-top: 8px" class="btn btn-info btn-large">Начать</a>
+               </div>
+
+           </div>
         </div>
+        <div class="container" id="wait-head-container">
+            <div class="row">
+                <div class="span8 well truewell">
+                    <div class="span4">
+                    <h3 class="st-name"></h3>
+                    <dl class="dl-horizontal">
+                        <dt>Факультет</dt>
+                        <dd id="faculty"></dd>
+                        <dt>Кафедра</dt>
+                        <dd id="cathedra"></dd>
+                        <dt>Направление</dt>
+                        <dd class="direction"></dd>
+                    </dl>
+                    <a  href="/html/Student/service.php" style="margin: 8px 0 0 200px" class="btn btn-info btn-large">Изменить</a>
+                    </div>
+
+                    <div class="span3" style="margin-top: 40px">
+                        <h2>Ваша заявка еще рассматривается</h2>
+                    </div>
+                </div>
+                <div class="span3 well truewell">
+                    <h2>
+                        Ваш средний балл:<p class="avgpoint"></p>
+                    </h2>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="span8 well truewell">
+                    <h3 class="direction"></h3>
+                    <dl>
+                        <dt>Сайт кафедры</dt>
+                        <dd id="phone"></dd>
+                        <dt>Стоимость контрактного обучения</dt>
+                        <dd id="cost"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="ok-head-container">
+            <div class="row">
+                <div class="span8 well">
+                    <div class="span4">
+                        <h2>Вы выбрали:</h2>
+                        <dl class="dl-horizontal">
+                            <dt>Факультет</dt>
+                            <dd id="okfaculty"></dd>
+                            <dt>Кафедра</dt>
+                            <dd id="okcathedra"></dd>
+                            <dt>Направление</dt>
+                            <dd class="direction"></dd>
+                        </dl>
+                    </div>
+
+                    <div class="span3" style="text-align: center">
+                        <h2>Ваша заявка одобрена</h2>
+                        <img src="/content/img/accepted.png" alt="">
+                    </div>
+                </div>
+                <div class="span3 well truewell">
+                    <h2>
+                        Ваш средний балл:<p class="avgpoint"></p>
+                    </h2>
+                </div>
+            </div>
+        </div>
+      </div>
       <script>
           $(function(){
               $.hash = '#!/';
               $.siteurl = '<?php echo $_SERVER['HTTP_HOST']; ?>';
               $.container = '#container';
               $("a[data-pjax]").pjax();
+          });
+          $(function(){
+              $(".nav li").click(
+                  function() {
+                      $("li.active").removeClass("active");
+                      $(this).addClass("active");
+                  }
+              );
+          });
+          //заполняем страницу данными
+          $(function(){
+              $.getJSON("/php_script/StudentService/getMainContent.php",{user:'<?= $_SESSION['user_id'] ?>'},function(json){
+                  $(".st-name").text(json['stname'])
+                  if(!json['confirm']) {
+                      $("#head-container").show();
+                      }
+                  else if(json['confirm']=='1') {
+                      $("#wait-head-container").show()
+                      //если заявка ожидается
+                      $("#faculty").text(json['faculty'])
+                      $("#cathedra").text(json['cathedra'])
+                      $(".direction").text(json['direction'])
+                  }
+                  else if(json['confirm']=='2') {
+                      $("#ok-head-container").show()
+                      //если заявка одобрена
+                      $("#okfaculty").text(json['faculty'])
+                      $("#okcathedra").text(json['cathedra'])
+                      $(".direction").text(json['direction'])
+
+                  }
+              })
           });
       </script>
     </body>

@@ -1,5 +1,12 @@
 <?php 
 session_start();
+require_once 'php_script/function.php';
+$linkfm=connectToIfmo();
+if($result=$linkfm->query("SELECT state FROM users WHERE id=".$_SESSION['user_id']))
+{
+    $state=$result->fetch_row();
+    $state=$state[0];
+}
 if(!isset($_SESSION['user_id'])) {
    ?>
 <!DOCTYPE html>
@@ -43,8 +50,11 @@ if(!isset($_SESSION['user_id'])) {
 
 <?php
 }
-else
+elseif($state==1)
 {
     header("Location: http://".$_SERVER['HTTP_HOST']."/main.php");
+}
+elseif($state==2) {
+    header("Location: http://".$_SERVER['HTTP_HOST']."/html/student/main.php");
 }
 ?>

@@ -1,6 +1,9 @@
 <?php
 session_start();
-if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
+$id=$_SESSION['user_id'];
+$date=date('Ymd');
+$token=sha1($id.$date);
+if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'] AND $_SESSION['token']==$token)
 {
     return;
 }

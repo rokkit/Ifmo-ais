@@ -16,14 +16,16 @@ class Cathedra {
     public $full_name;
     public $dekan;
     public $description;
+    public $site;
 
-    function __construct($id,$name,$full_name,$dekan,$description)
+    function __construct($id,$name,$full_name,$dekan,$description,$site=null)
     {
         $this->id=$id;
         $this->name=$name;
         $this->full_name=$full_name;
         $this->dekan=$dekan;
         $this->description=$description;
+        $this->site=$site;
     }
     static function getCathedraObj($id)
     {
@@ -34,7 +36,7 @@ class Cathedra {
         $results =  mysql_query($query,  connectToIfmoDb()) or die(mysql_error());
         if($result =  mysql_fetch_array($results))
         {
-            $data=new Cathedra($result['id'], $result['name'], $result['full_name'], $result['dekan'], $result['description']);
+            $data=new Cathedra($result['id'], $result['name'], $result['full_name'], $result['dekan'], $result['description'],$result['site']);
         }
         return $data;
     }

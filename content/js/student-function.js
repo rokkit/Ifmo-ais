@@ -63,7 +63,7 @@ function checkFavourite(user_id,fav_id) {
     var favs=$.cookie("favourites"+user_id)
     if(favs) {
         favs = favs.split(",");
-        for(var fav in favs) {alert(favs[fav])
+        for(var fav in favs) {
            if(favs[fav]==fav_id) return "remove";
         }
 

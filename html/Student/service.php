@@ -1,4 +1,8 @@
-<?php include '../../php_script/StudentService/studentService.php'; setcookie("idst",1); ?>
+<?php include '../../php_script/StudentService/studentService.php';
+define('FNPATH', $_SERVER['DOCUMENT_ROOT']."/php_script/");
+require FNPATH.'auth.php';
+require FNPATH.'StudentService/auth.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>

@@ -6,7 +6,7 @@ include '../function.php';
 if($_GET['confirm']=="true")//подтверждение заявки
 {
     $id=  parseNumSql($_GET['id']);
-    $sql="UPDATE student_choose SET confirm=1 WHERE id_student=$id";
+    $sql="UPDATE student_choose SET confirm=2 WHERE id_student=$id";
     mysql_query($sql)or die("ERROR");
 }
 if($_GET['confirm']=='false')

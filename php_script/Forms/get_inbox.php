@@ -43,7 +43,7 @@ $data = array();
 
 $data['total'] = $total;
 $data['rows'] = array();
-$result=@mysql_query("SELECT * FROM student_choose WHERE confirm=0 
+$result=@mysql_query("SELECT * FROM student_choose WHERE confirm=1
     $searchSql ",$ifmodb);
     while($row = @mysql_fetch_array($result))
     {

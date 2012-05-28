@@ -2,40 +2,1026 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8d65dd4-e588-406c-9408-3cd5649bd2da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/css/.main.css.swo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/Forms/.form_maker.php.swo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/Student/success.php" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\lucene\_0.cfs" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\lucene\_0_2.del" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\lucene\_1.cfs" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\lucene\_1_1.del" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\lucene\_2.cfs" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\lucene\_2_1.del" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\lucene\_3.cfs" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\lucene\segments.gen" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\lucene\segments_5" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\lucene_last_updated" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\redcar.lock" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\storage\cursor_saver.yaml" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\storage\project_loader.yaml" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\localhost\www\._redcar\tags" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/Forms/Form_docxgen/036000 06_05_2012.docx" afterPath="$PROJECT_DIR$/php_script/Forms/Form_docxgen/036000 06_05_2012.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/Forms/Form_docxgen/230400 06_05_2012.docx" afterPath="$PROJECT_DIR$/php_script/Forms/Form_docxgen/230400 06_05_2012.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/css/main.css" afterPath="$PROJECT_DIR$/content/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/ChangeLog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/README.VENDOR" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/RELEASE-DATE-3.5.1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/canvg/flashcanvas.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/codemirror/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/blank.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/cloud-popup-relative.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/drag-rectangle-off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/drag-rectangle-on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/east-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/layer-switcher-maximize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/layer-switcher-minimize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/marker-blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/marker-gold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/marker-green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/marker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/measuring-stick-off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/measuring-stick-on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/north-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/panning-hand-off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/panning-hand-on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/slider.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/south-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/west-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/zoom-minus-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/zoom-plus-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/zoom-world-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/img/zoombar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/add_point_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/add_point_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/blank.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/close.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/drag-rectangle-off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/drag-rectangle-on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/draw_line_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/draw_line_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/draw_point_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/draw_point_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/draw_polygon_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/draw_polygon_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/editing_tool_bar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/move_feature_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/move_feature_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/navigation_history.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/overview_replacement.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/pan-panel-NOALPHA.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/pan-panel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/pan_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/pan_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/panning-hand-off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/panning-hand-on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/remove_point_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/remove_point_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/ruler.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/save_features_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/save_features_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/view_next_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/view_next_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/view_previous_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/view_previous_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/zoom-panel-NOALPHA.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/img/zoom-panel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/auth/swekey/musbe-ca.crt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/fonts/dejavu-fonts-ttf-2.33/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/fonts/dejavusans.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/fonts/dejavusans.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/fonts/dejavusansb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/fonts/dejavusansb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/TEMPLATE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/TEMPLATE_MIMETYPE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/ar/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/bg/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/ca/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/cs/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/da/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/de/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/el/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/en_GB/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/es/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/et/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/fi/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/fr/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/gl/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/hi/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/hr/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/hu/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/id/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/it/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/ja/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/lt/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/nb/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/nl/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/pl/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/pt_BR/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/ro/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/ru/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/si/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/sk/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/sl/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/sv/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/tr/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/uk/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/uz@latin/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/uz/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/zh_CN/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/locale/zh_TW/LC_MESSAGES/phpmyadmin.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/dot.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/ajax_clock_small.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/arrow_ltr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/arrow_rtl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_bookmark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_browse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_comment.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_dbstatistics.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_deltbl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_docs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_drop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_engine.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_event_add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_events.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_export.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_ftext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_globe.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_help.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_import.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_index.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_inline_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_insrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_minus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_more.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_newdb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_newtbl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_nextpage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_plus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_primary.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_print.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_props.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_relations.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_routine_add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_routines.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_sbrowse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_selboard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_select.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_snewtbl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_spatial.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_sql.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_sqlhelp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_tblanalyse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_tblexport.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_tblimport.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_tblops.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_tbloptimize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_tipp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_trigger_add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_triggers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_unique.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_usradd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_usrcheck.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_usrdrop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_usredit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_usrlist.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_view.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/b_views.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_browse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_deltbl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_drop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_export.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_ftext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_index.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_insrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_nextpage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_primary.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_sbrowse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_select.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_spatial.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/bd_unique.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/cleardot.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/col_drop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/col_pointer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/col_pointer_ver.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/docs_menu_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/east-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/error.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/eye.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/eye_grey.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/item_ltr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/item_rtl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/logo_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/logo_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/more.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/new_data.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/new_data_hovered.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/new_data_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/new_data_selected_hovered.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/new_struct.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/new_struct_hovered.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/new_struct_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/new_struct_selected_hovered.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/north-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/2leftarrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/2leftarrow_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/2rightarrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/2rightarrow_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/FieldKey_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/Field_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/Field_small_char.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/Field_small_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/Field_small_int.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/Header.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/Header_Linked.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/and_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/ang_direct.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/bord.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/bottom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/def.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/display_field.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/downarrow1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/downarrow2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/downarrow2_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/exec.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/exec_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/grid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/help.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/help_relation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/left_panel_butt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/left_panel_tab.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/minus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/or_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/pdf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/plus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/query_builder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/relation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/reload.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/resize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/rightarrow1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/rightarrow2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/small_tab.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/table.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/toggle_lines.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/top_panel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/pmd/uparrow2_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_asc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_asci.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_attention.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_cog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_db.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_desc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_error.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_error2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_fulltext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_host.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_lang.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_loggoff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_notice.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_okay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_partialtext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_passwd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_process.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_really.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_reload.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_replication.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_rights.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_sortable.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_status.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_sync.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_tbl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_theme.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_vars.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/s_views.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/south-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/spacer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/sprites.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/toggle-ltr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/toggle-rtl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/vertical_line.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/west-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/window-new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/zoom-minus-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/zoom-plus-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/img/zoom-world-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-bg_flat_75_ffffff_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-bg_glass_75_dadada_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-icons_2e83ff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-icons_454545_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-icons_888888_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/ajax_clock_small.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/arrow_ltr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/arrow_rtl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/asc_order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_bookmark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_browse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_comment.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_dbstatistics.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_deltbl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_docs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_docsql.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_drop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_engine.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_event_add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_events.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_export.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_firstpage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_ftext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_globe.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_help.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_import.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_index.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_inline_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_insrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_lastpage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_minus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_more.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_newdb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_newtbl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_nextpage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_pdfdoc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_plus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_prevpage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_primary.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_print.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_props.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_relations.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_routine_add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_routines.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_sbrowse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_sdb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_selboard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_select.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_snewtbl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_spatial.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_sql.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_sqldoc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_sqlhelp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_tblanalyse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_tblexport.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_tblimport.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_tblops.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_tbloptimize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_tipp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_trigger_add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_triggers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_unique.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_usradd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_usrcheck.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_usrdrop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_usredit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_usrlist.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_view.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/b_views.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_browse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_deltbl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_drop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_export.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_firstpage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_ftext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_index.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_insrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_lastpage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_nextpage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_prevpage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_primary.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_sbrowse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_select.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_spatial.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/bd_unique.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/body_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/col_drop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/col_pointer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/col_pointer_ver.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/database.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/database_list_li_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/docs_menu_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/east-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/error.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/eye.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/eye_grey.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/input_bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/item.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/item_ltr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/item_rtl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/left_nav_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/logo_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/logo_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/marked_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/more.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/new_data.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/new_data_hovered.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/new_data_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/new_data_selected_hovered.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/new_struct.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/new_struct_hovered.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/new_struct_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/new_struct_selected_hovered.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/north-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/php_sym.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pma_logo2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/2leftarrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/2leftarrow_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/2rightarrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/2rightarrow_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/FieldKey_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/Field_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/Field_small_char.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/Field_small_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/Field_small_int.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/Header.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/Header_Linked.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/and_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/ang_direct.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/bord.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/bottom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/def.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/display_field.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/downarrow1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/downarrow2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/downarrow2_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/exec.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/exec_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/grid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/help.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/help_relation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/left_panel_butt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/left_panel_tab.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/minus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/or_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/pdf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/plus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/query_builder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/relation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/reload.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/resize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/rightarrow1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/rightarrow2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/small_tab.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/table.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/toggle_lines.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/top_panel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/pmd/uparrow2_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_asc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_asci.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_attention.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_cancel2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_cog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_db.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_desc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_error.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_error2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_fulltext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_host.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_lang.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_loggoff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_notice.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_okay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_partialtext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_passwd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_process.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_really.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_reload.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_replication.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_rights.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_sortable.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_status.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_sync.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_tbl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_theme.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_vars.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/s_views.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/south-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/spacer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/sprites.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/tab_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/tab_hover_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/tabactive_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/toggle-ltr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/toggle-rtl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/vertical_line.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/west-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/window-new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/zoom-minus-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/zoom-plus-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/img/zoom-world-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_flat_75_ffffff_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_glass_75_dadada_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-icons_2e83ff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-icons_454545_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-icons_888888_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/itmo_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/itmo_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php_script/Forms/Form_docxgen/1337597858.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/Documentation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/Documentation.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/browse_foreigners.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/bs_disp_as_mime_type.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/bs_play_media.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/changelog.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/chk_rel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/config.sample.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_create.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_datadict.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_events.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_export.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_import.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_operations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_printview.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_qbe.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_routines.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_search.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_sql.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_structure.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_tracking.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/db_triggers.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/docs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/enum_editor.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/examples/config.manyhosts.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/examples/create_tables.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/examples/create_tables_drizzle.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/examples/openid.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/examples/signon-script.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/examples/signon.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/examples/swekey.sample.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/examples/upgrade_tables_mysql_4_1_2+.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/export.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/file_echo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/gis_data_editor.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/import.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/import_status.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/OpenStreetMap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/canvg/MIT-LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/canvg/canvg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/canvg/flashcanvas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/codemirror/lib/codemirror.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/codemirror/mode/mysql/mysql.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/cross_framing_protection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/date.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/db_operations.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/db_search.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/db_structure.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/dom-drag.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/export.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/functions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/get_image.js.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/gis_data_editor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/highcharts/exporting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/highcharts/highcharts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/import.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/indexes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/jquery-1.6.2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/jquery-ui-1.8.16.custom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/jquery.cookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/jquery.event.drag-2.0.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/jquery.json-2.2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/jquery.mousewheel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/jquery.qtip-1.0.0-rc3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/jquery.sortableTable.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/jquery.sprintf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/jquery.svg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/jquery.tablesorter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/jquery/timepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/keyhandler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/makegrid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/messages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/navigation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/OpenLayers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/framedCloud.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/google.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/ie6-style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/openlayers/theme/default/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/pmd/ajax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/pmd/history.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/pmd/iecanvas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/pmd/move.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/querywindow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/replication.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/rte/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/rte/events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/rte/routines.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/rte/triggers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/server_plugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/server_privileges.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/server_status.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/server_status_monitor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/server_synchronize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/server_variables.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/sql.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/tbl_change.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/tbl_chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/tbl_gis_visualization.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/tbl_relation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/tbl_select.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/tbl_structure.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/tbl_zoom_plot.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/js/update-location.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/Advisor.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/Config.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/Error.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/Error_Handler.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/File.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/Index.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/List.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/List_Database.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/Message.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/PDF.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/PMA.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/Partition.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/RecentTable.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/StorageEngine.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/Table.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/Theme.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/Theme_Manager.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/Tracker.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/advisory_rules.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/auth/config.auth.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/auth/cookie.auth.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/auth/http.auth.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/auth/signon.auth.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/auth/swekey/authentication.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/auth/swekey/swekey.auth.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/auth/swekey/swekey.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/bfShapeFiles/ShapeFile.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/blobstreaming.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/blowfish.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/bookmark.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/build_html_for_db.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/charset_conversion.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/check_user_privileges.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/cleanup.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/common.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/common.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/config.default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/config.values.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/config/ConfigFile.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/config/Form.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/config/FormDisplay.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/config/FormDisplay.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/config/config_functions.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/config/messages.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/config/setup.forms.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/config/user_preferences.forms.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/config/validate.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/core.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/data_dictionary_relations.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/data_drizzle.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/data_mysql.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/database_interface.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/db_common.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/db_info.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/db_links.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/db_structure.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/db_table_exists.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/dbi/drizzle-wrappers.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/dbi/drizzle.dbi.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/dbi/mysql.dbi.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/dbi/mysqli.dbi.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/display_change_password.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/display_create_database.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/display_create_table.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/display_export.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/display_import.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/display_import_ajax.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/display_select_lang.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/display_tbl.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/bdb.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/berkeleydb.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/binlog.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/innobase.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/innodb.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/memory.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/merge.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/mrg_myisam.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/myisam.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/ndbcluster.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/pbms.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/engines/pbxt.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/error.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/codegen.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/csv.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/excel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/htmlword.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/json.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/latex.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/mediawiki.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/ods.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/odt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/pdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/php_array.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/sql.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/texytext.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/xml.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/export/yaml.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/file_listing.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/footer.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/gis/pma_gis_factory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/gis/pma_gis_geometry.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/gis/pma_gis_geometrycollection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/gis/pma_gis_linestring.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/gis/pma_gis_multilinestring.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/gis/pma_gis_multipoint.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/gis/pma_gis_multipolygon.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/gis/pma_gis_point.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/gis/pma_gis_polygon.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/gis/pma_gis_visualization.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/gis_visualization.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/grab_globals.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/header.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/header_http.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/header_meta_style.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/header_printview.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/header_scripts.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/iconv_wrapper.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import/csv.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import/docsql.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import/ldi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import/ods.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import/shp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import/sql.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import/upload/apc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import/upload/noplugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import/upload/uploadprogress.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/import/xml.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/information_schema_relations.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/ip_allow_deny.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/js_escape.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/kanji-encoding.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/language_stats.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/logging.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/mime.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/mult_submits.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/mysql_charsets.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/navigation_header.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/ob.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/opendocument.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/parse_analyze.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/php-gettext/gettext.inc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/php-gettext/gettext.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/php-gettext/streams.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/plugin_interface.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/pmd_common.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/relation.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/relation_cleanup.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/replication.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/replication_gui.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/rte/rte_events.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/rte/rte_export.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/rte/rte_footer.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/rte/rte_list.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/rte/rte_main.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/rte/rte_routines.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/rte/rte_triggers.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/rte/rte_words.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/sanitizing.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/schema/Dia_Relation_Schema.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/schema/Eps_Relation_Schema.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/schema/Export_Relation_Schema.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/schema/Pdf_Relation_Schema.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/schema/Svg_Relation_Schema.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/schema/User_Schema.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/schema/Visio_Relation_Schema.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/select_lang.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/select_server.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/server_common.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/server_links.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/server_synchronize.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/server_variables_doc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/session.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/sql_query_form.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/sqlparser.data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/sqlparser.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/sqlvalidator.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/sqlvalidator.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/string.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/string_mb.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/string_native.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/string_type_ctype.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/string_type_native.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/sysinfo.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tbl_common.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tbl_info.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tbl_links.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tbl_properties.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tbl_replace_fields.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tbl_select.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/LICENSE.TXT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/README.TXT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/config/tcpdf_config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/encodings_maps.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/fonts/dejavusans.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/fonts/dejavusansb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/fonts/helvetica.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/htmlcolors.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/tcpdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/tcpdf/unicode_data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/application_octetstream__download.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/application_octetstream__hex.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/generator.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/global.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/image_jpeg__inline.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/image_jpeg__link.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/image_png__inline.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/template_generator.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/template_generator_mimetype.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/text_plain__dateformat.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/text_plain__external.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/text_plain__formatted.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/text_plain__imagelink.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/text_plain__link.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/text_plain__longToIpv4.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/text_plain__sql.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/transformations/text_plain__substr.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/url_generating.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/user_preferences.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/user_preferences.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/vendor_config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/zip.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/libraries/zip_extension.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/license.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/main.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/navigation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/phpinfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/phpmyadmin.css.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/pmd_display_field.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/pmd_general.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/pmd_pdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/pmd_relation_new.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/pmd_relation_upd.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/pmd_save_pos.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/prefs_forms.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/prefs_manage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/querywindow.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/schema_edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/schema_export.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_binlog.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_collations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_databases.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_engines.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_export.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_import.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_plugins.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_privileges.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_replication.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_sql.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_status.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_synchronize.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/server_variables.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/frames/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/frames/config.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/frames/form.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/frames/index.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/frames/menu.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/frames/servers.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/lib/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/lib/ConfigGenerator.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/lib/common.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/lib/form_processing.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/lib/index.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/setup/validate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/show_config_errors.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/sql.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_addfield.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_alter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_change.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_chart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_create.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_export.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_get_field.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_gis_visualization.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_import.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_indexes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_move_copy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_operations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_printview.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_relation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_replace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_row_action.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_select.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_sql.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_structure.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_tracking.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_triggers.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/tbl_zoom_select.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/css/theme_left.css.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/css/theme_print.css.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/css/theme_right.css.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/info.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/jquery/jquery-ui-1.8.16.custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/layout.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/original/sprites.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/css/theme_left.css.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/css/theme_print.css.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/css/theme_right.css.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/info.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/jquery/jquery-ui-1.8.16.custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/layout.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/pmahomme/sprites.lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/sprites.css.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/themes/svg_gradient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/transformation_overview.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/transformation_wrapper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/url.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/user_password.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/view_create.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/view_operations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tools/phpMyAdmin/webapp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/Student/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/Student/main/stats.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php_script/StudentService/auth.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php_script/StudentService/getMainContent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php_script/StudentService/struct/getStructContent.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\localhost\www\html\Student\main\study.php" afterPath="$PROJECT_DIR$/html/Student/main/struct.php" />
+      <change type="MODIFICATION" beforePath="C:\WebServers\home\localhost\www\php_script\Forms\Form_docxgen\files\eBe�ebmNm�ebmNesm�_eZebeiehese�eb_423.docx" afterPath="C:\WebServers\home\localhost\www\php_script\Forms\Form_docxgen\files\eBe�ebmNm�ebmNesm�_eZebeiehese�eb_423.docx" />
+      <change type="MODIFICATION" beforePath="C:\WebServers\home\localhost\www\php_script\Forms\Form_docxgen\files\eBe�eym�eleu_eIm�ehese�_423.docx" afterPath="C:\WebServers\home\localhost\www\php_script\Forms\Form_docxgen\files\eBe�eym�eleu_eIm�ehese�_423.docx" />
+      <change type="MODIFICATION" beforePath="C:\WebServers\home\localhost\www\php_script\Forms\Form_docxgen\files\eEeiebeyeseiesm�_ePebe�eheleeesm�_423.docx" afterPath="C:\WebServers\home\localhost\www\php_script\Forms\Form_docxgen\files\eEeiebeyeseiesm�_ePebe�eheleeesm�_423.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/css/student-main.css" afterPath="$PROJECT_DIR$/content/css/student-main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/js/student-function.js" afterPath="$PROJECT_DIR$/content/js/student-function.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Forms/form_maker.php" afterPath="$PROJECT_DIR$/html/Forms/form_maker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Forms/get_inbox_choose.php" afterPath="$PROJECT_DIR$/html/Forms/get_inbox_choose.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Student/cservice.php" afterPath="$PROJECT_DIR$/html/Student/cservice.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Student/dservice.php" afterPath="$PROJECT_DIR$/html/Student/dservice.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Student/main.php" afterPath="$PROJECT_DIR$/html/Student/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Student/service.php" afterPath="$PROJECT_DIR$/html/Student/service.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Trans/add_trans.php" afterPath="$PROJECT_DIR$/html/Trans/add_trans.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Trans/trans_editor.php" afterPath="$PROJECT_DIR$/html/Trans/trans_editor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/data_editor.php" afterPath="$PROJECT_DIR$/html/data_editor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/header-menu.php" afterPath="$PROJECT_DIR$/html/header-menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/Forms/Form_docxgen/form_creator.php" afterPath="$PROJECT_DIR$/php_script/Forms/Form_docxgen/form_creator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/Forms/get_inbox.php" afterPath="$PROJECT_DIR$/php_script/Forms/get_inbox.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/Forms/set_inbox.php" afterPath="$PROJECT_DIR$/php_script/Forms/set_inbox.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/Struct/Cathedra.php" afterPath="$PROJECT_DIR$/php_script/Struct/Cathedra.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/Struct/Direction.php" afterPath="$PROJECT_DIR$/php_script/Struct/Direction.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/StudentService/doChoose.php" afterPath="$PROJECT_DIR$/php_script/StudentService/doChoose.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/Student/Student.php" afterPath="$PROJECT_DIR$/php_script/Student/Student.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/Trans/get_trans.php" afterPath="$PROJECT_DIR$/php_script/Trans/get_trans.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/auth.php" afterPath="$PROJECT_DIR$/php_script/auth.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/function.php" afterPath="$PROJECT_DIR$/php_script/function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/get_disps.php" afterPath="$PROJECT_DIR$/php_script/get_disps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/get_disps_table.php" afterPath="$PROJECT_DIR$/php_script/get_disps_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/validation.php" afterPath="$PROJECT_DIR$/php_script/validation.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +1042,98 @@
     <favorites_list name="www" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="struct.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/Student/main/struct.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="53" selection-start="2717" selection-end="2717" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/Student/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="148" column="18" selection-start="6109" selection-end="6109" vertical-scroll-proportion="0.21296297">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getStructContent.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php_script/StudentService/struct/getStructContent.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="36" selection-start="1532" selection-end="1532" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Direction.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php_script/Struct/Direction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="82" selection-start="1640" selection-end="1649" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/Student/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="45" selection-start="756" selection-end="756" vertical-scroll-proportion="-7.1923075">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student-main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/css/student-main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="59" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="21" selection-start="230" selection-end="230" vertical-scroll-proportion="-0.65384614">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stats.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/Student/main/stats.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="34" selection-start="389" selection-end="389" vertical-scroll-proportion="-2.9230769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stats.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/Stats/stats.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graphics.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php_script/Stats/graphics.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="6" selection-start="1390" selection-end="1633" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -69,22 +1146,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/html/Student/main/study.php" />
-        <option value="$PROJECT_DIR$/adress_book/index.php" />
-        <option value="$PROJECT_DIR$/php_script/Student/Student.php" />
-        <option value="$PROJECT_DIR$/html/Student/success.php" />
-        <option value="$PROJECT_DIR$/php_script/function.php" />
-        <option value="$PROJECT_DIR$/php_script/Struct/Direction.php" />
-        <option value="$PROJECT_DIR$/html/Student/main.php" />
-        <option value="$PROJECT_DIR$/php_script/Stats/graphics.php" />
+        <option value="$PROJECT_DIR$/php_script/validation.php" />
+        <option value="$PROJECT_DIR$/php_script/StudentService/auth.php" />
+        <option value="$PROJECT_DIR$/html/Student/service.php" />
         <option value="$PROJECT_DIR$/html/Student/dservice.php" />
-        <option value="$PROJECT_DIR$/html/Forms/form_maker.php" />
-        <option value="$PROJECT_DIR$/html/header-menu.php" />
-        <option value="$PROJECT_DIR$/html/Trans/trans_editor.php" />
-        <option value="$PROJECT_DIR$/php_script/get_disps.php" />
-        <option value="$PROJECT_DIR$/php_script/Trans/get_trans.php" />
-        <option value="$PROJECT_DIR$/html/Trans/add_trans.php" />
-        <option value="$PROJECT_DIR$/content/css/main.css" />
+        <option value="$PROJECT_DIR$/html/Student/cservice.php" />
+        <option value="$PROJECT_DIR$/php_script/function.php" />
+        <option value="$PROJECT_DIR$/php_script/Struct/Cathedra.php" />
+        <option value="$PROJECT_DIR$/php_script/StudentService/struct/getStructContent.php" />
+        <option value="$PROJECT_DIR$/html/Student/main/struct.php" />
+        <option value="$PROJECT_DIR$/php_script/Struct/Direction.php" />
+        <option value="$PROJECT_DIR$/html/Student/index.php" />
+        <option value="$PROJECT_DIR$/php_script/auth.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/content/css/student-main.css" />
+        <option value="$PROJECT_DIR$/html/Student/main/stats.php" />
+        <option value="$PROJECT_DIR$/html/Student/main.php" />
       </list>
     </option>
   </component>
@@ -140,6 +1217,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -168,7 +1255,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="php_script" />
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -183,10 +1274,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="php_script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Trans" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -222,7 +1309,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Student" />
+              <option name="myItemId" value="StudentService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="struct" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -362,6 +1453,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="content" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -386,15 +1495,20 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="Errors" />
+    <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\WebServers\home\localhost\www\php_script\StudentService" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -407,6 +1521,13 @@
       <method>
         <option name="PhingTarget" enabled="false" />
       </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -438,19 +1559,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19423369" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2003035" sideWeight="0.6710311" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -515,110 +1636,96 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/php_script/function.php">
+    <entry file="file://$PROJECT_DIR$/html/Student/service.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="75" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" />
+        <state line="1" column="0" selection-start="68" selection-end="196" vertical-scroll-proportion="-0.65384614" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php_script/StudentService/load_dir_data.php">
+    <entry file="file://$PROJECT_DIR$/php_script/data_edit_get.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="61" selection-start="435" selection-end="605" vertical-scroll-proportion="0.0" />
+        <state line="12" column="5" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php_script/StudentService/studentService.php">
+    <entry file="file://$PROJECT_DIR$/php_script/Struct/Faculty.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="31" selection-start="710" selection-end="729" vertical-scroll-proportion="0.0" />
+        <state line="50" column="9" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/Student/main.php">
+    <entry file="file://$PROJECT_DIR$/php_script/Struct/Cathedra.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="14" selection-start="788" selection-end="788" vertical-scroll-proportion="-0.65384614">
+        <state line="40" column="21" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_script/validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="42" selection-start="223" selection-end="378" vertical-scroll-proportion="-7.8461537" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_script/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="226" selection-end="226" vertical-scroll-proportion="0.30035335" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Student/main/struct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="53" selection-start="2717" selection-end="2717" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_script/StudentService/struct/getStructContent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="36" selection-start="1532" selection-end="1532" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_script/Struct/Direction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="82" selection-start="1640" selection-end="1649" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/Stats/stats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="19.653847">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/data_editor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="9" selection-start="6567" selection-end="6567" vertical-scroll-proportion="-10.384615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php_script/get_content_fcd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1335095447662" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php_script/get_disps.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="44" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/Trans/add_trans.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="26" selection-start="6242" selection-end="6242" vertical-scroll-proportion="-24.846153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="24" selection-start="1241" selection-end="1241" vertical-scroll-proportion="2.43686">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php_script/Trans/get_trans.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="31" selection-start="3685" selection-end="3685" vertical-scroll-proportion="0.2530541">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/Trans/trans_editor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="61" selection-start="4373" selection-end="4395" vertical-scroll-proportion="0.2125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/header-menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="780" selection-end="780" vertical-scroll-proportion="0.54642856">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/Forms/form_maker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="116" selection-start="4447" selection-end="4447" vertical-scroll-proportion="0.71480805">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/Student/dservice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="53" selection-start="995" selection-end="995" vertical-scroll-proportion="0.3875">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php_script/Stats/graphics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="78" selection-start="532" selection-end="532" vertical-scroll-proportion="0.3875">
+        <state line="48" column="6" selection-start="1390" selection-end="1633" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/css/student-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="59" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Student/main/stats.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="34" selection-start="389" selection-end="389" vertical-scroll-proportion="-2.9230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="21" selection-start="230" selection-end="230" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Student/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="45" selection-start="756" selection-end="756" vertical-scroll-proportion="-7.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Student/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="18" selection-start="6109" selection-end="6109" vertical-scroll-proportion="0.21296297">
           <folding />
         </state>
       </provider>

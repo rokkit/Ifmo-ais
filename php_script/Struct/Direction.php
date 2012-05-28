@@ -17,13 +17,15 @@ class Direction {
     public $description;
     public $cathedra;
     public $faculty;
+    public $price;
 
-    function __construct($id,$name,$full_name,$description)
+    function __construct($id,$name,$full_name,$description,$price=null)
     {
         $this->id=$id;
         $this->name=$name;
         $this->full_name=$full_name;
         $this->description=$description;
+        $this->price=$price;
     }
     static function getDirection($cathedra=null)
     {
@@ -41,6 +43,23 @@ class Direction {
             $data[]=new Direction($result['id'], $result['name'], $result['full_name'], $result['description']);
         }
         return json_encode($data);
+    }
+    static function getDirectionObj($cathedra=null)
+    {
+        $query="SELECT * FROM direction";
+        $id =  parseNumSql($cathedra);
+        if(!empty($id))
+        {
+
+            $query.=" WHERE id=$id";
+        }
+        $data=null;
+        $results =  mysql_query($query,  connectToIfmoDb()) or die(mysql_error());
+        if($result =  mysql_fetch_array($results))
+        {
+            $data=new Direction($result['id'], $result['name'], $result['full_name'], $result['description'],$result['price']);
+        }
+        return $data;
     }
     static function getFullInfo($id)
     {

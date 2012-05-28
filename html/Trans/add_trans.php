@@ -104,8 +104,9 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
            dataType: 'json',
            colModel : [
 
-                        {display: 'Дисциплина', name : 'name', width : 269, sortable : true, align: 'left'}
-
+               {display: 'Дисциплина', name : 'name', width : 269, sortable : true, align: 'left'},
+               {display: 'Кол-во часов', name : 'hours', width : 269, sortable : true, align: 'left'},
+               {display: 'Итог', name : 'final', width : 269, sortable : true, align: 'left'}
            ],
 
            searchitems : [
@@ -120,7 +121,7 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
                 showToggleBtn:false,
                 showTableToggleBtn: false,
                 resizable: false,
-                width: 300,
+                width: 740,
                 height: height_t,
                 singleSelect: false
        });
