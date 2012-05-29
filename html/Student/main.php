@@ -13,6 +13,9 @@ require_once FNPATH.'auth.php';
         <script type="text/javascript" src="/content/js/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="/content/js/jquery.pjax.js"></script>
         <script type="text/javascript" src="/content/js/jquery.chainedSelects.js"></script>
+        <script type="text/javascript" src="/content/js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="/content/js/TufteGraph/jquery.enumerable.js"></script>
+        <script type="text/javascript" src="/content/js/TufteGraph/jquery.tufte-graph.js"></script>
     </head>
     <body>
         <div class="navbar">
@@ -40,7 +43,7 @@ require_once FNPATH.'auth.php';
                         </li>
                         <li class="divider-vertical"></li>
                         <li>
-                            <a><i class="icon-eject"></i> Выход</a>
+                            <a href="<?='http://'.$_SERVER['HTTP_HOST'].'?action=logout'?>"><i class="icon-eject"></i> Выход</a>
                         </li>
                     </ul>
                 </div>
@@ -63,42 +66,40 @@ require_once FNPATH.'auth.php';
         </div>
         <div class="container" id="wait-head-container">
             <div class="row">
-                <div class="span8 well truewell">
+                <div class="span4 well truewell">
                     <div class="span4">
                     <h3 class="st-name"></h3>
                     <dl class="dl-horizontal">
-                        <dt>Факультет</dt>
-                        <dd id="faculty"></dd>
-                        <dt>Кафедра</dt>
-                        <dd id="cathedra"></dd>
-                        <dt>Направление</dt>
-                        <dd class="direction"></dd>
+                        <dt>Год выпуска</dt>
+                        <dd></dd>
+                        <dt>Средний балл</dt>
+                        <dd></dd>
                     </dl>
+                        <h3>Ваша заявка рассматривается</h3>
                     <a  href="/html/Student/service.php" style="margin: 8px 0 0 200px" class="btn btn-info btn-large">Изменить</a>
                     </div>
 
-                    <div class="span3" style="margin-top: 40px">
-                        <h2>Ваша заявка еще рассматривается</h2>
-                    </div>
-                </div>
-                <div class="span3 well truewell">
-                    <h2>
-                        Ваш средний балл:<p class="avgpoint"></p>
-                    </h2>
+
                 </div>
 
-            </div>
-            <div class="row">
-                <div class="span8 well truewell">
+
+
+                <div class="span7 well truewell">
                     <h3 class="direction"></h3>
                     <dl>
-                        <dt>Сайт кафедры</dt>
-                        <dd id="phone"></dd>
+
+                        <dt>Декан</dt>
+                        <dd id="dekan"></dd>
+                        <dt>Зав. кафедры:</dt>
+                        <dd id="zavcath"></dd>
                         <dt>Стоимость контрактного обучения</dt>
                         <dd id="cost"></dd>
+                        <dt>Сайт кафедры</dt>
+                        <dd id="site"></dd>
+
                     </dl>
                 </div>
-            </div>
+                </div>
         </div>
         <div class="container" id="ok-head-container">
             <div class="row">

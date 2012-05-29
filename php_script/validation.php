@@ -23,7 +23,7 @@ $linkifm=connectToFspo();
        // header("Location: http://".$_SERVER['HTTP_HOST']);
             if($r['state']=='1')
                 echo '<script>document.location.href="main.php"</script>';
-            else header("Location: http://".$_SERVER['HTTP_HOST'].'/html/Student/main.php');
+            else echo '<script>document.location.href="http://'.$_SERVER['HTTP_HOST'].'/html/student/main.php"</script>';
         exit;
         }
         else

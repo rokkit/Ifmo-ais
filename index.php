@@ -1,5 +1,7 @@
 <?php 
 session_start();
+if($_GET['action']=='logout')
+    session_destroy();
 require_once 'php_script/function.php';
 $linkfm=connectToIfmo();
 if($result=$linkfm->query("SELECT state FROM users WHERE id=".$_SESSION['user_id']))
