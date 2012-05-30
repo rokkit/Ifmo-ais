@@ -32,8 +32,8 @@
                 Сайт кафедры:<p id="site"></p>
                 Контактный номер<p id="phone"></p>
                 Приблизительная стоимость контрактного обучения<p id="price"></p>
-        </div>
-            <div>
+            </div>
+            <div style="position: relative;top:-10px;right: -295px">
                 <a class="btn" href="/content/files/"><i class="icon-download"></i> Скачать учебный план</a>
             </div>
         </div>

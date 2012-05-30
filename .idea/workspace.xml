@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8d65dd4-e588-406c-9408-3cd5649bd2da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php_script/StudentService/get_dirs.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/css/student-main.css" afterPath="$PROJECT_DIR$/content/css/student-main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Student/main.php" afterPath="$PROJECT_DIR$/html/Student/main.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Student/main/stats.php" afterPath="$PROJECT_DIR$/html/Student/main/stats.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/header-menu.php" afterPath="$PROJECT_DIR$/html/header-menu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Student/main/struct.php" afterPath="$PROJECT_DIR$/html/Student/main/struct.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/StudentService/get_stats.php" afterPath="$PROJECT_DIR$/php_script/StudentService/get_stats.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/validation.php" afterPath="$PROJECT_DIR$/php_script/validation.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +32,7 @@
       <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/Student/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="99" selection-start="1076" selection-end="1076" vertical-scroll-proportion="53.615383">
+            <state line="17" column="99" selection-start="1076" selection-end="1076" vertical-scroll-proportion="83.03846">
               <folding>
                 <marker date="1338309786661" expanded="true" signature="5513:5561" placeholder="..." />
                 <marker date="1338309786661" expanded="true" signature="5537:5561" placeholder="{...}" />
@@ -44,10 +41,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="student-main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/css/student-main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="290" column="32" selection-start="5509" selection-end="5538" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="validation.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_script/validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="12" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-18.307692">
+            <state line="28" column="12" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-12.423077">
               <folding>
                 <marker date="1338230388878" expanded="true" signature="964:1242" placeholder="..." />
                 <marker date="1338230388878" expanded="true" signature="1010:1233" placeholder="{...}" />
@@ -57,19 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="student-main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/css/student-main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="285" column="0" selection-start="5437" selection-end="5437" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="7" selection-start="1770" selection-end="1770" vertical-scroll-proportion="-32.692307">
+            <state line="60" column="4" selection-start="1911" selection-end="1911" vertical-scroll-proportion="-17.653847">
               <folding />
             </state>
           </provider>
@@ -78,7 +75,16 @@
       <file leaf-file-name="stats.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/Student/main/stats.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="55" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.46875">
+            <state line="35" column="35" selection-start="1497" selection-end="1497" vertical-scroll-proportion="-0.40625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="struct.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/Student/main/struct.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="12" selection-start="1199" selection-end="1199" vertical-scroll-proportion="-22.576923">
               <folding />
             </state>
           </provider>
@@ -87,7 +93,7 @@
       <file leaf-file-name="get_stats.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_script/StudentService/get_stats.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="9" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
+            <state line="26" column="65" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,17 +125,17 @@
         <option value="$PROJECT_DIR$/php_script/function.php" />
         <option value="$PROJECT_DIR$/php_script/Struct/Cathedra.php" />
         <option value="$PROJECT_DIR$/php_script/StudentService/struct/getStructContent.php" />
-        <option value="$PROJECT_DIR$/html/Student/main/struct.php" />
         <option value="$PROJECT_DIR$/php_script/Struct/Direction.php" />
         <option value="$PROJECT_DIR$/html/Student/index.php" />
         <option value="$PROJECT_DIR$/php_script/auth.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/html/header-menu.php" />
         <option value="$PROJECT_DIR$/php_script/validation.php" />
         <option value="$PROJECT_DIR$/php_script/StudentService/get_dirs.php" />
         <option value="$PROJECT_DIR$/html/Student/main.php" />
-        <option value="$PROJECT_DIR$/content/css/student-main.css" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/php_script/StudentService/get_stats.php" />
+        <option value="$PROJECT_DIR$/content/css/student-main.css" />
+        <option value="$PROJECT_DIR$/html/Student/main/struct.php" />
         <option value="$PROJECT_DIR$/html/Student/main/stats.php" />
       </list>
     </option>
@@ -669,52 +675,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="7" selection-start="1770" selection-end="1770" vertical-scroll-proportion="-32.692307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/Student/main/struct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="53" selection-start="2717" selection-end="2717" vertical-scroll-proportion="1.0648855">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/js/jquery.chainedSelects.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3296089">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/css/student-main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="285" column="0" selection-start="5437" selection-end="5437" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/Student/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="99" selection-start="1076" selection-end="1076" vertical-scroll-proportion="53.615383">
-          <folding>
-            <marker date="1338309786661" expanded="true" signature="5513:5561" placeholder="..." />
-            <marker date="1338309786661" expanded="true" signature="5537:5561" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php_script/validation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="12" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-18.307692">
-          <folding>
-            <marker date="1338230388878" expanded="true" signature="964:1242" placeholder="..." />
-            <marker date="1338230388878" expanded="true" signature="1010:1233" placeholder="{...}" />
-            <marker date="1338230388878" expanded="true" signature="1034:1041" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -746,16 +710,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/html/Student/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="99" selection-start="1076" selection-end="1076" vertical-scroll-proportion="83.03846">
+          <folding>
+            <marker date="1338309786661" expanded="true" signature="5513:5561" placeholder="..." />
+            <marker date="1338309786661" expanded="true" signature="5537:5561" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_script/validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="12" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-12.423077">
+          <folding>
+            <marker date="1338230388878" expanded="true" signature="964:1242" placeholder="..." />
+            <marker date="1338230388878" expanded="true" signature="1010:1233" placeholder="{...}" />
+            <marker date="1338230388878" expanded="true" signature="1034:1041" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/css/student-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="290" column="32" selection-start="5509" selection-end="5538" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php_script/StudentService/get_stats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="9" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
+        <state line="26" column="65" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="4" selection-start="1911" selection-end="1911" vertical-scroll-proportion="-17.653847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Student/main/struct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="12" selection-start="1199" selection-end="1199" vertical-scroll-proportion="-22.576923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/Student/main/stats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="55" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.46875">
+        <state line="35" column="35" selection-start="1497" selection-end="1497" vertical-scroll-proportion="-0.40625">
           <folding />
         </state>
       </provider>

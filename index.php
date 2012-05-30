@@ -1,5 +1,6 @@
-<?php 
+<?php
 session_start();
+session_destroy();
 if($_GET['action']=='logout')
     session_destroy();
 require_once 'php_script/function.php';

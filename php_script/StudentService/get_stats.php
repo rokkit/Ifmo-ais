@@ -22,7 +22,9 @@ if($_GET['type']=='ch') {
             $c=parseNumSql($c);
             $result=$ifmodb->query("SELECT COUNT(*) FROM student_choose WHERE id_direction=$c");
             $r=$result->fetch_array();
-            $data[]=array(array((int)($r),array("label"=>$c)));
+            $result=$ifmodb->query("SELECT name FROM direction WHERE id=$c");
+            $name=$result->fetch_assoc();
+            $data[]=array((int)($r[0]),array("label"=>$name['name']));
         }
         }
     }
