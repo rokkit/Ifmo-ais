@@ -12,15 +12,14 @@ require_once FNPATH.'auth.php';
             <div class="sidebar-nav">
                 <ul class="nav nav-list">
                     <li class="nav-header">Sidebar</li>
-                    <li class="active"><a href="#">Link</a></li>
+                    <li class="active"><a href="#chart-content">Популярность направлений</a></li>
+                    <li><a href="#web-chart-content">Диаграмма</a></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="nav-header">Sidebar</li>
                 </ul>
             </div>
         </div>
-        <div class="span9 truewell" style="height: 450px;">
+        <div id="chart-content" class="span9 truewell chart-content" style="height: 450px;">
             <h2 style=" margin: 20px 10px 40px 30px;">График популярности направлений подготовки</h2>
 
             <div class="span5" id="holder-web-chart"  style="height: 200px;">
@@ -88,5 +87,22 @@ require_once FNPATH.'auth.php';
                 });
             </script>
         </div>
+
+        <!-- вторая диаграмма -->
+        <div id="web-chart-content" class="span9 truewell chart-content" style="height: 450px; display: none;">
+            <h2 style=" margin: 20px 10px 40px 30px;">Диаграмма</h2>
+        </div>
     </div>
 </div>
+    <script>
+        $(function(){
+            $(".nav-list a").click(function(){
+                $(".chart-content").hide()
+                var el=$(this).attr("href");
+                $(el).show();
+                $(".nav-list li").removeClass("active");
+                $(this).parent().addClass("active")
+                return false;
+            })
+        })
+    </script>

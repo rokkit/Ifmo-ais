@@ -166,7 +166,7 @@ $.container = '#studs-container';
            dataType: 'json',
            colModel : [
 
-                        {display: 'ФИО', name : 'name', width : 150, sortable : true, align: 'left'},
+                        {display: 'ФИО', name : 'name', width : 250, sortable : true, align: 'left'},
                         {display: 'Группа', name : 'group', width : 50, sortable : true, align: 'left'},
                         {display: 'Программа', name : 'programm', width : 150, sortable : true, align: 'left'}
 
@@ -184,7 +184,7 @@ $.container = '#studs-container';
                 showToggleBtn:false,
                 showTableToggleBtn: false,
                 resizable: false,
-                width: 450,
+                width: 600,
                 height: 400,
                 singleSelect: false,
                 minwidth:200

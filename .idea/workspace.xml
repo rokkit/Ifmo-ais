@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8d65dd4-e588-406c-9408-3cd5649bd2da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/css/student-main.css" afterPath="$PROJECT_DIR$/content/css/student-main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Forms/form_maker.php" afterPath="$PROJECT_DIR$/html/Forms/form_maker.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Student/main/stats.php" afterPath="$PROJECT_DIR$/html/Student/main/stats.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Student/main/struct.php" afterPath="$PROJECT_DIR$/html/Student/main/struct.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/StudentService/get_stats.php" afterPath="$PROJECT_DIR$/php_script/StudentService/get_stats.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,7 +50,7 @@
       <file leaf-file-name="validation.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_script/validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="12" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-12.423077">
+            <state line="28" column="12" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-18.307692">
               <folding>
                 <marker date="1338230388878" expanded="true" signature="964:1242" placeholder="..." />
                 <marker date="1338230388878" expanded="true" signature="1010:1233" placeholder="{...}" />
@@ -66,17 +63,28 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="4" selection-start="1911" selection-end="1911" vertical-scroll-proportion="-17.653847">
+            <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stats.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="form_maker.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/Forms/form_maker.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="168" column="67" selection-start="7523" selection-end="7523" vertical-scroll-proportion="0.096045196">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stats.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/Student/main/stats.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="35" selection-start="1497" selection-end="1497" vertical-scroll-proportion="-0.40625">
-              <folding />
+            <state line="92" column="68" selection-start="4513" selection-end="4513" vertical-scroll-proportion="-8.461538">
+              <folding>
+                <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/html/Student/cservice.php" />
         <option value="$PROJECT_DIR$/php_script/function.php" />
         <option value="$PROJECT_DIR$/php_script/Struct/Cathedra.php" />
         <option value="$PROJECT_DIR$/php_script/StudentService/struct/getStructContent.php" />
@@ -132,16 +139,19 @@
         <option value="$PROJECT_DIR$/php_script/validation.php" />
         <option value="$PROJECT_DIR$/php_script/StudentService/get_dirs.php" />
         <option value="$PROJECT_DIR$/html/Student/main.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/php_script/StudentService/get_stats.php" />
         <option value="$PROJECT_DIR$/content/css/student-main.css" />
         <option value="$PROJECT_DIR$/html/Student/main/struct.php" />
         <option value="$PROJECT_DIR$/html/Student/main/stats.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/html/Forms/form_maker.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="240" />
+    <option name="y" value="34" />
     <option name="width" value="1366" />
     <option name="height" value="728" />
   </component>
@@ -323,6 +333,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Stats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_script" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -572,7 +600,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="728" extended-state="1" />
+    <frame x="240" y="34" width="1366" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -649,11 +677,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/php_script/Struct/Direction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="82" selection-start="1640" selection-end="1649" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/Student/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="45" selection-start="756" selection-end="756" vertical-scroll-proportion="-7.1923075">
@@ -720,17 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php_script/validation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="12" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-12.423077">
-          <folding>
-            <marker date="1338230388878" expanded="true" signature="964:1242" placeholder="..." />
-            <marker date="1338230388878" expanded="true" signature="1010:1233" placeholder="{...}" />
-            <marker date="1338230388878" expanded="true" signature="1034:1041" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/css/student-main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="290" column="32" selection-start="5509" selection-end="5538" vertical-scroll-proportion="0.0">
@@ -745,13 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="4" selection-start="1911" selection-end="1911" vertical-scroll-proportion="-17.653847">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/Student/main/struct.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="12" selection-start="1199" selection-end="1199" vertical-scroll-proportion="-22.576923">
@@ -761,7 +766,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/Student/main/stats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="35" selection-start="1497" selection-end="1497" vertical-scroll-proportion="-0.40625">
+        <state line="92" column="68" selection-start="4513" selection-end="4513" vertical-scroll-proportion="-8.461538">
+          <folding>
+            <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_script/validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="12" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-18.307692">
+          <folding>
+            <marker date="1338230388878" expanded="true" signature="964:1242" placeholder="..." />
+            <marker date="1338230388878" expanded="true" signature="1010:1233" placeholder="{...}" />
+            <marker date="1338230388878" expanded="true" signature="1034:1041" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Forms/form_maker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="67" selection-start="7523" selection-end="7523" vertical-scroll-proportion="0.096045196">
           <folding />
         </state>
       </provider>
