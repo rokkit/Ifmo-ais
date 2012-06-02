@@ -54,10 +54,15 @@ if(isset($_SERVER['HTTP_X_PJAX']))
 
         var discipline=$("#discipline").val();
         $.getJSON("/php_script/Stats/hours_chart.php", {"discipline":discipline}, function(json) {
-                    $("#holder-hours-chart").tufteBar({
+            $.get("/php_script/Stats/hours_chart.php",{"discipline":discipline,"fspo":true},function(check_line){
+                $("#holder-hours-chart").tufteBar({
                     data:json,
-                    barWidth: 0.8
-                    });
+                    barWidth: 0.8,
+                    check_line: check_line,
+                    axisLabel: function(index) { return this[1].label }
+                });
+            })
+
                 })
         });
      });

@@ -16,6 +16,8 @@ include_once '../../php_script/function.php';
         <script type="text/javascript" src="/content/js/bootstrap-dropdown.js"></script>
         <script type="text/javascript" src="/content/js/flexigrid.pack.js"></script>
         <script type="text/javascript" src="/content/js/jquery.pjax.js"></script>
+        <script type="text/javascript" src="/content/js/bootstrap-alert.js"></script>
+        <script type="text/javascript" src="/content/js/admin-function.js"></script>
     </head>
     <body>
         <?php include ('../header-menu.php'); ?>

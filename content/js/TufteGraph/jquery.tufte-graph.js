@@ -16,6 +16,7 @@
   // Defaults are exposed publically so you can reuse bits that you find 
   // handy (the colors, for instance)
   $.fn.tufteBar.defaults = {
+    check_line:null,
     barWidth:  0.8,
     colors:    ['#07093D', '#0C0F66', '#476FB2'],
     color:     function(index, stackedIndex, options) { return options.colors[stackedIndex % options.colors.length]; },
@@ -135,6 +136,11 @@
         ctx.rect(coords[0], coords[1], coords[2], coords[3]).attr({stroke: color, fill: color});
 
         lastY = lastY + y;
+
+          var path_line=ctx.path("M0 "+options.check_line+"L"+plot.width+" "+options.check_line)
+          path_line.attr("stroke","#345")
+          var path_line_txt=ctx.text(parseInt(plot.width)-40,parseInt(options.check_line)+10,options.check_line)
+
       });
 
       addLabel = function(klass, text, pos) {
@@ -223,7 +229,8 @@
 
     // the canvas
     plot.ctx = Raphael(target[0].id, plot.width, plot.height);
-
+//    var path_line=plot.ctx.path("M0 "+options.check_line+"L"+plot.width+" "+options.check_line)
+//      path_line.attr("stroke","#345")
     plot.axis = makeAxis(options);
     plot.axis.x.pixelLength = plot.width;
     plot.axis.y.pixelLength = plot.height;

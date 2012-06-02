@@ -149,3 +149,8 @@ margin-bottom:5px;
 .chart-filter {
     padding:30px 0px 0px 30px;
 }
+.alert {
+    position: absolute;
+
+    z-index: 1024;
+}

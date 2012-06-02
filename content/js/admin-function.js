@@ -7,5 +7,6 @@
  */
 function createAutoClosingAlert(selector, delay) {
     var alert = $(selector).alert();
+    $(selector).show()
     window.setTimeout(function() { alert.alert('close') }, delay);
 }
