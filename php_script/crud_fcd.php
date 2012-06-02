@@ -1,6 +1,7 @@
 <?php
 require 'auth.php';
 require 'dbconnect.php';
+require_once "function.php";
 
 if(isset($_POST['update-state']))//нажата кнопка отправить на апдейт и факультет
     {
@@ -67,7 +68,8 @@ if(isset($_POST['update-state']))//нажата кнопка отправить 
         $full_name = $_POST['full-name-input'];
         $desc=$_POST['desc-input'];
         $link_fc=$_POST['faculty-h'];
-        mysql_query("INSERT INTO cathedra (name, id_faculty, full_name,dekan,description) VALUES('$name','$link_fc','$full_name','$dekan','$desc')") or die("Error");
+        $site=parseNumSql($_POST['site-input']);
+        mysql_query("INSERT INTO cathedra (name, id_faculty, full_name,dekan,description,site) VALUES('$name','$link_fc','$full_name','$dekan','$desc','$site')") or die(mysql_error());
         echo "Запись добавлена";
 
         }

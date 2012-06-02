@@ -1,13 +1,20 @@
 <?php
 session_start();
-if($_GET['action']=='logout')
-    session_destroy();
+
 require_once 'php_script/function.php';
-$linkfm=connectToIfmo();
+
+if(isset($_SESSION['user_id'])) {
+    $linkfm=connectToIfmo();
 if($result=$linkfm->query("SELECT state FROM users WHERE id=".$_SESSION['user_id']))
 {
     $state=$result->fetch_row();
     $state=$state[0];
+}
+    if($_GET['action']=='logout')
+        session_destroy();
+    $id=$_SESSION['user_id'];
+    $date=date('Ymd');
+    $_SESSION['token']=sha1($id.$date);
 }
 if(!isset($_SESSION['user_id'])) {
    ?>

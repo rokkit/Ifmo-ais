@@ -105,8 +105,8 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
            colModel : [
 
                {display: 'Дисциплина', name : 'name', width : 269, sortable : true, align: 'left'},
-               {display: 'Кол-во часов', name : 'hours', width : 269, sortable : true, align: 'left'},
-               {display: 'Итог', name : 'final', width : 269, sortable : true, align: 'left'}
+               {display: 'Кол-во часов', name : 'hours', width : 50, sortable : true, align: 'left'},
+               {display: 'Итог', name : 'final', width : 100, sortable : true, align: 'left'}
            ],
 
            searchitems : [

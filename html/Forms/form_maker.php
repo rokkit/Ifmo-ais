@@ -35,6 +35,9 @@ include_once '../../php_script/function.php';
                                 <li>
                                     <a href="/html/Forms/inbox.php"><i class="icon-inbox"></i>Заявки <?php include 'get_inbox_choose.php'; ?></a>
                                 </li>
+                                <li>
+                                    <a href="ifmo_studs.php"><i class="icon-th-list"></i> Поступившие студенты</a>
+                                </li>
                                 <li class="nav-header">Отображать записи</li>
                                 <li class="span3 well" id="filter-studs-table" style="width: 200px; margin-top:9px;">
                                     <form class="nform">
@@ -171,6 +174,9 @@ $.container = '#studs-container';
                         {display: 'Программа', name : 'programm', width : 150, sortable : true, align: 'left'}
 
            ],
+           buttons : [
+               {name: '<i class="icon-check"></i>Поступил на ВПО', bclass: 'create', onpress : doCommand}
+           ],
 
            searchitems : [
                         {display: 'ФИО', name : 'name'}
@@ -193,32 +199,20 @@ $.container = '#studs-container';
 
 //Кнопки таблицы
     function doCommand(com, grid) {
-            if (com == 'Подтвердить') {
+            if (com == '<i class="icon-check"></i>Поступил на ВПО') {
             $('.trSelected', grid).each(function() {
             var id = $(this).attr('id');
+                if(id==null) return false;
             id = id.substring(id.lastIndexOf('row')+3);
-                        $.get("../php_script/set_disps.php",{id:id,get_update:"true"},
+                        $.get("/php_script/Forms/ifmo_studs.php",{id:id,state_ifmo:"1"},
                             function(data)
                             {
+                                $("div#studs-table").flexReload();
+                                createAutoClosingAlert("#alert-save",2000);
                             });
 
             });
-            } else if (com == 'Удалить') {
-                    $('.trSelected', grid).each(function() {
-                    var id = $(this).attr('id');
-                    id = id.substring(id.lastIndexOf('row')+3);
-
-                    $.get("../php_script/set_disps.php", {id:id,get_delete:"true"}, function(data){
-                        $("form#modal-delete").html(data);
-                    });
-                    $("#ModalDelDisp").modal('show');
-                    });
-                    }
-                     else if (com == 'Добавить')
-                    {
-                    $("#ModalAddDisp").modal();
-                    }
-
+            }
             }
             $(function() {
                 $("#form-link").click(function() {

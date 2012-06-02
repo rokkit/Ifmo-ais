@@ -75,7 +75,7 @@ function checkFavourite(user_id,fav_id) {
 
 
 //рисуем паутиновый график
-function drawWebChart(line,kf,json,params_line,params_pline) {
+function drawWebChart(holder,line,kf,json,params_line,params_pline) {
     var count=0;
 
     //считаем сколько секций пришло
@@ -90,7 +90,7 @@ function drawWebChart(line,kf,json,params_line,params_pline) {
         sx=cx/2,
         sy=cy/2;
 
-    var paper = Raphael("holder-web-chart", cx,cy);
+    var paper = Raphael(holder, cx,cy);
     paper.circle(sx, sy, line);
     var px=0,py=0;
     function draw_text(cx,cy,delta,angle,text) {

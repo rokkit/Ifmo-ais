@@ -22,7 +22,7 @@ require_once FNPATH.'auth.php';
         <div id="chart-content" class="span9 truewell chart-content" style="height: 450px;">
             <h2 style=" margin: 20px 10px 40px 30px;">График популярности направлений подготовки</h2>
 
-            <div class="span5" id="holder-web-chart"  style="height: 200px;">
+            <div class="span5" id="holder-chart"  style="height: 200px;">
 
             </div>
             <div class="span5">
@@ -66,7 +66,7 @@ require_once FNPATH.'auth.php';
                                     })
                                 else
                                     $.getJSON("/php_script/StudentService/get_stats.php", {type:"ch",graph:"chart"}, function(json) {
-                                        $("#holder-web-chart").tufteBar({
+                                        $("#holder-chart").tufteBar({
                                             data:json,
                                             barWidth: 0.8,
                                             axisLabel: function(index) { return this[1].label }
@@ -81,7 +81,7 @@ require_once FNPATH.'auth.php';
                     $.getJSON("/php_script/StudentService/get_dirs.php",{},function(json) {
                         for(var j in json) {
                             j=json[j];
-                        $("#select-direction").get(0).add(new Option(j['name'],j['id'],true))
+                            $("#select-direction").get(0).add(new Option(j['name'],j['id'],true))
                         }
                     });
                 });
@@ -90,7 +90,17 @@ require_once FNPATH.'auth.php';
 
         <!-- вторая диаграмма -->
         <div id="web-chart-content" class="span9 truewell chart-content" style="height: 450px; display: none;">
-            <h2 style=" margin: 20px 10px 40px 30px;">Диаграмма</h2>
+            <h2 style=" margin: 20px 10px 0 30px;">Диаграмма</h2>
+            <div class="span5" id="holder-web-chart"  style="height: 200px;">
+
+            </div>
+            <script>
+            $(function(){$.getJSON("/php_script/StudentService/get_stats.php", {type:"ch",graph:"web"}, function(json){
+            drawWebChart("holder-web-chart",150,2,json,{"stroke-width": 0.8},
+            {stroke:"05C","stroke-width": 2});
+            });
+            });
+            </script>
         </div>
     </div>
 </div>

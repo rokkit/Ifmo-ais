@@ -34,4 +34,7 @@
                 </div>
             </div>
         </div>
+<div class="alert alert-success" style="display: none" id="alert-save">
+<strong>Запись сохранена</strong>
+</div>
 <?php ?>

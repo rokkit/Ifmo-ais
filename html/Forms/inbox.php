@@ -31,6 +31,9 @@
                                 <li class="active">
                                     <a href=""><i class="icon-inbox icon-white"></i>Заявки <?php include 'get_inbox_choose.php'; ?></a>
                                 </li>
+                                <li>
+                                    <a href="ifmo_studs.php"><i class="icon-th-list"></i>Поступившие студенты</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="span6">
