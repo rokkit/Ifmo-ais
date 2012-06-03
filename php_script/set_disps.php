@@ -40,7 +40,7 @@ include 'function.php';
             $main_cathedra=  parseNumSql($_POST['set_main_cathedra']);
             $query.=", id_cathedra='$main_cathedra'";
         }
-        if(isset($_POST['set_direction']))
+        if(!empty($_POST['set_direction']))
         {
             $direction=  parseNumSql($_POST['set_direction']);
             $query.=",id_direction=$direction";
@@ -55,8 +55,8 @@ include 'function.php';
             $id=  parseNumSql($_POST['set_id']);
             $query.=" WHERE id='$id'";
         }
-        echo $query;
-        mysql_query($query) or die('ERROR ADD');
+echo $query;
+        mysql_query($query,connectToFspoDB()) or die(mysql_error());
     }
    
         if(isset($_GET['id']))//получено ид для редактирования или удаления
@@ -65,7 +65,7 @@ include 'function.php';
             {
                 $id =  parseNumSql($_GET['id']);
                 $ar[]=array();
-                $disps =  mysql_query("SELECT * FROM discipline WHERE id='$id'") or die('ERROR');
+                $disps =  mysql_query("SELECT * FROM discipline WHERE id='$id'",connectToFspoDB()) or die('ERROR');
                 if($disp = mysql_fetch_array($disps))
                 {
                     $ar[]=array(id=>$disp[0]);

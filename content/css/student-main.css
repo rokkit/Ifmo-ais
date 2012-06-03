@@ -290,5 +290,9 @@ ul#content-nav {
 .h2-margin {
     margin: 20px 10px 40px 30px;
 }
+.btn-download {
+    margin-right: 0;
+    float: right;
+}
 
 

@@ -25,6 +25,9 @@
             <form>
         </div>
         <div class="span8 well truewell">
+            <div class="btn-download">
+                <a class="btn" href="/content/files/"><i class="icon-download"></i> Скачать учебный план</a>
+            </div>
             <h3 id="full-name"></h3>
             <div style="float: left;">
                 Декан факультета:<p id="dekan"></p>
@@ -33,9 +36,7 @@
                 Контактный номер<p id="phone"></p>
                 Приблизительная стоимость контрактного обучения<p id="price"></p>
             </div>
-            <div style="position: relative;top:-10px;">
-                <a class="btn" href="/content/files/"><i class="icon-download"></i> Скачать учебный план</a>
-            </div>
+
         </div>
     </div>
 </div>
@@ -58,17 +59,17 @@
                 $.getJSON("/php_script/StudentService/struct/getStructContent.php",form,function(json){
                     if(json['faculty']!=null) {
                         var f=json['faculty'][0];
-                        $("#full-name").text(f['name'])
+                        if(f["name"]!=null) $("#full-name").text(f['name'])
                         $("#dekan").text(f['dekan'])
                     }
                     if(json['cathedra']!=null) {
                         var c=json['cathedra'];
-                        $("#full-name").append(" "+c["name"]);
+                        if(c["name"]!=null) $("#full-name").append(" "+c["name"]);
                         $("#zavcath").text(c["zavcath"]);
                     }
                     if(json['direction']!=null) {
                         var c=json['direction'];
-                        $("#full-name").append(" "+c["name"]);
+                        if(c["name"]!=null) $("#full-name").append(" "+c["name"]);
                         $("#price").text(c['price']);
                     }
                 });

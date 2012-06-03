@@ -43,6 +43,9 @@ var urlParams = <?php echo json_encode($_GET);?>;
             //вешаем на закрытие модала очистку внутри него
             $(function(){
             $("div#ModalDelDisp").on('hidden',function(){$("form#modal-delete").empty();})
+            $(".modal").on('hidden',function(){
+                $("div#disp-table").flexReload()
+            })
             });
 
     $(function(){
