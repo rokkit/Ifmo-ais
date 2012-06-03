@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8d65dd4-e588-406c-9408-3cd5649bd2da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/css/student-main.css" afterPath="$PROJECT_DIR$/content/css/student-main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Student/main/struct.php" afterPath="$PROJECT_DIR$/html/Student/main/struct.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/get_disps_table.php" afterPath="$PROJECT_DIR$/php_script/get_disps_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/set_disps.php" afterPath="$PROJECT_DIR$/php_script/set_disps.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/js/TufteGraph/jquery.tufte-graph.js" afterPath="$PROJECT_DIR$/content/js/TufteGraph/jquery.tufte-graph.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Student/cservice.php" afterPath="$PROJECT_DIR$/html/Student/cservice.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/header-menu.php" afterPath="$PROJECT_DIR$/html/header-menu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_script/crud_fcd.php" afterPath="$PROJECT_DIR$/php_script/crud_fcd.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,28 +28,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="graphics.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php_script/Stats/graphics.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="6" selection-end="128" vertical-scroll-proportion="-0.65384614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stats.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/Stats/stats.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="32" selection-start="1601" selection-end="1601" vertical-scroll-proportion="-11.769231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hours_chart.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_script/Stats/hours_chart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="18" selection-start="835" selection-end="835" vertical-scroll-proportion="-11.769231">
+            <state line="21" column="0" selection-start="719" selection-end="719" vertical-scroll-proportion="-9.807693">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_content_fcd.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php_script/get_content_fcd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="174" column="16" selection-start="9694" selection-end="9694" vertical-scroll-proportion="-22.884615">
+              <folding>
+                <marker date="1335095447662" expanded="true" signature="5785:5834" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crud_fcd.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php_script/crud_fcd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="36" selection-start="3462" selection-end="3462" vertical-scroll-proportion="0.67741936">
               <folding />
             </state>
           </provider>
@@ -58,16 +60,7 @@
       <file leaf-file-name="student-main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/css/student-main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="292" column="13" selection-start="5522" selection-end="5522" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="struct.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/Student/main/struct.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="25" selection-start="734" selection-end="734" vertical-scroll-proportion="-13.076923">
+            <state line="278" column="18" selection-start="5377" selection-end="5377" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,16 +80,25 @@
       <file leaf-file-name="data_editor.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/data_editor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="99.42308">
+            <state line="162" column="13" selection-start="6232" selection-end="6232" vertical-scroll-proportion="-13.576923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_disps_table.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="get_disps_table.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_script/get_disps_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="48" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.6537037">
+            <state line="46" column="48" selection-start="2025" selection-end="2025" vertical-scroll-proportion="-13.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header-menu.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/header-menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="47" selection-start="1276" selection-end="1276" vertical-scroll-proportion="-10.307693">
               <folding />
             </state>
           </provider>
@@ -105,7 +107,16 @@
       <file leaf-file-name="jquery.tufte-graph.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/js/TufteGraph/jquery.tufte-graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="41" selection-start="4851" selection-end="4851" vertical-scroll-proportion="0.0">
+            <state line="144" column="11" selection-start="5022" selection-end="5022" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cservice.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/Student/cservice.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="10" selection-start="2712" selection-end="2712" vertical-scroll-proportion="-13.076923">
               <folding />
             </state>
           </provider>
@@ -124,22 +135,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/html/Student/main/stats.php" />
-        <option value="$PROJECT_DIR$/html/Forms/inbox.php" />
         <option value="$PROJECT_DIR$/html/Forms/ifmo_studs.php" />
-        <option value="$PROJECT_DIR$/html/header-menu.php" />
         <option value="$PROJECT_DIR$/php_script/Forms/ifmo_studs.php" />
         <option value="$PROJECT_DIR$/html/Forms/form_maker.php" />
         <option value="$PROJECT_DIR$/content/js/admin-function.js" />
         <option value="$PROJECT_DIR$/content/css/main.css" />
         <option value="$PROJECT_DIR$/php_script/Stats/hours_chart.php" />
         <option value="$PROJECT_DIR$/php_script/Stats/graphics.php" />
-        <option value="$PROJECT_DIR$/content/js/TufteGraph/jquery.tufte-graph.js" />
         <option value="$PROJECT_DIR$/html/Stats/stats.php" />
-        <option value="$PROJECT_DIR$/content/css/student-main.css" />
         <option value="$PROJECT_DIR$/html/Student/main/struct.php" />
         <option value="$PROJECT_DIR$/php_script/set_disps.php" />
         <option value="$PROJECT_DIR$/php_script/get_disps_table.php" />
+        <option value="$PROJECT_DIR$/html/header-menu.php" />
+        <option value="$PROJECT_DIR$/content/js/TufteGraph/jquery.tufte-graph.js" />
+        <option value="$PROJECT_DIR$/html/Student/cservice.php" />
+        <option value="$PROJECT_DIR$/content/css/student-main.css" />
+        <option value="$PROJECT_DIR$/php_script/crud_fcd.php" />
       </list>
     </option>
   </component>
@@ -595,14 +606,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21363637" sideWeight="0.6710311" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20833333" sideWeight="0.6710311" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -672,52 +683,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/Forms/ifmo_studs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="80" selection-start="827" selection-end="903" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/Forms/form_maker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="84" selection-start="1173" selection-end="1173" vertical-scroll-proportion="9.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/header-menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="53" selection-start="1748" selection-end="1748" vertical-scroll-proportion="-1.3076923">
-          <folding>
-            <element signature="tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/js/admin-function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc;n#createAutoClosingAlert#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="4" selection-start="2205" selection-end="2205" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/js/TufteGraph/jquery.tufte-graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="41" selection-start="4851" selection-end="4851" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/Student/main/stats.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="83" column="28" selection-start="4117" selection-end="4117" vertical-scroll-proportion="-54.26923">
@@ -746,20 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php_script/Stats/hours_chart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="835" selection-end="835" vertical-scroll-proportion="-11.769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/css/student-main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="292" column="13" selection-start="5522" selection-end="5522" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/Student/main/struct.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="25" selection-start="734" selection-end="734" vertical-scroll-proportion="-13.076923">
@@ -776,16 +727,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/data_editor.php">
+    <entry file="file://$PROJECT_DIR$/php_script/get_disps_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="99.42308">
+        <state line="46" column="48" selection-start="2025" selection-end="2025" vertical-scroll-proportion="-13.576923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php_script/get_disps_table.php">
+    <entry file="file://$PROJECT_DIR$/html/header-menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="48" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.6537037">
+        <state line="25" column="47" selection-start="1276" selection-end="1276" vertical-scroll-proportion="-10.307693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/js/TufteGraph/jquery.tufte-graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="11" selection-start="5022" selection-end="5022" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Student/cservice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="10" selection-start="2712" selection-end="2712" vertical-scroll-proportion="-13.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/css/student-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="278" column="18" selection-start="5377" selection-end="5377" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/data_working.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/data_editor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="13" selection-start="6232" selection-end="6232" vertical-scroll-proportion="-13.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_script/Stats/hours_chart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="719" selection-end="719" vertical-scroll-proportion="-9.807693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_script/get_content_fcd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="16" selection-start="9694" selection-end="9694" vertical-scroll-proportion="-22.884615">
+          <folding>
+            <marker date="1335095447662" expanded="true" signature="5785:5834" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_script/crud_fcd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="36" selection-start="3462" selection-end="3462" vertical-scroll-proportion="0.67741936">
           <folding />
         </state>
       </provider>

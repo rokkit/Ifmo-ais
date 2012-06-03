@@ -23,14 +23,15 @@
                             <li><a href="/html/Stats/stats.php">Статистика</a></li>
                         </ul>
                     </li>
-                    <li class="divider-vertical pull-right"></li>
+                    <li class="divider-vertical"></li>
+
+                </ul>
                     <ul class="nav pull-right">
                         <li class="divider-vertical"></li>
                         <li>
                             <a href="<?='http://'.$_SERVER['HTTP_HOST'].'?action=logout'?>"><i class="icon-eject"></i> Выход</a>
                         </li>
                     </ul>
-                </ul>
                 </div>
             </div>
         </div>

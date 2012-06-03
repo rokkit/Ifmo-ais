@@ -276,7 +276,7 @@ body {
 }
 .favourite {
     position: relative;
-    top:-52px;
+    margin-top: 20px;
     right: -680px;
 }
 

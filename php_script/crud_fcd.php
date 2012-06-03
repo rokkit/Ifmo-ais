@@ -67,6 +67,7 @@ if(isset($_POST['update-state']))//нажата кнопка отправить 
         $name =  $_POST['name-input'];
         $full_name = $_POST['full-name-input'];
         $desc=$_POST['desc-input'];
+        $dekan=$_POST['dekan-input'];
         $link_fc=$_POST['faculty-h'];
         $site=parseNumSql($_POST['site-input']);
         mysql_query("INSERT INTO cathedra (name, id_faculty, full_name,dekan,description,site) VALUES('$name','$link_fc','$full_name','$dekan','$desc','$site')") or die(mysql_error());

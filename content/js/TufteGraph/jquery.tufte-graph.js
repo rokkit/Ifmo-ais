@@ -137,10 +137,12 @@
 
         lastY = lastY + y;
 
-          var path_line=ctx.path("M0 "+options.check_line+"L"+plot.width+" "+options.check_line)
+          if(options.check_line!=null) {
+              var path_line=ctx.path("M0 "+options.check_line+"L"+plot.width+" "+options.check_line)
+
           path_line.attr("stroke","#345")
           var path_line_txt=ctx.text(parseInt(plot.width)-40,parseInt(options.check_line)+10,options.check_line)
-
+          }
       });
 
       addLabel = function(klass, text, pos) {
