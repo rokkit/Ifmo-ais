@@ -81,7 +81,7 @@ if(isset($_POST['update-state']))//нажата кнопка отправить 
         $price=  mysql_escape_string($_POST['price-input']);
         $desc=  mysql_escape_string($_POST['desc-input']);
         $link_cd=$_POST['cathedra-h'];
-        mysql_query("INSERT INTO direction (name, id_cathedra, description, price) VALUES('$name',$link_cd,'$full_name','$price')") or die("Error add dir");
+        mysql_query("INSERT INTO direction (name, id_cathedra, description, price) VALUES('$name',$link_cd,'$full_name','$price')") or die(mysql_error( ));
         echo "Направление добавлено";
         }
     }

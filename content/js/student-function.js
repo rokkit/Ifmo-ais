@@ -41,6 +41,7 @@ function load_dir_data(direction,user_id,dir) {
         $("#cathedra-temp-choose").text(json['name_cathedra']);//название кафедры
         $("#direction-temp-choose").text(json['name_direction']);//название направления
         $("#count-num").text(json['count_num']);//название направления
+        $("#cost").text(json['price']+"р/год");//цена
 
         var points=json['points'];
         //заполняем таблицу оценок

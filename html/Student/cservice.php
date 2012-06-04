@@ -1,7 +1,7 @@
 <?php session_start();
 define('FNPATH', $_SERVER['DOCUMENT_ROOT']."/php_script/");
 require FNPATH.'auth.php';
-require FNPATH.'StudentService/auth.php';
+//require FNPATH.'StudentService/auth.php';
 ?>
 <title>НИУ ИТМО | Кафедра</title>
 <?php include '../../php_script/StudentService/studentService.php'; ?>

@@ -8,8 +8,6 @@ if(!empty($_GET['user'])) {
     $data=array();
     $user=parseNumSql($_GET['user']);
 
-
-
     $linkifm=connectToFspo();
     $confirm=$linkifm->query("SELECT confirm FROM student_choose WHERE id_student=$user");
     if($confirm=$confirm->fetch_assoc()) {
@@ -32,6 +30,10 @@ if(!empty($_GET['user'])) {
         $student=Student::getStudentById($user);//информация о студенте
         $data['stname']=$student->getFio();
 
+    } else {
+        setcookie("servstart",0,time()+3600,"/");
+        setcookie("idst",$_SESSION['user_id'],time()+3600,"/");
     }
+
     echo json_encode($data);
 }

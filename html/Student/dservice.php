@@ -2,12 +2,13 @@
 session_start();
 define('FNPATH', $_SERVER['DOCUMENT_ROOT']."/php_script/");
 require FNPATH.'auth.php';
-require FNPATH.'StudentService/auth.php';
+//require FNPATH.'StudentService/auth.php';
 include '../../php_script/StudentService/studentService.php';
       include '../../php_script/Trans/Trans.php';
       include '../../php_script/Student/Student.php';
 
 ?>
+
 <title>Результаты</title>
 
 <div id="favourite-nav" class="span1">
@@ -101,6 +102,7 @@ include '../../php_script/StudentService/studentService.php';
 </div>
 </div>
 
+
                     <div id="check-dlg" class="modal fade">
                         <div class="modal-header">
                             <a class="close" data-dismiss="modal">×</a>
@@ -134,6 +136,7 @@ include '../../php_script/StudentService/studentService.php';
                         });
                     </script>
                     <script>
+
                     //диалог отправки заявки
                     $(function(){
                         $("#do-choose").click(function(){
@@ -154,21 +157,23 @@ include '../../php_script/StudentService/studentService.php';
                             $.post("/php_script/StudentService/doChoose.php",
                                 {
                                     id_student:<?= $_SESSION['user_id'] ?>,
-                                    id_direction:direction,
-                                    status: <?= $_COOKIE['servstart'] ?>
+                                    id_direction:direction
+                                    //status:
                                 }
                             , function(data){
                                 $("#check-dlg").modal('hide');
-                                document.location.href="<?= 'http://'.$_SERVER['HTTP_HOST'].'/html/student/main.php' ?>";
-                            })
-                        })
+                               // document.location.href="<?= 'http://'.$_SERVER['HTTP_HOST'].'/html/student/main.php' ?>";
+                            });
+                        });
                         return false;
                     });
                     </script>
+
                     <script>
                     //получение списка избранного
                     $(function(){
-                         var dir=$("#direction-temp").val();
+
+                        var dir=$("#direction-temp").val();
                         load_favourites(<?= $_SESSION['user_id'] ?>,dir);
                         load_dir_data(<?= $_REQUEST['direction'] ?>,<?= $_SESSION['user_id'] ?>,dir);
                     })

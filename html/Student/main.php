@@ -51,7 +51,7 @@ require_once FNPATH.'auth.php';
         </div>
     <div id="content">
         <div class="container" id="head-container">
-           <div class="row well">
+           <div class="row well  truewell">
                <div class="span3">
                    <img src="http://www.ifmo.ru/images/logo.png" alt="">
                </div>

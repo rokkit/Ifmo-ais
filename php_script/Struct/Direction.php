@@ -68,7 +68,7 @@ class Direction {
         $id = parseNumSql($id);
         $result = mysql_query("SELECT * FROM direction WHERE id=$id",$ifmodb) or die(mysql_error());
         if($result=mysql_fetch_array($result)) {
-            $direction=new Direction($result['id'], $result['name'], $result['full_name'], $result['description']);
+            $direction=new Direction($result['id'], $result['name'], $result['full_name'], $result['description'],$result['price']);
         //теперь получаем инф о кафедре и факультете
         $direction->cathedra=$result['id_cathedra'];
 

@@ -15,6 +15,7 @@ $name_faculty=Faculty::getName($direction->faculty);
 $name_cathedra=Cathedra::getName($direction->cathedra);
 $name_direction=$direction->name." ".$direction->description;
 $count_num=getCountStudentByIdDirection($direction->id);
+$price=$direction->price;
 $student=Student::getStudentById($_SESSION['user_id']);
 
 $points=array();
@@ -33,6 +34,7 @@ $json=array("name_faculty"=>$name_faculty,
             "name_cathedra"=>$name_cathedra,
             "name_direction"=>$name_direction,
             "count_num"=>$count_num,
+            "price"=>$price,
             "points"=>$points);
 
 echo json_encode($json);

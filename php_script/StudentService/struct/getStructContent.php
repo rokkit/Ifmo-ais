@@ -8,7 +8,7 @@ session_start();
  * To change this template use File | Settings | File Templates.
  */
 define('FNPATH', $_SERVER['DOCUMENT_ROOT']."/php_script/");
-require FNPATH.'StudentService/auth.php';
+
 require FNPATH.'function.php';
 require FNPATH.'Struct/Faculty.php';
 require FNPATH.'Struct/Cathedra.php';
