@@ -10,6 +10,7 @@ require_once "../../djpate-docxgen/lib/pclzip.lib.php";
 require_once SCRIPTPATH.'Struct/Cathedra.php';
 require_once SCRIPTPATH.'Struct/Direction.php';
 require_once SCRIPTPATH.'Struct/Faculty.php';
+require_once SCRIPTPATH.'Trans/Trans.php';
 function zipAndDownload($files) {
                 $valid_files = array();
                 /* for every file */
@@ -69,6 +70,26 @@ if(isset($_REQUEST['id'])) {//формируем документ
     } catch (Exception $exc) {
         echo $exc->getTraceAsString();
     }
+      $fspodb = connectToFspoDB();
+      $ifmodb = connectToIfmoDb();
+      $id =  parseNumSql($_REQUEST['id']);
+      $student =  Student::getStudentById($id);//получаем студента со всей инфой
+      $choose = Trans::getStudentChooseByIdStudent($student->id,$ifmodb);//получаем его выбранное направление и кафедру
+      if($choose)
+      {
+          $transfers = Trans::getTransfersByIdDirection($choose['id_direction']);//получаем переход для него для этого направления
+          $disciplines = Trans::getDisciplinesByDirection($choose['id_direction'], $ifmodb);
+          $points=array();
+          $points[]=array("№","Дисциплина","Объём работы студ.","Форма итог. контр.","Оценка","Состав аттестационной комиссии");
+          foreach ($disciplines as $discipline) //формируем таблицу соотсвествия предметов и дисциплин
+                {
+                    $subject=Trans::getSubjectByDiscipline($discipline, $fspodb, $ifmodb);
+                    $point=$student->getPoint($fspodb,$subject['id']);
+                    $disp_name=Trans::getDisciplineById($discipline, $ifmodb);
+                    $points[]=array("id",$disp_name,"hours","finish",$point['point'],"comm");
+                }
+                //var_dump($points);exit;
+      }
     if ($phpdocx) {
         //Записываем информацию о студенте
         $phpdocx->assignBlock("block",array(array("#GROUP#"=>"423",
@@ -76,7 +97,7 @@ if(isset($_REQUEST['id'])) {//формируем документ
                                                   "#SPECIALITION#"=>"230105",
                                                   "#FIO#"=>$student->getFio())));
 
-    $phpdocx->assignTable("points",array(array("№","Дисциплина","Объём работы студ.","Форма итог. контр.","Оценка","Состав аттестационной комиссии"),array(1,2,3,4,5,6)));
+    $phpdocx->assignTable("points",$points);
     @$phpdocx->download();
     }
   }
@@ -110,6 +131,7 @@ if(isset($_REQUEST['id'])) {//формируем документ
                 foreach($ids as $id) {
                     $id = parseNumSql($id);
                     $student=Student::getStudentById($id);
+
         $phpdocx->assignBlock("block",array(array("#GROUP#"=>$student->group,
                                                   "#PERIOD#"=>"1.05.2003",
                                                   "#SPECIALITION#"=>"230105",

@@ -1,11 +1,11 @@
 <?php
 if (isset($_SERVER['HTTP_X_PJAX']))
-{   
-    
+{
+
     include_once '../function.php';
     include 'Student.php';
     include '../Trans/Trans.php';
-    
+
   if(isset($_GET['id']) && $_GET['id']!=null)
   {
       $fspodb = connectToFspoDB();
@@ -13,7 +13,7 @@ if (isset($_SERVER['HTTP_X_PJAX']))
       $id =  parseNumSql($_GET['id']);
       $student =  Student::getStudentById($id);//получаем студента со всей инфой
       $choose = Trans::getStudentChooseByIdStudent($student->id,$ifmodb);//получаем его выбранное направление и кафедру
-      if($choose) 
+      if($choose)
       {
           $transfers = Trans::getTransfersByIdDirection($choose['id_direction']);//получаем переход для него для этого направления
           $disciplines = Trans::getDisciplinesByDirection($choose['id_direction'], $ifmodb);
@@ -23,12 +23,12 @@ if (isset($_SERVER['HTTP_X_PJAX']))
 <title>Студент</title>
 <div>
     <div class="row-fluid">
-  <div id="stud-info" class="span9" style="margin-bottom: 20px;">    
-    <div>ФИО: <?= $student->getFio() ?></div>
-    <div>Группа: <?= $student->group ?></div>
-    <div>Программа: <?= ($student->programm==1) ? "Непрерывная" : "Базовая" ?></div>
-    <div>Выбранная кафедра: <?= $choose['name_cathedra']." ".$choose['full_name_cathedra'] ?></div>
-    <div>Выбранное направление: <?= $choose['name_direction']." ".$choose['full_name_direction'] ?></div>
+  <div id="stud-info" class="span9" style="margin-bottom: 20px;">
+    <div>ФИО: <?php echo $student->getFio() ?></div>
+    <div>Группа: <?php echo $student->group ?></div>
+    <div>Программа: <?php echo ($student->programm==1) ? "Непрерывная" : "Базовая" ?></div>
+    <div>Выбранная кафедра: <?php echo $choose['name_cathedra']." ".$choose['full_name_cathedra'] ?></div>
+    <div>Выбранное направление: <?php echo $choose['name_direction']." ".$choose['full_name_direction'] ?></div>
   </div>
     <?php if(!empty($choose['name_cathedra'])) { ?>
     <div class="btn-group span3">
@@ -65,7 +65,7 @@ if (isset($_SERVER['HTTP_X_PJAX']))
                     <td><?= Trans::getDisciplineById($discipline, $ifmodb) ?></td>
                 </tr>
             <?php
-                } 
+                }
             ?>
             </tbody>
         </table>

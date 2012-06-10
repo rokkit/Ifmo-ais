@@ -71,7 +71,7 @@ $('.cf-block').click(function(){
                         ?>
                         <?php foreach($data as $f) {?>
     <div class="favourite span1">
-        <a class="star <?=checkFavourite($f->id)?>" title="Добавить в избранное" onclick="add_to_favourite(this,<?= $f->id ?>)" href="#"></a>
+        <a class="star <?php echo checkFavourite($f->id)?>" title="Добавить в избранное" onclick="add_to_favourite(this,<?= $f->id ?>)" href="#"></a>
     </div>
                         <div class="cf-block well" id="<?= $f->id ?>">
 

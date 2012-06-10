@@ -162,7 +162,7 @@ include '../../php_script/StudentService/studentService.php';
                                 }
                             , function(data){
                                 $("#check-dlg").modal('hide');
-                               // document.location.href="<?= 'http://'.$_SERVER['HTTP_HOST'].'/html/student/main.php' ?>";
+                                document.location.href="<?= 'http://'.$_SERVER['HTTP_HOST'].'/html/student/main.php' ?>";
                             });
                         });
                         return false;

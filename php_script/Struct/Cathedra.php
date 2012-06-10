@@ -63,5 +63,10 @@ class Cathedra {
         $name=mysql_query("SELECT name FROM cathedra WHERE id=$id",connectToIfmoDb()) or die(mysql_error());
         return $name = mysql_result($name, 0);
     }
+    static function getZav($cathedra) {
+        $id =  parseNumSql($cathedra);
+        $zav=mysql_query("SELECT dekan FROM cathedra WHERE id=$id",connectToIfmoDb()) or die(mysql_error());
+        return $zav=mysql_result($zav,0);
+    }
 }
 ?>

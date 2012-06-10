@@ -43,7 +43,6 @@ $.container = '#st-content';
   </script>
     </head>
     <body>
-
         <div class="container">
          <div class="row step-nav-row">
             <ul id="content-nav">
