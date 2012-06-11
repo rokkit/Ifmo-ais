@@ -19,7 +19,7 @@
             <ul class="nav pull-right">
                 <li class="divider-vertical"></li>
                 <li>
-                    <a class="st-name"></a>
+                <a class="st-name"><?php echo $_COOKIE['st-name'] ?></a>
                 </li>
                 <li class="divider-vertical"></li>
                 <li>

@@ -34,7 +34,7 @@ require FNPATH.'Struct/Direction.php';
     if(!empty($_GET['cathedra'])) {
         $c=Cathedra::getCathedraObj($_GET['cathedra']);
         $data['cathedra']=array();
-        $data['cathedra']=array("name"=>$c->name." ".$C->full_name,
+        $data['cathedra']=array("name"=>$c->name." ".$c->full_name,
                                 "zavcath"=>$c->dekan,
                                 "desc"=>$c->description,
                                 "site"=>$c->site);

@@ -65,7 +65,7 @@ if(isset($_REQUEST['id'])) {//формируем документ
     $student=Student::getStudentById($_REQUEST['id']);
     $phpdocx="";
     try {
-        $template="template_end_form.docx";
+        $template="template_form.docx";
         $phpdocx = new phpdocx($template);
     } catch (Exception $exc) {
         echo $exc->getTraceAsString();
@@ -81,12 +81,19 @@ if(isset($_REQUEST['id'])) {//формируем документ
           $disciplines = Trans::getDisciplinesByDirection($choose['id_direction'], $ifmodb);
           $points=array();
           $points[]=array("№","Дисциплина","Объём работы студ.","Форма итог. контр.","Оценка","Состав аттестационной комиссии");
-          foreach ($disciplines as $discipline) //формируем таблицу соотсвествия предметов и дисциплин
+          $i=1;
+          foreach ($disciplines as $discipline) //формируем таблицу
                 {
                     $subject=Trans::getSubjectByDiscipline($discipline, $fspodb, $ifmodb);
                     $point=$student->getPoint($fspodb,$subject['id']);
                     $disp_name=Trans::getDisciplineById($discipline, $ifmodb);
-                    $points[]=array("id",$disp_name,"hours","finish",$point['point'],"comm");
+                    $dd=Trans::getDiscipline($discipline, $ifmodb);//все поля дисциплины
+
+                    if($dd['type']==1 || $dd['type']==3) $type="Экз";
+                    else if($dd['type']==2) $type="Зач";
+                    $comm = mysql_query("SELECT comm FROM transfer WHERE id_discipline=$discipline",$ifmodb) or die(mysql_error());
+                    $comm = @mysql_result($result, 0);
+                    $points[]=array($i++,$disp_name,$dd['hours'],$type,$point['point'],$comm);
                 }
                 //var_dump($points);exit;
       }

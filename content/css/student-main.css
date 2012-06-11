@@ -23,7 +23,13 @@ body {
     display: none;
     margin: 60px 0 0 150px;
 }
-
+#struct-info {
+ float: left;
+ font-weight:bold;
+}
+#struct-info p {
+ font-weight:normal;
+}
 #content-nav ul {
     list-style-position: inside;
 

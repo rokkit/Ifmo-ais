@@ -29,16 +29,26 @@
                 <a class="btn" href="/content/files/"><i class="icon-download"></i> Скачать учебный план</a>
             </div>
             <h3 id="full-name"></h3>
-            <div style="float: left;">
+            <div id="struct-info">
                 Декан факультета:<p id="dekan"></p>
                 Зав.кафедры:<p id="zavcath"></p>
-                Сайт кафедры:<p id="site"></p>
-                Контактный номер<p id="phone"></p>
+                <p><a id="site">Сайт кафедры</a></p>
                 Приблизительная стоимость контрактного обучения<p id="price"></p>
             </div>
-
         </div>
+        <div class="row">
+           <div class="span8 well truewell" style="margin:0 0 0 400px">
+                <div id="f-desc" style="margin-bottom:20px">
+
+                </div>
+                <div id="c-desc">
+
+                </div>
+           </div>
+        </div>
+
     </div>
+
 </div>
 <script>
     $(function(){
@@ -60,17 +70,20 @@
                     if(json['faculty']!=null) {
                         var f=json['faculty'][0];
                         if(f["name"]!=null) $("#full-name").text(f['name'])
-                        $("#dekan").text(f['dekan'])
+                            $("#dekan").text(f['dekan'])
+                            $("#f-desc").text(f['desc'])
                     }
                     if(json['cathedra']!=null) {
                         var c=json['cathedra'];
                         if(c["name"]!=null) $("#full-name").append(" "+c["name"]);
                         $("#zavcath").text(c["zavcath"]);
+                        $("#c-desc").text(c['desc'])
+                        $("#site").attr("href",c['site'])
                     }
                     if(json['direction']!=null) {
                         var c=json['direction'];
                         if(c["name"]!=null) $("#full-name").append(" "+c["name"]);
-                        $("#price").text(c['price']);
+                        $("#price").text(c['price']+"р/год");
                     }
                 });
             }

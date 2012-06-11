@@ -43,6 +43,8 @@ $.container = '#st-content';
   </script>
     </head>
     <body>
+<?php include 'header-menu.php'; ?>
+
         <div class="container">
          <div class="row step-nav-row">
             <ul id="content-nav">

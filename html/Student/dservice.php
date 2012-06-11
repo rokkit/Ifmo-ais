@@ -18,41 +18,42 @@ include '../../php_script/StudentService/studentService.php';
 
     <!-- скрипт добавляет сюда элементы меню -->
     </ul>
+<a class="btn btn-mini" id="add-to-favs" >В избранное</a>
   <div class="tab-content">
 
   </div>
 </div>
 </div>
 <div class="row span10">
-    <div id="choose-info" class="span4 well truewell">
-    <h2>Вы выбрали:</h2>
-    <dl>
+    <div id="choose-info" class="span7 well truewell" style="padding: 0">
+<div class="btn-download" style="margin: 7px 7px 0 0">
+                <a class="btn" href="/content/files/"><i class="icon-download"></i> Скачать учебный план</a>
+            </div>
+
+    <h2 style="margin-left: 30px">Вы выбрали:</h2>
+    <dl style="margin-left: 30px">
         <?php $direction=getFullInfoDirection($_REQUEST['direction']); ?>
         <input type="hidden" id="direction-temp" value="<?= $_REQUEST['direction'] ?>"/>
         <dt>Факультет:</dt><dd id="faculty-temp-choose"></dd>
         <dt>Кафедра:</dt><dd id="cathedra-temp-choose"></dd>
         <dt>Направление:</dt><dd id="direction-temp-choose"></dd>
-        </dd>
+
         <dt>Примерная стоимость контрактного обучения:</dt><dd id="cost"></dd>
+        <dt>Направление было выбрано:<span id="count-num"></span> раз</dt><dd></dd>
     </dl>
     </div>
-<div class="span3 well truewell" id="counter">
-    <h2>Это направление уже было выбрано</h2>
-    <h2 id="count-num"></h2>
-    <h2>раз</h2>
-</div>
   <div class="span1" id="btns">
     <div id="do-choose-btn">
         <a id="do-choose" class="btn btn-primary btn-large"
            rel="popover" data-content="Нажав кнопку, вы подадите заявление, которое будет рассмотрено в течении нескольких дней"
-           data-original-title="Внимание"><i class="icon-ok icon-white"></i>Выбрать</a>
+           data-original-title="Внимание"><i class="icon-ok icon-white"></i>Подать заявку</a>
     </div>
     <script>
     $(function(){
         $("#do-choose").popover();
     })
     </script>
-    <a class="btn btn-mini" id="add-to-favs" >В избранное</a>
+
   </div>
 </div>
 <div class="row points-row">

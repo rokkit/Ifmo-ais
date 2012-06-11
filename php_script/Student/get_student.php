@@ -72,7 +72,7 @@ if (isset($_SERVER['HTTP_X_PJAX']))
     </div>
         <script>//красим ячейки
             $(function(){
-                $("#stud-subject-body tr").each(function(){
+                $("#stud-subject-bdy tr").each(function(){
                     var point=parseInt($(this).children("#point").html());
                     if(point<3 || isNaN(point))
                         {

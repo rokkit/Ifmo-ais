@@ -109,7 +109,10 @@ margin-bottom:5px;
     position: absolute;
     width: 350px;
 }
-
+#struct-info {
+ float: left;
+ font-weight:bold;
+}
 .flexigrid i {
     padding-right: 3px;
 }

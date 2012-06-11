@@ -11,11 +11,9 @@ require_once FNPATH.'auth.php';
         <div class="span3 truewell">
             <div class="sidebar-nav">
                 <ul class="nav nav-list">
-                    <li class="nav-header">Sidebar</li>
+                    <li class="nav-header">Диаграммы</li>
                     <li class="active"><a href="#chart-content">Популярность направлений</a></li>
-                    <li><a href="#web-chart-content">Диаграмма</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
+                    <li><a href="#web-chart-content">Общая диаграмма популярности</a></li>
                 </ul>
             </div>
         </div>
@@ -91,7 +89,7 @@ require_once FNPATH.'auth.php';
         <!-- вторая диаграмма -->
         <div id="web-chart-content" class="span9 truewell chart-content" style="height: 450px; display: none;">
             <h2 style=" margin: 20px 10px 0 30px;">Диаграмма</h2>
-            <div class="span5" id="holder-web-chart"  style="height: 200px;">
+            <div class="span5" id="holder-web-chart"  style="height: 300px;">
 
             </div>
             <script>
@@ -101,6 +99,9 @@ require_once FNPATH.'auth.php';
             });
             });
             </script>
+            <div class="span3" id="list_dirs">
+
+            </div>
         </div>
     </div>
 </div>
@@ -114,5 +115,13 @@ require_once FNPATH.'auth.php';
                 $(this).parent().addClass("active")
                 return false;
             })
+        })
+        $(function() {
+            $.getJSON("/php_script/StudentService/get_dirs.php",{},function(json) {
+                        for(var j in json) {
+                            j=json[j];
+                            $("#list_dirs").append("<p>"+j['name']+"</p>")
+                        }
+                    });
         })
     </script>

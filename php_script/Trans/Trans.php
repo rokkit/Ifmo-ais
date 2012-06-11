@@ -68,6 +68,16 @@ class Trans {
         $result = mysql_query("SELECT name FROM discipline WHERE id=$discipline", $ifmodb) or die(mysql_error());
         return mysql_result($result, 0);
     }
+    static function getDiscipline($discipline,$ifmodb)
+    {
+        $discipline = parseNumSql($discipline);
+        $result = mysql_query("SELECT * FROM discipline WHERE id=$discipline", $ifmodb) or die(mysql_error());
+        $data=array();
+        if($d = mysql_fetch_array($result)) {
+            $data=array("id"=>$d['id'],"name"=>$d['name'],"hours"=>$d['hours'],"finish"=>$d['type'],"cathedra"=>$d['id_cathedra'],"direction"=>$d['id_direction']);
+        }
+        return $data;
+    }
     static function getSubjectByDiscipline($discipline,$fspodb,$ifmodb)//получить предмет соотвествущий дисциплине
     {
         $discipline = parseNumSql($discipline);

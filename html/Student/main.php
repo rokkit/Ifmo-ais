@@ -26,9 +26,9 @@ require_once FNPATH.'auth.php';
                    <img src="http://www.ifmo.ru/images/logo.png" alt="">
                </div>
                <div class="span8" style="text-align: center; margin:40px 0 0 -50px;">
-                   <h1>Выбор факультета</h1>
+                   <h3>Выбор направления для продолжения обучения по непрерывной программе высшего профессионального образования в НИУ ИТМО</h3>
 
-                   <h5>Сервис, позволяющий выбрать подходящее Вам направление обучения</h5>
+                   <h5></h5>
                    <a  href="/html/Student/service.php" style="margin-top: 8px" class="btn btn-info btn-large">Начать</a>
                </div>
 
@@ -41,31 +41,25 @@ require_once FNPATH.'auth.php';
                     <h3 class="st-name"></h3>
                     <dl class="dl-horizontal">
                         <dt>Год выпуска</dt>
-                        <dd></dd>
+                        <dd id="year"></dd>
                         <dt>Средний балл</dt>
-                        <dd></dd>
+                        <dd id="avg_point"></dd>
                     </dl>
-                        <h3>Ваша заявка рассматривается</h3>
-                    <a  href="/html/Student/service.php" style="margin: 8px 0 0 200px" class="btn btn-info btn-large">Изменить</a>
+                        <h3 id="status">Ваша заявка рассматривается</h3>
+                        <a  id="action-btn" href="/html/Student/service.php" style="margin: 8px 0 0 245px" class="btn btn-info btn-large">Изменить</a>
                     </div>
-
-
                 </div>
-
-
-
                 <div class="span7 well truewell">
                     <h3 class="direction"></h3>
                     <dl>
-
                         <dt>Декан</dt>
-                        <dd id="dekan"></dd>
-                        <dt>Зав. кафедры:</dt>
-                        <dd id="zavcath"></dd>
+                        <dd class="dekan"></dd>
+                        <dt>Зав. кафедры</dt>
+                        <dd class="zavcath"></dd>
                         <dt>Стоимость контрактного обучения</dt>
-                        <dd id="cost"></dd>
+                        <dd class="cost"></dd>
                         <dt>Сайт кафедры</dt>
-                        <dd id="site"></dd>
+                        <dd><a id="site"></a></dd>
 
                     </dl>
                 </div>
@@ -73,7 +67,7 @@ require_once FNPATH.'auth.php';
         </div>
         <div class="container" id="ok-head-container">
             <div class="row">
-                <div class="span8 well">
+                <div class="span8 well truewell">
                     <div class="span4">
                         <h2>Вы выбрали:</h2>
                         <dl class="dl-horizontal">
@@ -93,7 +87,7 @@ require_once FNPATH.'auth.php';
                 </div>
                 <div class="span3 well truewell">
                     <h2>
-                        Ваш средний балл:<p class="avgpoint"></p>
+                        Ваш средний балл: 4.75<p class="avgpoint"></p>
                     </h2>
                 </div>
             </div>
@@ -105,24 +99,41 @@ require_once FNPATH.'auth.php';
           $(function(){
               $.getJSON("/php_script/StudentService/getMainContent.php",{user:'<?= $_SESSION['user_id'] ?>'},function(json){
                   $(".st-name").text(json['stname'])
+                      $.cookie("st-name",json['stname'], {path:"/"})
+
+                      $("#year").text(json['year']);
+                      $("#avg_point").text(json['avg_point'])
                   if(!json['confirm']) {
                       $("#head-container").show();
                       }
-                  else if(json['confirm']=='1') {
+                  else if(json['confirm']=='1' || json['confirm']=='2') {
                       $("#wait-head-container").show()
                       //если заявка ожидается
                       $("#faculty").text(json['faculty'])
                       $("#cathedra").text(json['cathedra'])
                       $(".direction").text(json['direction'])
-                  }
-                  else if(json['confirm']=='2') {
-                      $("#ok-head-container").show()
+                  //else if(json['confirm']=='2') {
+                    //  $("#ok-head-container").show()
                       //если заявка одобрена
-                      $("#okfaculty").text(json['faculty'])
-                      $("#okcathedra").text(json['cathedra'])
-                      $(".direction").text(json['direction'])
-
+                      //$("#okfaculty").text(json['faculty'])
+                      //$("#okcathedra").text(json['cathedra'])
+                      //$(".direction").text(json['direction'])
+                  //}
+                        $(".dekan").text(json['dekan'])
+                        $(".zavcath").text(json['zavcath'])
+                        $(".cost").text(json['cost']+"р/год")
+                        $("#site").attr("href",json['site'])
+                        $("#site").text("Перейти")
+                        if(json['confirm']=='1') {
+                            $("#status").text("Ваше заявление рассматривается")
+                            $("#action-btn").value("Изменить")
+                        }
+                        else if(json['confirm']=='2') {
+                            $("#status").text("Ваше заявление одобрено")
+                            $("#action-btn").remove()
+                        }
                   }
+
               })
           });
       </script>

@@ -66,20 +66,20 @@ else
 
 $results = mysql_query($sql);
 while ($row = mysql_fetch_assoc($results)) {
-    if($row['type']==0) $type_final='Экзамен';
-    elseif($row['type']==1) $type_final='Зачёт';
-    elseif($row['type']==2) $type_final='Зачёт/Экзамен';
+    if($row['type']==1) $type_final='Экзамен';
+    elseif($row['type']==2) $type_final='Зачёт';
+    elseif($row['type']==3) $type_final='Зачёт/Экзамен';
     
-    $cats =  mysql_query("select name from cathedra where id=".$row['id_cathedra']);
-    if($cat = mysql_fetch_assoc($cats))
-    {
-        $cathedra = $cat['name'];
-    }
+//    $cats =  mysql_query("select name from cathedra where id=".$row['id_cathedra']);
+//    if($cat = mysql_fetch_assoc($cats))
+//    {
+//        $cathedra = $cat['name'];
+//    }
     
 $data['rows'][] = array(
 'id' => $row['id'],
 'cell' => array($row['id'], $row['name'], $row['semester'], $row['hours'],
-                $row['aud_hours'],$type_final,$cathedra)
+                $row['aud_hours'],$type_final,$row['id_cathedra'])
 );
 }
 echo json_encode($data);
