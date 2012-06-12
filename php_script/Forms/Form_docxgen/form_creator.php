@@ -11,6 +11,11 @@ require_once SCRIPTPATH.'Struct/Cathedra.php';
 require_once SCRIPTPATH.'Struct/Direction.php';
 require_once SCRIPTPATH.'Struct/Faculty.php';
 require_once SCRIPTPATH.'Trans/Trans.php';
+function checkGender($name) {
+    $women=array("Наталия");
+    if(in_array($name, $women)) return false;//имя женское
+    else return true;//имя мужское
+}
 function zipAndDownload($files) {
                 $valid_files = array();
                 /* for every file */
@@ -219,8 +224,8 @@ if(isset($_REQUEST['id'])) {//формируем документ
                 $students=array();
                 foreach($ids as $id) {
                     $id = parseNumSql($id);
-                    $result = mysql_query("SELECT id_direction FROM student_choose WHERE confirm=1 AND id_student=$id", $ifmodb) or die(mysql_error());
-                    $students[$id] =  mysql_result($result, 0);
+                    $result = mysql_query("SELECT id_direction FROM student_choose WHERE confirm=2 AND id_student=$id", $ifmodb) or die(mysql_error());
+                    $students[$id] =  @mysql_result($result, 0);
                 }
                 $dirs =  array_unique($students);//выбираем уникальные  направления
                 $dirs = array_flip($dirs);
@@ -258,10 +263,44 @@ if(isset($_REQUEST['id'])) {//формируем документ
                     $direction = json_decode(Direction::getFullInfo($dir));
                     $faculty=Faculty::getFacultyObj($direction->faculty);
                     $cathedra = Cathedra::getCathedraObj($direction->cathedra);
-                    $phpdocx->assign('#FACNAME#', $faculty->full_name);
-                    $phpdocx->assign("#FIODEKAN#", $faculty->dekan);
-                    $phpdocx->assign('#CATHEDRA#', $cathdra->name);
-                    $phpdocx->assign('#ZAVCATHEDR#',$cathedra->dekan);
+                    $phpdocx->assign('#FACNAME#', $faculty->name);
+
+                    
+                        //сокращаем фио декана
+                        $dfio=$faculty->dekan;
+                        $dfio=explode(" ", $dfio);
+                        $dname=$dfio[1];
+                        $name_2=$dname;
+                        
+                        $dname=substr($dname, 0,2).'. ';
+                        $secname=$dfio[2];
+                        $secname=substr($secname, 0,2).".";
+                        $dfio_2=$dfio[0];
+                        $dfio=$dfio[0].' '.$dname.$secname;
+
+                        if(checkGender($dname_2)) {
+                            $phpdocx->assign('#FIODEKAN2',$dfio_2.'у '.$dname.$secname);
+                        }
+
+                        //сокращаем фио зав кафедры
+                        $cfio=$cathedra->dekan;
+                        $cfio=explode(" ", $cfio);
+                        $dname=$cfio[1];
+                        $status="Заведующий";
+                        if(!checkGender($dname)) {//проверяем мужское имя или женское
+                            $status="Заведующая";
+                        }
+                        $dname=substr($dname, 0,2).'. ';
+                        $secname=$cfio[2];
+                        $secname=substr($secname, 0,2).".";
+                        $cfio=$cfio[0].' '.$dname.$secname;
+                        
+
+                    $phpdocx->assign("#FIODEKAN#", $dfio);
+
+                    $phpdocx->assign("#STATUS#",$status);
+                    $phpdocx->assign('#CATHEDRA#', $cathedra->name);
+                    $phpdocx->assign('#ZAVCATHEDR#',$cfio);
                     $phpdocx->assign('#DIRECTION#',$direction->name." ".$direction->description);
                     $arr = array(); //need array like array(array(name=>value))
                     foreach($stds as $std) {

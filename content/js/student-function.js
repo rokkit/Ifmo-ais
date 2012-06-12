@@ -78,7 +78,7 @@ function checkFavourite(user_id,fav_id) {
 //рисуем паутиновый график
 function drawWebChart(holder,line,kf,json,params_line,params_pline) {
     var count=0;
-    var colors={};
+    var colors=[];
 
     //считаем сколько секций пришло
     for(section in json) count++;
@@ -131,15 +131,15 @@ function drawWebChart(holder,line,kf,json,params_line,params_pline) {
     for(i=0;i<=points.length-1;i++)
         {
             var color = '#'+Math.floor(Math.random()*16777215).toString(16);
-            
+            colors.push(color)
             if(i!=points.length-1) {
                 draw_parametric_line(points[i][0], points[i][1], points[i+1][0], points[i+1][1]);
                 paper.circle(points[i][0],points[i][1],4).attr({stroke: color, "stroke-width": 4});
-                paper.text(points[i][0],points[i][1],"ccc")
             }
             else {
                 draw_parametric_line(points[i][0], points[i][1], points[0][0], points[0][1])
                 paper.circle(points[i][0],points[i][1],4).attr({stroke: color, "stroke-width": 4});
             }
         }
+        return colors;
 }

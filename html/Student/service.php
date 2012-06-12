@@ -90,9 +90,9 @@ $.container = '#st-content';
                     <div class="row">
                         <?php $facultys = getBlockFaculty(); ?>
                         <?php foreach($facultys as $f) {?>
-                        <div class="fc-block well" id="<?= $f->id ?>" style="text-align: justify">
-                            <strong><?= $f->name ?></strong><br>
-                                <?= $f->description ?>
+                        <div class="fc-block well" id="<?php echo $f->id ?>" style="text-align: justify">
+                            <strong><?php echo $f->full_name." (".$f->name.")" ?></strong><br>
+                                <?php echo $f->description ?>
 
                         </div>
 

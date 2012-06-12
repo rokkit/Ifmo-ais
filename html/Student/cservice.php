@@ -73,10 +73,10 @@ $('.cf-block').click(function(){
     <div class="favourite span1">
         <a class="star <?php echo checkFavourite($f->id)?>" title="Добавить в избранное" onclick="add_to_favourite(this,<?= $f->id ?>)" href="#"></a>
     </div>
-                        <div class="cf-block well" id="<?= $f->id ?>">
+                        <div class="cf-block well" id="<?php echo $f->id ?>">
 
-                                <strong><?= $f->name ?></strong><br>
-                                <?= $f->description ?>
+                                <strong><?php echo $f->full_name." (".$f->name.")" ?></strong><br>
+                                <?php echo $f->description ?>
 
                         </div>
 

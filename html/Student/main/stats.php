@@ -76,7 +76,7 @@ require_once FNPATH.'auth.php';
                 });
 
                 $(function(){
-                    $.getJSON("/php_script/StudentService/get_dirs.php",{},function(json) {
+                    $.getJSON("/php_script/StudentService/get_dirs.php",{type:"all"},function(json) {
                         for(var j in json) {
                             j=json[j];
                             $("#select-direction").get(0).add(new Option(j['name'],j['id'],true))
@@ -93,11 +93,22 @@ require_once FNPATH.'auth.php';
 
             </div>
             <script>
+            var colors=[];
             $(function(){$.getJSON("/php_script/StudentService/get_stats.php", {type:"ch",graph:"web"}, function(json){
-            drawWebChart("holder-web-chart",150,2,json,{"stroke-width": 0.8},
+            colors=drawWebChart("holder-web-chart",150,2,json,{"stroke-width": 0.8},
             {stroke:"05C","stroke-width": 2});
             });
             });
+            $(function() {
+                var i=0;
+            $.getJSON("/php_script/StudentService/get_dirs.php",{type:"only"},function(json) {
+                        for(var j in json) {
+                            j=json[j];
+                            $("#list_dirs").append("<p style=color:"+colors[i]+">"+j+"</p>")
+                            i++;
+                        }
+                    });
+            })
             </script>
             <div class="span3" id="list_dirs">
 
@@ -116,12 +127,5 @@ require_once FNPATH.'auth.php';
                 return false;
             })
         })
-        $(function() {
-            $.getJSON("/php_script/StudentService/get_dirs.php",{},function(json) {
-                        for(var j in json) {
-                            j=json[j];
-                            $("#list_dirs").append("<p>"+j['name']+"</p>")
-                        }
-                    });
-        })
+
     </script>

@@ -35,25 +35,16 @@ require_once FNPATH.'function.php';
                         <div class="row-fluid">
                             <div class="span3">
                             <ul class="nav nav-list">
-                                <li>
-                                    <a href="/php_script/Stats/graphics.php" data-pjax="#fcd-content">Графики</a>
-                                </li>
+                               
                             </ul>
                         </div>
                         <div class="span6">
                             <div id="fcd-content">
                                 <div>
                                     <div class="row-fluid">
-                                        <div class="span6">
-                                            <h3>Популярность направлений</h3>
-                                            <div id="holder-web-chart"></div>
-
-                                        </div>
-                                    </div>
-                                    <div class="row-fluid">
                                         <hr>
                                         <div class="span6">
-                                            <h3 style="margin-bottom: 30px;">Анализ соответствия дисциплин</h3>
+                                            <h3 style="margin-bottom: 30px;">Анализ соответствия количества учебных часов</h3>
                                             <div id="holder-hours-chart" style="height: 200px;">
 
                                             </div>

@@ -67,11 +67,6 @@ if (isset($_SESSION['user_id']) AND $_SESSION['ip'] == $_SERVER['REMOTE_ADDR'])
 
     <div class="span6" id="fcd-content">
 
-        <div class="well">
-         <div>
-             <h3>Распределение студентов</h3>
-         </div>
-        </div>
     </div>
 </div>
 

@@ -7,24 +7,35 @@ if(isset($_GET['discipline'])) {
     if(isset($_GET['fspo'])) {
         //получаем информацию о кол-ве часов на фспо
         /*
-        * у андрея всё это, а пока тупо число
+        * у андрея всё это, а пока рандомное число
         */
         $fspo_hours=(int)rand(100,200);
         echo $fspo_hours;
         exit();
     }
     //запрос статистики по дисциплине
-    $name=  strip_tags($_GET['discipline']);
-    $name = htmlspecialchars($name);
-    $name=  mysql_escape_string($name);
-
-    $sql="SELECT id_direction,hours,aud_hours FROM discipline WHERE name='$name'";//дисицплины на разных направлениях
-
+    $name = $_GET['discipline'];
+    //$name = htmlspecialchars($name);
+    //$name = mysql_escape_string($name);
+    $name = substr($name, 0,-1);
+    $sql="SELECT id_direction,hours,aud_hours FROM discipline WHERE name LIKE '%$name%'";//дисицплины на разных направлениях
+    //$sql="select id, name, id_direction,hours,aud_hours from discipline where hours=646";
+    //echo $sql;
     $ifmodb=  connectToIfmoDb();
     $result=  mysql_query($sql, $ifmodb) or die(mysql_error());
     $data=array();
     while($disp = mysql_fetch_assoc($result)) {
-        $data[]=array(array((int)($disp['hours']-$disp['aud_hours']),(int)$disp['aud_hours']),array("label"=>$disp['id_direction']));
+        $r=mysql_query("SELECT name, description FROM direction WHERE id=$disp[id_direction]") or die(mysql_error());
+        $dname=mysql_result($r, 0);
+        $data[]=array(array((int)($disp['hours']-$disp['aud_hours']),(int)$disp['aud_hours']),array("label"=>$dname));
+//         $data[]=array(array((int)($disp['hours']-$disp['aud_hours']+rand(20,40)),(int)$disp['aud_hours']+rand(10,25)),array("label"=>rand(134000,180000)));
+// $data[]=array(array((int)($disp['hours']-$disp['aud_hours']+rand(20,40)),(int)$disp['aud_hours']+rand(10,25)),array("label"=>rand(134000,180000)));
+// $data[]=array(array((int)($disp['hours']-$disp['aud_hours']+rand(20,40)),(int)$disp['aud_hours']+rand(10,25)),array("label"=>rand(134000,180000)));
+// $data[]=array(array((int)($disp['hours']-$disp['aud_hours']+rand(20,40)),(int)$disp['aud_hours']+rand(10,25)),array("label"=>rand(134000,180000)));
+// $data[]=array(array((int)($disp['hours']-$disp['aud_hours']+rand(20,40)),(int)$disp['aud_hours']+rand(10,25)),array("label"=>rand(134000,180000)));
+// $data[]=array(array((int)($disp['hours']-$disp['aud_hours']+rand(20,40)),(int)$disp['aud_hours']+rand(10,25)),array("label"=>rand(134000,180000)));
+// $data[]=array(array((int)($disp['hours']-$disp['aud_hours']+rand(20,40)),(int)$disp['aud_hours']+rand(10,25)),array("label"=>rand(134000,180000)));
+
     }
 
     //var_dump($data);

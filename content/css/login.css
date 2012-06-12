@@ -8,11 +8,13 @@
 
 body { 
     display: block;
+    background-image: url("/content/img/light_toast.png");
+    
 }
 .login {
     padding: 50px;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 form#login-form {
     
@@ -40,6 +42,20 @@ form#login-form {
     list-style-position: inside;  
     line-height: 1.6em;
     visibility: hidden;
+}
+
+#login-header {
+    margin-bottom:25px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    text-align: center;
+    
+    left:50%;
+    text-decoration: underline;
 }
 
 

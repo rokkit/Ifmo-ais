@@ -38,8 +38,12 @@ if(!isset($_SESSION['user_id'])) {
                 <li id="pass-error">Неверный пароль</li>
             </ul>
         </div>
-        
+
         <div class="login clearfix">
+            <div id="login-header">
+            <h3>Автоматизированная информационная система отделения выпускного курса</h3><br>
+            <h3>ФСПО НИУ ИТМО</h3>
+            </div>
             <form id="login-form"  method="POST">
                 <fieldset class="well">
                     <div class="au-input">
@@ -53,6 +57,9 @@ if(!isset($_SESSION['user_id'])) {
                     </div>
                 </fieldset>
             </form>
+        </div>
+        <div id="footer">
+            2012г.
         </div>
     </body>
 </html>

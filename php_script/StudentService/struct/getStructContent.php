@@ -27,14 +27,14 @@ require FNPATH.'Struct/Direction.php';
     if(!empty($_GET['faculty'])) {
        $f=Faculty::getFacultyObj($_GET['faculty']);
        $data['faculty']=array();
-       $data['faculty'][]=array("name"=>$f->name." ".$f->full_name,
+       $data['faculty'][]=array("name"=>'('.$f->name.") ".$f->full_name,
                                 "dekan"=>$f->dekan,
                                 "desc"=>$f->description);
     }
     if(!empty($_GET['cathedra'])) {
         $c=Cathedra::getCathedraObj($_GET['cathedra']);
         $data['cathedra']=array();
-        $data['cathedra']=array("name"=>$c->name." ".$c->full_name,
+        $data['cathedra']=array("name"=>'('.$c->name.") ".$c->full_name,
                                 "zavcath"=>$c->dekan,
                                 "desc"=>$c->description,
                                 "site"=>$c->site);

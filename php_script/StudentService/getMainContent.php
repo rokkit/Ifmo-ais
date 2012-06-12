@@ -25,7 +25,11 @@ if(!empty($_GET['user'])) {
             $cobj=Cathedra::getCathedraObj($direction->cathedra);
             $data['site']=$cobj->site;
             $data['zavcath']=$cobj->dekan;
-            $data['cathedra']=Cathedra::getName($direction->cathedra);
+            $f=Faculty::getFacultyObj($direction->faculty);
+            $data['faculty']='Факультет: ('.$f->name.") ".$f->full_name;
+
+            $cobj=Cathedra::getCathedraObj($direction->cathedra);
+            $data['cathedra']='Кафедра: ('.$cobj->name.") ".$cobj->full_name;
             $data['direction']=$direction->name." ".$direction->description;
 
         }

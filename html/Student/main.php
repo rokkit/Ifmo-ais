@@ -50,7 +50,7 @@ require_once FNPATH.'auth.php';
                     </div>
                 </div>
                 <div class="span7 well truewell">
-                    <h3 class="direction"></h3>
+                    <h3 id="faculty"><h3><h3 id="cathedra"><h3><h3 id="direction"></h3>
                     <dl>
                         <dt>Декан</dt>
                         <dd class="dekan"></dd>
@@ -65,33 +65,7 @@ require_once FNPATH.'auth.php';
                 </div>
                 </div>
         </div>
-        <div class="container" id="ok-head-container">
-            <div class="row">
-                <div class="span8 well truewell">
-                    <div class="span4">
-                        <h2>Вы выбрали:</h2>
-                        <dl class="dl-horizontal">
-                            <dt>Факультет</dt>
-                            <dd id="okfaculty"></dd>
-                            <dt>Кафедра</dt>
-                            <dd id="okcathedra"></dd>
-                            <dt>Направление</dt>
-                            <dd class="direction"></dd>
-                        </dl>
-                    </div>
-
-                    <div class="span3" style="text-align: center">
-                        <h2>Ваша заявка одобрена</h2>
-                        <img src="/content/img/accepted.png" alt="">
-                    </div>
-                </div>
-                <div class="span3 well truewell">
-                    <h2>
-                        Ваш средний балл: 4.75<p class="avgpoint"></p>
-                    </h2>
-                </div>
-            </div>
-        </div>
+        
       </div>
       <script>
 
@@ -111,14 +85,8 @@ require_once FNPATH.'auth.php';
                       //если заявка ожидается
                       $("#faculty").text(json['faculty'])
                       $("#cathedra").text(json['cathedra'])
-                      $(".direction").text(json['direction'])
-                  //else if(json['confirm']=='2') {
-                    //  $("#ok-head-container").show()
-                      //если заявка одобрена
-                      //$("#okfaculty").text(json['faculty'])
-                      //$("#okcathedra").text(json['cathedra'])
-                      //$(".direction").text(json['direction'])
-                  //}
+                      $("#direction").text(json['direction'])
+
                         $(".dekan").text(json['dekan'])
                         $(".zavcath").text(json['zavcath'])
                         $(".cost").text(json['cost']+"р/год")
